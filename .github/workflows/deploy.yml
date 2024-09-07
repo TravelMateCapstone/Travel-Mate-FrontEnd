@@ -1,4 +1,4 @@
-name: Deploy React App to GitHub Pages
+name: Test and Deploy React App to GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main  # Chạy khi có push vào nhánh chính. Bạn có thể thay đổi thành nhánh khác nếu cần.
 
 jobs:
-  build-deploy:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,27 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  
+          node-version: '16'  # Sử dụng Node.js phiên bản 16 trở lên
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
+        continue-on-error: false  # Hủy quy trình nếu test không thành công
+
+  build-deploy:
+    needs: test  # Đảm bảo build và deploy chỉ chạy sau khi test thành công
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
@@ -28,4 +48,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: ./dist 
+          publish_dir: ./dist
