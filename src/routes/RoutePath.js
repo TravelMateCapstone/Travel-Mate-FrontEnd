@@ -6,7 +6,7 @@ const RoutePath = {
     REGISTER: '/register',
     GROUP: '/group',
     EVENT: '/event',
-    SETTING: '/Travel-Mate-FrontEnd/setting',
+    SETTING: '/setting',
     PROFILE: '/profile',
 }
 
