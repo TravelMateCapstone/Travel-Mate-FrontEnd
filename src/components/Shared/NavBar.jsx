@@ -38,10 +38,10 @@ function NavBar() {
               <div className="d-flex align-items-center">
                 <Navbar.Brand href="#home" className="me-0">
                   <img
-                    src="https://via.placeholder.com/50"
+                    src="https://via.placeholder.com/40"
                     alt="Logo"
-                    width="50"
-                    height="50"
+                    width="40"
+                    height="40"
                     className="d-inline-block align-top rounded-5"
                   />
                 </Navbar.Brand>
@@ -116,8 +116,8 @@ function NavBar() {
                     <Dropdown align='end'>
                       <Dropdown.Toggle className="avatar bg-secondary rounded-5 border-0 p-0">
                         <img
-                          height={50}
-                          width={50}
+                          height={40}
+                          width={40}
                           className="object-fit-cover rounded-5"
                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRez3lFozeHy6f4R0eoyEaIlM5lunDXiEbICA&s"
                           alt="avatar"

@@ -3,10 +3,10 @@
   z-index: 1;
   border-radius: 40px;
   padding: 0 12px;
-  height: 50px;
+  height: 40px;
   left: 8px;
   background: #4763c8;
-  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important; /* Adds a soft shadow with blur */
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important;
 }
 .search-dropdown-mb {
   position: relative;
@@ -16,7 +16,7 @@
   height: 50px;
   left: 0px;
   background: #4763c8;
-  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important; /* Adds a soft shadow with blur */
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important; 
 }
 .search-dropdown:hover {
   background: #4763c8 !important;
@@ -30,7 +30,7 @@
 .input-group .form-control {
   border-radius: 0 40px 40px 0;
   padding: 0 12px;
-  height: 50px;
+  height: 40px;
   z-index: 0;
 }
 .input-group {
@@ -45,8 +45,8 @@
 .messages_action,
 .notify_action,
 .avatar {
-  height: 50px !important;
-  width: 50px !important;
+  height: 40px !important;
+  width: 40px !important;
   display: flex;
   justify-content: center;
   align-items: center;
