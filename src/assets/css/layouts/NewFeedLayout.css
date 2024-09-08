@@ -1,0 +1,8 @@
+
+/* Make columns scrollable if content overflows */
+.column-scrollable {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds height */
+    background-color: #f8f9fa; /* Optional background */
+  }

@@ -7,6 +7,7 @@
   left: 8px;
   background: #4763c8;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important;
+  font-size: 14px !important;
 }
 .search-dropdown-mb {
   position: relative;
@@ -40,6 +41,7 @@
 }
 .searchBar {
   text-indent: 20px !important;
+  font-size: 14px !important;
 }
 
 .messages_action,
@@ -54,12 +56,12 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1920px) {
-  .search-dropdown {
-    width: 120px !important;
+  /* .search-dropdown {
+    width: 115px !important;
   }
   .searchBar {
     width: 400px !important;
-  }
+  } */
 }
 
 .messages_action::after,

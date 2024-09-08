@@ -29,9 +29,9 @@ function NavBar() {
   const toggleCanvas = () => setShowCanvas(!showCanvas);
 
   return (
-    <>
+    <Container>
       <Navbar bg="light" expand="lg" className="shadow p-2" fixed="top">
-        <Container fluid className="p-0 m-0">
+        <Container className="p-0">
           <Row className="w-100 align-items-center justify-content-between">
             {/* Left Side */}
             <Col lg={4} md={6} sm={6} xs={6} className="d-flex justify-content-start">
@@ -74,10 +74,10 @@ function NavBar() {
             {/* Middle Side: Hidden on Tablet and Mobile */}
             <Col lg={4} className="d-none d-lg-flex justify-content-center my-2 my-md-0 p-0">
               <Nav className="d-flex justify-content-center flex-row gap-2 fw-bold">
-                <Nav.Link as={Link} to={RoutePath.DASHBOARD} className="text-nowrap">Trang chủ</Nav.Link>
-                <Nav.Link as={Link} to={RoutePath.EVENT} className="text-nowrap">Sự kiện</Nav.Link>
-                <Nav.Link as={Link} to={RoutePath.GROUP} className="text-nowrap">Nhóm</Nav.Link>
-                <Nav.Link as={Link} to={RoutePath.SETTING} className="text-nowrap">Cài đặt</Nav.Link>
+                <Nav.Link as={Link} to={RoutePath.DASHBOARD} className="text-nowrap fw-semibold">Trang chủ</Nav.Link>
+                <Nav.Link as={Link} to={RoutePath.EVENT} className="text-nowrap fw-semibold">Sự kiện</Nav.Link>
+                <Nav.Link as={Link} to={RoutePath.GROUP} className="text-nowrap fw-semibold">Nhóm</Nav.Link>
+                <Nav.Link as={Link} to={RoutePath.SETTING} className="text-nowrap fw-semibold">Cài đặt</Nav.Link>
               </Nav>
             </Col>
 
@@ -89,7 +89,7 @@ function NavBar() {
                     {/* Messenger Dropdown */}
                     <Dropdown align='end'>
                       <Dropdown.Toggle className="messages_action bg-secondary rounded-5 border-0">
-                        <i class="bi bi-messenger fs-5"></i>
+                        <i className="bi bi-messenger fs-6"></i>
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu>
@@ -102,7 +102,7 @@ function NavBar() {
                     {/* Notifications Dropdown */}
                     <Dropdown align='end'>
                       <Dropdown.Toggle className="notify_action bg-secondary rounded-5 border-0">
-                        <i className="bi bi-bell-fill fs-5"></i>
+                        <i className="bi bi-bell-fill fs-6"></i>
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu>
@@ -196,8 +196,8 @@ function NavBar() {
         </Offcanvas>
       </Navbar>
 
-      <div style={{ paddingTop: "100px" }}>{/* Content goes here */}</div>
-    </>
+    
+    </Container>
   );
 }
 
