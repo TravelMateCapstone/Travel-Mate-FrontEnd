@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import '../../assets/css/Shared/Footer.css';
 
 const Footer = () => {
@@ -20,7 +20,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Align Download, Help, and Team Solutions on the same row for tablet (md) screens */}
             <div className="col-lg-6 col-md-12 col-sm-12 mt-3">
               <div className="row">
                 <div className="f_widget col-6 col-md-4 col-sm-6 about-widget wow fadeInLeft" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}>
@@ -64,4 +63,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

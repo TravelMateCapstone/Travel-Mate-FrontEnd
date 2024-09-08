@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import {
   Col,
   Navbar,
@@ -201,4 +201,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default memo(NavBar);
