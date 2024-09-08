@@ -17,8 +17,8 @@ export const Couter = () => {
     return (
         <div>
             <h1>Count: {count}</h1>
-            <button onClick={handleIncrease}>Increase</button>
-            <button onClick={handleDecrease}>Decrease</button>
+            <button className='btn btn-primary mt-2 mb-2 me-2' onClick={handleIncrease}>Increase</button>
+            <button className='btn btn-primary mt-2 mb-2' onClick={handleDecrease}>Decrease</button>
         </div>
     );
 };

@@ -13,10 +13,10 @@ function Dashboard() {
     <div>
       <h1>Dashboard</h1>
       <Couter />
-      {/* Nút để điều hướng đến trang settings */}
-      <button onClick={handleNavigateToSettings}>
+      <button className="btn btn-danger mb-2" onClick={handleNavigateToSettings}>
         Go to Settings
       </button>
+
     </div>
   );
 }
