@@ -1,0 +1,76 @@
+.search-dropdown {
+  position: relative;
+  z-index: 1;
+  border-radius: 40px;
+  padding: 0 12px;
+  height: 50px;
+  left: 8px;
+  background: #4763c8;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important; /* Adds a soft shadow with blur */
+}
+.search-dropdown-mb {
+  position: relative;
+  z-index: 1;
+  border-radius: 40px;
+  padding: 0 12px;
+  height: 50px;
+  left: 0px;
+  background: #4763c8;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important; /* Adds a soft shadow with blur */
+}
+.search-dropdown:hover {
+  background: #4763c8 !important;
+  color: #ffffff;
+}
+
+.input-group .form-control:focus {
+  box-shadow: 0 0 0px !important;
+  z-index: 0;
+}
+
+.input-group .form-control {
+  border-radius: 0 40px 40px 0;
+  padding: 0 12px;
+  height: 50px;
+  z-index: 0;
+}
+.input-group {
+  margin-left: -15px;
+  display: flex;
+  align-items: center;
+}
+.form-control {
+  text-indent: 20px !important;
+}
+
+.messages_action,
+.notify_action,
+.avatar {
+  height: 50px !important;
+  width: 50px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@media (min-width: 1024px) and (max-width: 1920px) {
+  .search-dropdown {
+    width: 120px !important;
+  }
+  .searchBar {
+    width: 400px !important;
+  }
+}
+
+.messages_action::after,
+.notify_action::after,
+.avatar::after {
+  display: none !important;
+}
+
+.dropdown-menu.show {
+  display: block;
+  position: absolute;
+  z-index: 1050;
+}

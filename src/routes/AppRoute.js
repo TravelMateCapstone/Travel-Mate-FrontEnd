@@ -17,7 +17,7 @@ const publishRoutes = [
 
 const privateRoutes = [
     { path: RoutePath.GROUP, component: Group, layout: DefaultLayout },
-    { path: RoutePath.EVENT, component: Event, layout: AdminLayout },
+    { path: RoutePath.EVENT, component: Event, layout: DefaultLayout },
     { path: RoutePath.PROFILE, component: Profile, layout: ProfileLayout },
 ]
 
