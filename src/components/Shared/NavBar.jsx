@@ -180,7 +180,7 @@ function NavBar() {
                   type="search"
                   placeholder="Nhập từ khóa"
                   aria-label="Search"
-                  className="border"
+                  className="border searchBar"
                 />
               </InputGroup>
             </Form>

@@ -6,10 +6,12 @@ import NavBar from "../components/Shared/NavBar";
 
 function NewFeedLayout({ children }) {
   return (
-    <Container fluid>
+    <Container fluid className="p-0">
       <NavBar />
-      <div>NewFeed layout</div>
-      {children}
+      <Container fluid>
+        <div>NewFeed layout</div>
+        {children}
+      </Container>
       <Footer />
     </Container>
   );

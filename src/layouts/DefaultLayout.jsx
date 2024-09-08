@@ -6,10 +6,12 @@ import '../assets/css/layouts/DefaultLayout.css'
 
 function DefaultLayout({ children }) {
   return (
-    <Container fluid>
+    <Container fluid className="p-0">
       <Navbar />
-      <div>DefaultLayout</div>
-      {children}
+      <Container fluid>
+        <div>DefaultLayout</div>
+        {children}
+      </Container>
       <Footer />
     </Container>
   );
