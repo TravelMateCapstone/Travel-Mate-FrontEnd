@@ -205,8 +205,9 @@ function NavBar() {
       <div className="d-none">
       <Register></Register>
       </div>
+      <div className="d-none">
       <EditProfile></EditProfile>
-      
+      </div>
     </Container>
   );
 }
