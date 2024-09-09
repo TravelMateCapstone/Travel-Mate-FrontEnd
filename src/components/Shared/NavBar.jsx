@@ -19,18 +19,37 @@ import { Link } from "react-router-dom";
 import RoutePath from "../../routes/RoutePath";
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
-import EditProfile from "../../pages/EditProfile";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/actions/authActions";
 
 function NavBar() {
   const [dropdownValue, setDropdownValue] = useState("Tìm kiếm");
-  const [isAuthenticated, setIsAuthenticated] = useState(true); // Change this based on auth logic
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated); // Access auth state
+ 
   const [showCanvas, setShowCanvas] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+
 
   const handleSelect = (eventKey) => {
     setDropdownValue(eventKey);
   };
-
+  const dispatch = useDispatch();
   const toggleCanvas = () => setShowCanvas(!showCanvas);
+  const handleLoginModal = () => setShowLoginModal(!showLoginModal);
+  const toggleRegisterModal = () => setShowRegisterModal(!showRegisterModal);
+
+   // Function to handle successful login
+   const handleLoginSuccess = () => {
+    setIsAuthenticated(true); // Set authentication to true after login
+    setShowLoginModal(false); // Close the login modal
+  };
+  const handleLogout = () => {
+    dispatch(logout()); 
+  };
+
+
+
 
   return (
     <Container>
@@ -50,7 +69,6 @@ function NavBar() {
                   />
                 </Navbar.Brand>
 
-                {/* Search Bar Hidden on Mobile */}
                 <Form className="d-none d-md-flex w-100">
                   <Dropdown as={ButtonGroup} onSelect={handleSelect}>
                     <Dropdown.Toggle id="dropdown-custom-1" variant="primary" className="search-dropdown">
@@ -75,7 +93,6 @@ function NavBar() {
               </div>
             </Col>
 
-            {/* Middle Side: Hidden on Tablet and Mobile */}
             <Col lg={4} className="d-none d-lg-flex justify-content-center my-2 my-md-0 p-0">
               <Nav className="d-flex justify-content-center flex-row gap-2 fw-bold">
                 <Nav.Link as={Link} to={RoutePath.DASHBOARD} className="text-nowrap fw-semibold">Trang chủ</Nav.Link>
@@ -85,12 +102,10 @@ function NavBar() {
               </Nav>
             </Col>
 
-            {/* Right Side */}
             <Col lg={4} md={6} sm={6} xs={6} className="d-flex justify-content-end p-0">
               <Nav className="d-flex align-items-center flex-row gap-1">
                 {isAuthenticated ? (
                   <>
-                    {/* Messenger Dropdown */}
                     <Dropdown align='end'>
                       <Dropdown.Toggle className="messages_action bg-secondary rounded-5 border-0">
                         <i className="bi bi-messenger fs-6"></i>
@@ -103,7 +118,6 @@ function NavBar() {
                       </Dropdown.Menu>
                     </Dropdown>
 
-                    {/* Notifications Dropdown */}
                     <Dropdown align='end'>
                       <Dropdown.Toggle className="notify_action bg-secondary rounded-5 border-0">
                         <i className="bi bi-bell-fill fs-6"></i>
@@ -116,7 +130,6 @@ function NavBar() {
                       </Dropdown.Menu>
                     </Dropdown>
 
-                    {/* Profile Dropdown */}
                     <Dropdown align='end'>
                       <Dropdown.Toggle className="avatar bg-secondary rounded-5 border-0 p-0">
                         <img
@@ -136,7 +149,7 @@ function NavBar() {
                           Cài đặt
                         </Dropdown.Item>
                         <Dropdown.Divider />
-                        <Dropdown.Item href="#logout">Đăng xuất</Dropdown.Item>
+                        <Dropdown.Item onClick={handleLogout}>Đăng xuất</Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
 
@@ -147,11 +160,11 @@ function NavBar() {
                   </>
                 ) : (
                   <>
-                    <Button as={Link} to={RoutePath.LOGIN} variant="outline-primary">
-                      Login
+                    <Button variant="" onClick={handleLoginModal} style={{background: '#4763c8', color: 'white'}} className="fw-bold">
+                      Đăng nhập
                     </Button>
-                    <Button as={Link} to={RoutePath.REGISTER} variant="primary">
-                      Register
+                    <Button variant="" onClick={toggleRegisterModal} style={{background: '#DF6B00', color: 'white'}} className="fw-bold">
+                      Đăng kí
                     </Button>
                   </>
                 )}
@@ -160,13 +173,11 @@ function NavBar() {
           </Row>
         </Container>
 
-        {/* Offcanvas for mobile and tablet with Search */}
         <Offcanvas show={showCanvas} onHide={toggleCanvas} placement="start">
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            {/* Search Dropdown and Input Group for mobile and tablet */}
             <Form className="mb-4 d-flex align-items-center">
               <Dropdown as={ButtonGroup} onSelect={handleSelect}>
                 <Dropdown.Toggle id="dropdown-custom-1" variant="primary" className="w-100 search-dropdown-mb">
@@ -189,7 +200,6 @@ function NavBar() {
               </InputGroup>
             </Form>
 
-            {/* Navigation Links */}
             <Nav className="d-flex flex-column gap-3">
               <Nav.Link as={Link} to={RoutePath.DASHBOARD} onClick={toggleCanvas}>Trang chủ</Nav.Link>
               <Nav.Link as={Link} to={RoutePath.EVENT} onClick={toggleCanvas}>Sự kiện</Nav.Link>
@@ -199,15 +209,12 @@ function NavBar() {
           </Offcanvas.Body>
         </Offcanvas>
       </Navbar>
-      <div className="d-none">
-      <Login></Login>
-      </div>
-      <div className="d-none">
-      <Register></Register>
-      </div>
-      <div className="d-none">
-      <EditProfile></EditProfile>
-      </div>
+
+        {/* Login Modal */}
+        <Login show={showLoginModal} handleClose={handleLoginModal} />
+
+
+      <Register show={showRegisterModal} handleClose={toggleRegisterModal} />
     </Container>
   );
 }

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import '../../assets/css/Auth/Register.css'
+import { Form, Button, Container, Row, Col, Modal } from 'react-bootstrap';
+import '../../assets/css/Auth/Register.css';
+import google from '../../assets/images/google.png'
+import facebook from '../../assets/images/facebook.png'
 
-const Register = () => {
+const Register = ({ show, handleClose }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -19,68 +21,65 @@ const Register = () => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-      <Row className="w-100">
-        <Col xs={12} md={6} className="mx-auto">
-          <div className="border p-4 shadow rounded">
-            <h3 className="text-center mb-4">Register</h3>
-            <p className="text-center">Welcome to Travel Mate</p>
-            <Form onSubmit={handleSubmit}>
-              <Form.Group controlId="formEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </Form.Group>
+    <Modal show={show} onHide={handleClose} centered>
+      <Modal.Header style={{background: '#4763c8', color: 'white'}}>
+        <Modal.Title>Register</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </Form.Group>
 
-              <Form.Group controlId="formPassword" className="mt-3">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </Form.Group>
+          <Form.Group controlId="formPassword" className="mt-3">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </Form.Group>
 
-              <Form.Group controlId="formConfirmPassword" className="mt-3">
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="Confirmed password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  required
-                />
-              </Form.Group>
+          <Form.Group controlId="formConfirmPassword" className="mt-3">
+            <Form.Label>Confirm Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Confirmed password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </Form.Group>
 
-              <p className="mt-3 text-center">
-                We will send you a message to confirm your email address. Please follow the instructions in the email to complete the verification process.
-              </p>
+          <p className="mt-3 text-center">
+            We will send you a message to confirm your email address. Please follow the instructions.
+          </p>
 
-              <Button variant="primary" type="submit" className="w-100 mt-3">
-                Continue
-              </Button>
-            </Form>
+          <Button variant="primary" type="submit" className="btn-continue w-100 mt-3" style={{background: '#4763c8 !important;'}}>
+            Continue
+          </Button>
+        </Form>
 
-            <div className="text-center mt-3">
-              <p>or</p>
-              <Button variant="outline-dark" className="w-100 mb-2">
-                <i className="fab fa-google"></i> Register with Google
-              </Button>
-              <Button variant="outline-dark" className="w-100">
-                <i className="fab fa-facebook"></i> Register with Facebook
-              </Button>
-            </div>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+        <div className="text-center mt-3">
+          <p>or</p>
+          <Button variant="outline-dark" className="w-100 mb-2">
+            <i className="fab fa-google"></i> Register with Google <img src={google} alt="google icon" width={24} height={24} />
+          </Button>
+          <Button variant="outline-dark" className="w-100">
+            <i className="fab fa-facebook"></i> Register with Facebook <img src={facebook} alt="facebook icon" width={24} height={24} />
+          </Button>
+        </div>
+      </Modal.Body>
+    </Modal>
   );
 };
 
