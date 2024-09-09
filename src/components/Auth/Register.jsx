@@ -22,7 +22,7 @@ const Register = ({ show, handleClose }) => {
 
   return (
     <Modal show={show} onHide={handleClose} centered>
-      <Modal.Header style={{background: '#4763c8', color: 'white'}}>
+      <Modal.Header closeButton style={{background: '#4763c8', color: 'white'}}>
         <Modal.Title>Register</Modal.Title>
       </Modal.Header>
       <Modal.Body>
