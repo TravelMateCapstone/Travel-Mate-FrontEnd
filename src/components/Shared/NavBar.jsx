@@ -160,10 +160,10 @@ function NavBar() {
                   </>
                 ) : (
                   <>
-                    <Button variant="" onClick={handleLoginModal} style={{background: '#4763c8', color: 'white'}} className="fw-bold">
+                    <Button variant="" onClick={handleLoginModal} style={{background: '#4763c8', color: 'white'}} className="fw-bold text-nowrap">
                       Đăng nhập
                     </Button>
-                    <Button variant="" onClick={toggleRegisterModal} style={{background: '#DF6B00', color: 'white'}} className="fw-bold">
+                    <Button variant="" onClick={toggleRegisterModal} style={{background: '#DF6B00', color: 'white'}} className="fw-bold text-nowrap">
                       Đăng kí
                     </Button>
                   </>
