@@ -1,4 +1,5 @@
 import React, { memo, useState } from "react";
+import logo from '../../assets/images/logo.png'
 import {
   Col,
   Navbar,
@@ -30,15 +31,15 @@ function NavBar() {
 
   return (
     <Container>
-      <Navbar bg="light" expand="lg" className="shadow p-2" fixed="top">
-        <Container className="p-0">
+      <Navbar bg="light" expand="lg" className="shadow p-1" fixed="top">
+        <Container fluid className="p-0">
           <Row className="w-100 align-items-center justify-content-between">
             {/* Left Side */}
             <Col lg={4} md={6} sm={6} xs={6} className="d-flex justify-content-start">
               <div className="d-flex align-items-center">
-                <Navbar.Brand href="#home" className="me-0">
+                <Navbar.Brand href="/" className="me-0 ms-3">
                   <img
-                    src="https://via.placeholder.com/40"
+                    src={logo}
                     alt="Logo"
                     width="40"
                     height="40"
@@ -126,13 +127,13 @@ function NavBar() {
 
                       <Dropdown.Menu>
                         <Dropdown.Item as={Link} to={RoutePath.PROFILE}>
-                          Profile
+                          Hồ sơ
                         </Dropdown.Item>
                         <Dropdown.Item as={Link} to={RoutePath.SETTING}>
-                          Setting
+                          Cài đặt
                         </Dropdown.Item>
                         <Dropdown.Divider />
-                        <Dropdown.Item href="#logout">Logout</Dropdown.Item>
+                        <Dropdown.Item href="#logout">Đăng xuất</Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
 

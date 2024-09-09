@@ -9,7 +9,7 @@ function ProfileLayout({ children }) {
   return (
     <Container fluid className="p-0">
       <NavBar />
-      <Container  style={{paddingTop: '100px'}}>
+      <Container  style={{paddingTop: '80px'}}>
         <Row>
           <Col xs={12} sm={4} md={4} lg={3} className="left-side">
             <ProfileCard />
