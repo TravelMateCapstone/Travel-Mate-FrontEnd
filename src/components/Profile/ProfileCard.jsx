@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Button, Image, Container } from 'react-bootstrap';
 import '../../assets/css/Profile/ProfileCard.css'
+import { Link } from 'react-router-dom';
+import RoutePath from '../../routes/RoutePath';
 
 function ProfileCard() {
   return (
@@ -18,7 +20,7 @@ function ProfileCard() {
           <i className="bi bi-geo-alt"></i> Ngu Hanh Son, Da Nang, Viet Nam
         </Card.Text>
         <Container className='buttons-container'>
-          <Button variant="light" className='button-custom'>Edit profile</Button>
+          <Button variant="light" className='button-custom'><Link to={RoutePath.EDITPROFILE}>Edit profile</Link></Button>
           <Button variant="light" className='button-custom'>Setting</Button>
         </Container>
         <Card.Text className='accepting-text'>

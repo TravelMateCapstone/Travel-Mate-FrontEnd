@@ -8,6 +8,7 @@ const RoutePath = {
     EVENT: '/event',
     SETTING: '/setting',
     PROFILE: '/profile',
+    EDITPROFILE: '/editprofile',
 }
 
 export default RoutePath;

@@ -17,6 +17,9 @@ import {
 import '../../assets/css/Shared/NavBar.css';
 import { Link } from "react-router-dom";
 import RoutePath from "../../routes/RoutePath";
+import Login from "../Auth/Login";
+import Register from "../Auth/Register";
+import EditProfile from "../../pages/EditProfile";
 
 function NavBar() {
   const [dropdownValue, setDropdownValue] = useState("Tìm kiếm");
@@ -196,8 +199,14 @@ function NavBar() {
           </Offcanvas.Body>
         </Offcanvas>
       </Navbar>
-
-    
+      <div className="d-none">
+      <Login></Login>
+      </div>
+      <div className="d-none">
+      <Register></Register>
+      </div>
+      <EditProfile></EditProfile>
+      
     </Container>
   );
 }
