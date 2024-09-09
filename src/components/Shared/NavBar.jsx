@@ -59,7 +59,7 @@ function NavBar() {
             {/* Left Side */}
             <Col lg={4} md={6} sm={6} xs={6} className="d-flex justify-content-start">
               <div className="d-flex align-items-center">
-                <Navbar.Brand href="/" className="me-0 ms-3">
+                <Navbar.Brand href="/Travel-Mate-FrontEnd/" className="me-0 ms-3">
                   <img
                     src={logo}
                     alt="Logo"
