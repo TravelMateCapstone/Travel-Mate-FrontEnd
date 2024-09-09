@@ -166,6 +166,10 @@ function NavBar() {
                     <Button variant="" onClick={toggleRegisterModal} style={{background: '#DF6B00', color: 'white', textWrap: "nowrap"}} className="fw-bold">
                       Đăng kí
                     </Button>
+                      {/* Offcanvas Button visible on md and below */}
+                      <Button variant="link" className="p-0 d-lg-none text-black" onClick={toggleCanvas} style={{ height: '50px', width: '50px' }}>
+                      <i className="bi bi-list fs-1"></i>
+                    </Button>
                   </>
                 )}
               </Nav>
@@ -220,3 +224,4 @@ function NavBar() {
 }
 
 export default memo(NavBar);
+ 
