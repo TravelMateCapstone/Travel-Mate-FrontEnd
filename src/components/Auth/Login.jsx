@@ -27,7 +27,7 @@ const Login = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton style={{background: '#4763c8', color: 'white'}}>
-        <Modal.Title>Login</Modal.Title>
+        <Modal.Title>Đăng nhập</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
@@ -35,32 +35,32 @@ const Login = ({ show, handleClose }) => {
             <Form.Label>Email</Form.Label>
             <Form.Control
               type="email"
-              placeholder="Enter your email"
+              placeholder="Nhập email của bạn"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </Form.Group>
           <Form.Group controlId="formPassword" className="mt-3">
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Mật khẩu</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Enter your password"
+              placeholder="Nhập mật khẩu của bạn"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </Form.Group>
           <Button variant="primary" type="submit" className="btn-continue w-100 mt-3">
-            Continue
+            Tiếp tục
           </Button>
           <div className="text-center mt-3">
-            <p>or</p>
+            <p>hoặc</p>
             <Button variant="outline-dark" className="w-100 mb-2">
-              <i className="fab fa-google"></i> Login with Google <img src={google} alt="google icon" width={24} height={24} />
+              <i className="fab fa-google"></i> Đăng nhập với Google <img src={google} alt="google icon" style={{width: '24px', height: '24px'}} />
             </Button>
             <Button variant="outline-dark" className="w-100">
-              <i className="fab fa-facebook"></i> Login with Facebook <img src={facebook} alt="facebook icon" width={24} height={24} />
+              <i className="fab fa-facebook"></i> Đăng nhập với Facebook <img src={facebook} alt="facebook icon" style={{width: '24px', height: '24px'}}/>
             </Button>
           </div>
         </Form>

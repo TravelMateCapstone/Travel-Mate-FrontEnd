@@ -23,7 +23,7 @@ const Register = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton style={{background: '#4763c8', color: 'white'}}>
-        <Modal.Title>Register</Modal.Title>
+        <Modal.Title>Đăng kí</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
@@ -31,7 +31,7 @@ const Register = ({ show, handleClose }) => {
             <Form.Label>Email</Form.Label>
             <Form.Control
               type="email"
-              placeholder="Your email"
+              placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -42,7 +42,7 @@ const Register = ({ show, handleClose }) => {
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Password"
+              placeholder="Mật khẩu"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -53,7 +53,7 @@ const Register = ({ show, handleClose }) => {
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Confirmed password"
+              placeholder="Xác nhận mật khẩu"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
@@ -61,21 +61,21 @@ const Register = ({ show, handleClose }) => {
           </Form.Group>
 
           <p className="mt-3 text-center">
-            We will send you a message to confirm your email address. Please follow the instructions.
+            Chúng tôi sẽ gửi đoạn tin nhắn đến email của bạn. <br/> Hãy làm theo hướng dẫn được viết.
           </p>
 
           <Button variant="primary" type="submit" className="btn-continue w-100 mt-3" style={{background: '#4763c8 !important;'}}>
-            Continue
+            Tiếp tục
           </Button>
         </Form>
 
         <div className="text-center mt-3">
-          <p>or</p>
+          <p>hoặc</p>
           <Button variant="outline-dark" className="w-100 mb-2">
-            <i className="fab fa-google"></i> Register with Google <img src={google} alt="google icon" width={24} height={24} />
+            <i className="fab fa-google"></i> Đăng kí với Google <img src={google} alt="google icon" style={{width: '24px', height: '24px'}} />
           </Button>
           <Button variant="outline-dark" className="w-100">
-            <i className="fab fa-facebook"></i> Register with Facebook <img src={facebook} alt="facebook icon" width={24} height={24} />
+            <i className="fab fa-facebook"></i> Đăng kí với Facebook <img src={facebook} alt="facebook icon" style={{width: '24px', height: '24px'}} />
           </Button>
         </div>
       </Modal.Body>

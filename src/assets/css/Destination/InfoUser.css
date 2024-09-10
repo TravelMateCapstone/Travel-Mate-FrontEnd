@@ -1,0 +1,8 @@
+
+
+@media (max-width: 576px){
+    .info-img{
+        height: 50px !important;
+        width: 50px !important;
+    }
+}
