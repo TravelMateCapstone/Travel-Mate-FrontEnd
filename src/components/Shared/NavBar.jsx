@@ -24,7 +24,7 @@ import { logout } from "../../redux/actions/authActions";
 
 function NavBar() {
   const [dropdownValue, setDropdownValue] = useState("Tìm kiếm");
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated); // Access auth state
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated); 
  
   const [showCanvas, setShowCanvas] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -63,8 +63,7 @@ function NavBar() {
                   <img
                     src={logo}
                     alt="Logo"
-                    width="40"
-                    height="40"
+                    style={{width: '40px', height: '40px'}}
                     className="d-inline-block align-top rounded-5"
                   />
                 </Navbar.Brand>
