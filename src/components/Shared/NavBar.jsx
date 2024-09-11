@@ -155,10 +155,10 @@ function NavBar() {
                   </>
                 ) : (
                   <>
-                    <Button variant="" onClick={handleLoginModal} style={{background: '#4763c8', color: 'white', textWrap: "nowrap", height: '55px'}} className="fw-bold">
+                    <Button variant="" onClick={handleLoginModal} style={{background: '#4763c8', color: 'white', textWrap: "nowrap", height: '55px'}} className="fw-bold btn-login">
                       Đăng nhập
                     </Button>
-                    <Button variant="" onClick={toggleRegisterModal} style={{background: '#DF6B00', color: 'white', textWrap: "nowrap", height: '55px'}} className="fw-bold">
+                    <Button variant="" onClick={toggleRegisterModal} style={{background: '#DF6B00', color: 'white', textWrap: "nowrap", height: '55px'}} className="fw-bold btn-register">
                       Đăng kí
                     </Button>
                       {/* Offcanvas Button visible on md and below */}

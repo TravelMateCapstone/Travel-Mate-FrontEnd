@@ -55,6 +55,10 @@
   color: white;
 }
 
+.btn-login, .btn-register {
+  min-width: 110px !important; 
+}
+
 @media (min-width: 1024px) and (max-width: 1920px) {
   /* .search-dropdown {
     width: 115px !important;
@@ -78,4 +82,91 @@
 
 .navbar-nav a{
   font-size: 22px !important;
+}
+
+@media (max-width: 1024px) {
+  .search-dropdown, .search-dropdown-mb {
+    height: 45px !important;
+    font-size: 12px !important;
+  }
+
+  .searchBar {
+    height: 45px !important;
+    font-size: 12px !important;
+  }
+
+  .messages_action,
+  .notify_action,
+  .avatar {
+    height: 45px !important;
+    width: 45px !important;
+  }
+
+  .navbar-nav a {
+    font-size: 18px !important;
+  }
+
+  .btn {
+    height: 45px !important;
+    font-size: 14px !important;
+  }
+   /* Giảm chiều cao navbar */
+   .navbar {
+    height: 70px !important;
+  }
+
+  /* Giảm kích thước logo */
+  .navbar-brand img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  /* Điều chỉnh khoảng cách margin */
+  .navbar-brand {
+    margin-left: 10px !important;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .search-dropdown, .search-dropdown-mb {
+    height: 40px !important;
+    font-size: 11px !important;
+  }
+
+  .searchBar {
+    height: 40px !important;
+    font-size: 11px !important;
+  }
+
+  .messages_action,
+  .notify_action,
+  .avatar {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  .navbar-nav a {
+    font-size: 16px !important;
+  }
+
+  .btn {
+    height: 40px !important;
+    font-size: 12px !important;
+  }
+   /* Giảm chiều cao navbar */
+   .navbar {
+    height: 60px !important;
+  }
+
+  /* Giảm kích thước logo */
+  .navbar-brand img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* Điều chỉnh khoảng cách margin */
+  .navbar-brand {
+    margin-left: 5px !important;
+  }
 }
