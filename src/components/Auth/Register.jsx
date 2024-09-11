@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col, Modal } from 'react-bootstrap';
+import { Form, Button, Modal } from 'react-bootstrap';
 import '../../assets/css/Auth/Register.css';
-import google from '../../assets/images/google.png'
-import facebook from '../../assets/images/facebook.png'
+import google from '../../assets/images/google.png';
+import facebook from '../../assets/images/facebook.png';
+import '../../assets/css/Auth/Register.css'
 
 const Register = ({ show, handleClose }) => {
   const [email, setEmail] = useState('');
@@ -21,63 +22,133 @@ const Register = ({ show, handleClose }) => {
   };
 
   return (
-    <Modal show={show} onHide={handleClose} centered>
-      <Modal.Header closeButton style={{background: '#4763c8', color: 'white'}}>
-        <Modal.Title>Đăng kí</Modal.Title>
+    <Modal
+      show={show}
+      onHide={handleClose}
+      centered
+      dialogClassName="register-modal"
+    >
+      <Modal.Header
+        style={{
+          color: "black",
+          height: "77px",
+          borderTopLeftRadius: "20px",
+          borderTopRightRadius: "20px",
+          borderBottom: "1px solid #8C8B8B",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+        }}
+      >
+        <Modal.Title className="fw-semibold"
+          style={{
+            position: "absolute",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          Đăng kí
+        </Modal.Title>
+        <Button
+          onClick={handleClose}
+          style={{
+            position: "absolute",
+            right: "15px",
+            top: "15px",
+            background: "transparent",
+            border: "none",
+            fontSize: "18px",
+            fontWeight: "bold",
+            color: "#000",
+            cursor: "pointer",
+          }}
+        >
+          x
+        </Button>
       </Modal.Header>
       <Modal.Body>
+        <Modal.Title style={{ fontSize: "20px"}} className="fw-medium">
+          Chào mừng đến với Travel Mate
+        </Modal.Title>
         <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="formEmail">
-            <Form.Label>Email</Form.Label>
+          <Form.Group
+            controlId="formEmail"
+            style={{ marginTop: "20px", height: "50px" }}
+          >
             <Form.Control
               type="email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              style={{ fontSize: "12px", height: "50px", borderRadius: "10px" }}
               required
             />
           </Form.Group>
-
-          <Form.Group controlId="formPassword" className="mt-3">
-            <Form.Label>Password</Form.Label>
+          <Form.Group controlId="formPassword" style={{ marginTop: "14px" }}>
             <Form.Control
               type="password"
               placeholder="Mật khẩu"
               value={password}
+              style={{ fontSize: "12px", height: "50px", borderRadius: "10px" }}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </Form.Group>
 
-          <Form.Group controlId="formConfirmPassword" className="mt-3">
-            <Form.Label>Confirm Password</Form.Label>
+          <Form.Group controlId="formConfirmPassword" style={{ marginTop: "14px" }}>
             <Form.Control
               type="password"
               placeholder="Xác nhận mật khẩu"
               value={confirmPassword}
+              style={{ fontSize: "12px", height: "50px", borderRadius: "10px" }}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
             />
           </Form.Group>
 
-          <p className="mt-3 text-center">
-            Chúng tôi sẽ gửi đoạn tin nhắn đến email của bạn. <br/> Hãy làm theo hướng dẫn được viết.
-          </p>
+          <small className="fw-normal" style={{ fontSize: "12px" }}>
+            Chúng tôi sẽ gửi tin nhắn đến email của bạn. Hãy làm theo hướng dẫn.
+          </small>
 
-          <Button variant="primary" type="submit" className="btn-continue w-100 mt-3" style={{background: '#4763c8 !important;'}}>
+          <Button
+            variant="primary"
+            type="submit"
+            className="btn-continue w-100 mt-3 fw-bold"
+            style={{ fontSize: "12px", borderRadius: '10px', height: '36px' }}
+          >
             Tiếp tục
           </Button>
+          <div className="text-center-divider mt-3">
+            <span style={{ fontSize: "8px", fontWeight: "bold" }}>hoặc</span>
+          </div>
+          <div className="text-center mt-3">
+            <Button
+              variant="outline-dark"
+              className="w-100 mb-2 d-flex align-items-center justify-content-start"
+              style={{borderRadius: '10px'}}
+            >
+              <img
+                src={google}
+                alt="google icon"
+                style={{ width: "24px", height: "24px", marginRight: "10px" }}
+              />
+              <span className="mx-auto fw-bold" style={{fontSize: '12px'}}>Đăng kí bằng Google</span>
+            </Button>
+            <Button
+              variant="outline-dark"
+              className="w-100 d-flex align-items-center justify-content-start"
+              style={{borderRadius: '10px'}}
+            >
+              <img
+                src={facebook}
+                alt="facebook icon"
+                style={{ width: "24px", height: "24px", marginRight: "10px" }}
+              />
+              <span className="mx-auto fw-bold" style={{fontSize: '12px'}}>Đăng kí bằng Facebook</span>
+            </Button>
+          </div>
         </Form>
-
-        <div className="text-center mt-3">
-          <p>hoặc</p>
-          <Button variant="outline-dark" className="w-100 mb-2">
-            <i className="fab fa-google"></i> Đăng kí với Google <img src={google} alt="google icon" style={{width: '24px', height: '24px'}} />
-          </Button>
-          <Button variant="outline-dark" className="w-100">
-            <i className="fab fa-facebook"></i> Đăng kí với Facebook <img src={facebook} alt="facebook icon" style={{width: '24px', height: '24px'}} />
-          </Button>
-        </div>
       </Modal.Body>
     </Modal>
   );

@@ -3,7 +3,7 @@
   z-index: 1;
   border-radius: 40px;
   padding: 0 12px;
-  height: 40px;
+  height: 55px;
   left: 8px;
   background: #4763c8;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important;
@@ -14,7 +14,7 @@
   z-index: 1;
   border-radius: 40px;
   padding: 0 12px;
-  height: 50px;
+  height: 55px;
   left: 0px;
   background: #4763c8;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important; 
@@ -31,7 +31,7 @@
 .input-group .form-control {
   border-radius: 0 40px 40px 0;
   padding: 0 12px;
-  height: 40px;
+  height: 55px;
   z-index: 0;
 }
 .input-group {
@@ -47,8 +47,8 @@
 .messages_action,
 .notify_action,
 .avatar {
-  height: 40px !important;
-  width: 40px !important;
+  height: 55px !important;
+  width: 55px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,4 +74,8 @@
   display: block;
   position: absolute;
   z-index: 1050;
+}
+
+.navbar-nav a{
+  font-size: 22px !important;
 }

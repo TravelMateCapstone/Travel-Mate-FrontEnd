@@ -8,7 +8,7 @@ function DefaultLayout({ children }) {
   return (
     <Container fluid className="p-0">
       <Navbar />
-      <Container fluid style={{paddingTop: '60px'}}>
+      <Container fluid style={{paddingTop: '100px'}}>
         {children}
       </Container>
       <Footer />

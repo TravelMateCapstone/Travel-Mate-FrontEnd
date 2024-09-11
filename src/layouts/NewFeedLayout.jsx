@@ -8,7 +8,7 @@ function NewFeedLayout({ children }) {
   return (
     <Container fluid className="p-0">
       <NavBar />
-      <Container fluid style={{ paddingTop: '80px' }}>
+      <Container fluid style={{ paddingTop: '100px' }}>
         <Row>
           {/* Column 1 - Hidden on screens smaller than 'md' */}
           <Col md={2} className="column-1 bg-primary d-none d-md-block">

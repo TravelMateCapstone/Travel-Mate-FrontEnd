@@ -1,4 +1,39 @@
 .btn-continue {
-    background-color: #4763c8 !important;
+  background-color: #4763c8 !important;
+}
+
+.modal-content{
+  border-radius: 20px;
+  border: 0px solid black;
+}
+.text-center-divider {
+  position: relative;
+  text-align: center;
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.text-center-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid #ccc; /* Change color and thickness as needed */
+  z-index: 1;
+}
+
+.text-center-divider span {
+  position: relative;
+  padding: 0 10px; /* Adjust padding to your liking */
+  background: white; /* Same as modal background */
+  z-index: 2;
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+ 
+  .modal-content {
+    width: 468px !important;
+    height: 528px !important;
   }
-  
+}

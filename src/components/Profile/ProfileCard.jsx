@@ -12,27 +12,30 @@ function ProfileCard() {
           src="https://cdn.oneesports.vn/cdn-data/sites/4/2024/01/Zed_38.jpg"
           roundedCircle
           className='profile-image'
+          style={{height: '192px', width: '192px'}}
         />
       </div>
       <Card.Body className='card-body-custom shadow rounded-top-3'>
-        <Card.Title className='card-title-custom'>Tran Hai Dang</Card.Title>
-        <Card.Text className='card-text-custom'>
+        <Card.Title className='card-title-custom fw-medium' style={{fontSize: '24px'}}>Tran Hai Dang</Card.Title>
+        <Card.Text className='card-text-custom fw-light' style={{fontSize: '16px'}}>
           <i className="bi bi-geo-alt"></i> Ngu Hanh Son, Da Nang, Viet Nam
         </Card.Text>
-        <Container className='buttons-container'>
-          <Button variant="light" className='button-custom'><Link to={RoutePath.EDITPROFILE}>Edit profile</Link></Button>
-          <Button variant="light" className='button-custom'>Setting</Button>
-        </Container>
+
         <Card.Text className='accepting-text'>
           ACCEPTING GUEST
         </Card.Text>
+        <Container className='buttons-container'>
+          <Button variant="light" className='button-custom fw-light' style={{width: '106px', height: '35px', borderRadius: '30px'}}><Link to={RoutePath.EDITPROFILE}>Edit profile</Link></Button>
+          <Button variant="light" className='button-custom' style={{width: '106px', height: '35px', borderRadius: '30px'}}>Setting</Button>
+        </Container>
+       
       </Card.Body>
       <Card.Body className='card-body-bottom shadow rounded-bottom-3'>
-        <ul className='info-list'>
+        <ul className='info-list fw-light text-nowrap'>
           <li><i className="bi bi-person"></i> 22, Male</li>
           <li><i className="bi bi-geo-alt"></i> Ngu Hanh Son, Da Nang, Viet Nam</li>
-          <li><i className="bi bi-building"></i> Dai hoc FPT Da Nang</li>
-          <li><i className="bi bi-translate"></i> Fluent in English, learning Japanese</li>
+          <li><i className="bi bi-building"></i> Đại học FPT Đà Nẵng</li>
+          <li><i className="bi bi-translate"></i> English, Japanese</li>
           <li><i className="bi bi-check-circle"></i> Member since 2024</li>
           <li><i className="bi bi-shield-shaded"></i> Profile 65% complete</li>
         </ul>
