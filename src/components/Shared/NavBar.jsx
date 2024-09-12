@@ -81,7 +81,7 @@ function NavBar() {
                     <Dropdown.Toggle
                       id="dropdown-custom-1"
                       variant="secondary"
-                      className="search-dropdown text-dropdown"
+                      className="search-dropdown text-dropdown text-black"
                     >
                       {dropdownValue}
                       <i className="bi bi-chevron-down ms-2"></i>
@@ -173,7 +173,7 @@ function NavBar() {
                   <>
                     <Dropdown align="end">
                       <Dropdown.Toggle className="messages_action bg-secondary rounded-5 border-0">
-                        <i className="bi bi-messenger fs-6"></i>
+                        <i className="bi bi-messenger fs-3"></i>
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu>
@@ -191,7 +191,7 @@ function NavBar() {
 
                     <Dropdown align="end">
                       <Dropdown.Toggle className="notify_action bg-secondary rounded-5 border-0">
-                        <i className="bi bi-bell-fill fs-6"></i>
+                        <i className="bi bi-bell-fill fs-3"></i>
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu>
