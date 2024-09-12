@@ -1,8 +1,28 @@
+:root {
+  --primary-color: #007931;
+  --secondary-color: #ffffff;
+  --button-hover-color: #006f2b;
+  --dropdown-bg-color: #007931;
+}
+
+.avatar, .messages_action, .notify_action{
+  height: 55px;
+  width: 55px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+.search-dropdown i {
+  font-size: 12px; /* Điều chỉnh kích thước icon */
+}
+.search-dropdown, .dropdown-menu {
+  position: absolute !important;
+}
 .input-group,
 .form-control:focus {
   z-index: 0;
 }
-
 .searchBar {
   height: 40px !important;
   border-radius: 60px 0px 0px 60px !important;
@@ -16,8 +36,10 @@
   left: 0;
   top: 0;
   border-radius: 43px;
+  height: 40px !important;
   transform: translateX(-30px);
 }
+
 .btn-login {
   width: 144px;
   height: 35px;
@@ -25,9 +47,10 @@
   padding: 2px;
   border-radius: 30px;
   font-size: 16px !important;
-  color: white;
-  background: #007931;
+  color: var(--secondary-color);
+  background: var(--primary-color);
 }
+
 .btn-register {
   width: 125px;
   height: 35px;
@@ -37,14 +60,17 @@
   font-size: 16px !important;
   border: 0px;
 }
+
 .btn-login:hover {
-  color: white;
-  background: #007931;
+  color: var(--secondary-color);
+  background: var(--button-hover-color);
 }
-.drop-title{
+
+.drop-title {
   font-size: 12px !important;
 }
-.drop-sub{
+
+.drop-sub {
   font-size: 10px !important;
 }
 
@@ -96,27 +122,39 @@
     left: 0;
     top: 0;
     border-radius: 43px;
+    height: 32px !important;
     transform: translateX(-30px);
   }
-  .searchBar{
-    height: 38px;
+
+  .searchBar {
+    height: 32px !important;
     border-radius: 5px !important;
     border-start-start-radius: 0px !important;
     border-end-start-radius: 0px !important;
   }
-  .search-dropdown-mb{
+
+  .search-dropdown-mb {
     border-radius: 5px !important;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
   }
-  .search-dropdown-mb{
-    width: 180px !important;
-    background: #007931 !important;
+
+  .search-dropdown-mb {
+    font-size: 12px;
+    width: 150px !important;
+    background: var(--dropdown-bg-color) !important;
   }
 }
+
 .text-dropdown {
   font-size: 12px !important;
 }
+
+.nav-link.active {
+  color: var(--primary-color) !important; /* Màu xanh cho mục đã chọn */
+  font-weight: bold;
+}
+
 @media (max-width: 767px) {
   .navbar {
     height: 72px;
@@ -128,19 +166,23 @@
     margin-right: 16px;
   }
 
-  .searchBar{
-    height: 38px;
+  .searchBar {
+    height: 32px !important;
     border-radius: 5px !important;
     border-start-start-radius: 0px !important;
     border-end-start-radius: 0px !important;
   }
-  .search-dropdown-mb{
+
+  .search-dropdown-mb {
     border-radius: 5px !important;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
   }
-  .search-dropdown-mb{
-    width: 180px !important;
-    background: #007931 !important;
+
+  .search-dropdown-mb {
+    font-size: 12px;
+    width: 150px !important;
+    background: var(--dropdown-bg-color) !important;
   }
+  
 }

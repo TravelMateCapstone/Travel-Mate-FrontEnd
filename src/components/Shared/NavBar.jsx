@@ -15,7 +15,7 @@ import {
   Offcanvas,
 } from "react-bootstrap";
 import "../../assets/css/Shared/NavBar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import RoutePath from "../../routes/RoutePath";
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
@@ -30,21 +30,21 @@ function NavBar() {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
 
+  const location = useLocation(); // Lấy đường dẫn hiện tại
+
   const handleSelect = (eventKey) => {
     setDropdownValue(eventKey);
   };
+
   const dispatch = useDispatch();
   const toggleCanvas = () => setShowCanvas(!showCanvas);
   const handleLoginModal = () => setShowLoginModal(!showLoginModal);
   const toggleRegisterModal = () => setShowRegisterModal(!showRegisterModal);
 
-  const handleLoginSuccess = () => {
-    setIsAuthenticated(true); // Set authentication to true after login
-    setShowLoginModal(false); // Close the login modal
-  };
   const handleLogout = () => {
     dispatch(logout());
   };
+
   return (
     <Container>
       <Navbar bg="light" expand="lg" className="shadow p-1" fixed="top">
@@ -84,12 +84,13 @@ function NavBar() {
                       className="search-dropdown text-dropdown"
                     >
                       {dropdownValue}
+                      <i className="bi bi-chevron-down ms-2"></i>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                       <Dropdown.Item eventKey="Người địa phương">
                         <div>
                           <p className="m-0">
-                            <i class="bi bi-people"></i> Người địa phương
+                            <i className="bi bi-people"></i> Người địa phương
                           </p>
                         </div>
                         <small>ㅤTìm bạn cùng khám phá thành phố</small>
@@ -97,7 +98,7 @@ function NavBar() {
                       <Dropdown.Item eventKey="Khách du lịch">
                         <div>
                           <p className="m-0">
-                            <i class="bi bi-backpack"></i> Khách du lịch
+                            <i className="bi bi-backpack"></i> Khách du lịch
                           </p>
                         </div>
                         <small>ㅤKết nối với bạn để trải nghiệm</small>
@@ -105,7 +106,7 @@ function NavBar() {
                       <Dropdown.Item eventKey="Địa điểm du lịch">
                         <div>
                           <p className="m-0">
-                            <i class="bi bi-geo"></i> Địa điểm du lịch
+                            <i className="bi bi-geo"></i> Địa điểm du lịch
                           </p>
                         </div>
                         <small>ㅤKhám phá điểm đến thú vị</small>
@@ -124,28 +125,36 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={RoutePath.DASHBOARD}
-                  className="text-nowrap fw-semibold"
+                  className={`text-nowrap fw-semibold ${
+                    location.pathname === RoutePath.DASHBOARD ? "active" : ""
+                  }`}
                 >
                   Trang chủ
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to={RoutePath.EVENT}
-                  className="text-nowrap fw-semibold"
+                  className={`text-nowrap fw-semibold ${
+                    location.pathname === RoutePath.EVENT ? "active" : ""
+                  }`}
                 >
                   Sự kiện
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to={RoutePath.GROUP}
-                  className="text-nowrap fw-semibold"
+                  className={`text-nowrap fw-semibold ${
+                    location.pathname === RoutePath.GROUP ? "active" : ""
+                  }`}
                 >
                   Nhóm
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to={RoutePath.SETTING}
-                  className="text-nowrap fw-semibold"
+                  className={`text-nowrap fw-semibold ${
+                    location.pathname === RoutePath.SETTING ? "active" : ""
+                  }`}
                 >
                   Cài đặt
                 </Nav.Link>
@@ -232,14 +241,14 @@ function NavBar() {
                   <>
                     <Button
                       variant=""
-                      onClick={handleLoginModal}
+                      onClick={toggleRegisterModal}
                       className="btn-register fw-medium"
                     >
                       Đăng kí
                     </Button>
                     <Button
                       variant=""
-                      onClick={toggleRegisterModal}
+                      onClick={handleLoginModal}
                       className="btn-login fw-medium"
                     >
                       Đăng nhập
@@ -260,7 +269,10 @@ function NavBar() {
 
         <Offcanvas show={showCanvas} onHide={toggleCanvas} placement="start">
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title className="fw-bold"><img src={logo} alt="logo" className="logo"/>Travelmate</Offcanvas.Title>
+            <Offcanvas.Title className="fw-bold">
+              <img src={logo} alt="logo" className="logo" />
+              Travelmate
+            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Form className="mb-4 d-flex align-items-center">
@@ -271,34 +283,39 @@ function NavBar() {
                   className="w-100 search-dropdown-mb"
                 >
                   {dropdownValue}
+                  <i className="bi bi-chevron-down ms-2"></i>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                      <Dropdown.Item eventKey="Người địa phương">
-                        <div>
-                          <p className="m-0 drop-title">
-                            <i class="bi bi-people"></i> Người địa phương
-                          </p>
-                        </div>
-                        <small className="drop-sub">ㅤTìm bạn cùng khám phá thành phố</small>
-                      </Dropdown.Item>
-                      <Dropdown.Item eventKey="Khách du lịch">
-                        <div>
-                          <p className="m-0 drop-title">
-                            <i class="bi bi-backpack"></i> Khách du lịch
-                          </p>
-                        </div>
-                        <small className="drop-sub">ㅤKết nối với bạn để trải nghiệm</small>
-                      </Dropdown.Item>
-                      <Dropdown.Item eventKey="Địa điểm du lịch">
-                        <div>
-                          <p className="m-0 drop-title">
-                            <i class="bi bi-geo"></i> Địa điểm du lịch
-                          </p>
-                        </div>
-                        <small className="drop-sub">ㅤKhám phá điểm đến thú vị</small>
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
+                  <Dropdown.Item eventKey="Người địa phương">
+                    <div>
+                      <p className="m-0 drop-title">
+                        <i className="bi bi-people"></i> Người địa phương
+                      </p>
+                    </div>
+                    <small className="drop-sub">
+                      ㅤTìm bạn cùng khám phá thành phố
+                    </small>
+                  </Dropdown.Item>
+                  <Dropdown.Item eventKey="Khách du lịch">
+                    <div>
+                      <p className="m-0 drop-title">
+                        <i className="bi bi-backpack"></i> Khách du lịch
+                      </p>
+                    </div>
+                    <small className="drop-sub">
+                      ㅤKết nối với bạn để trải nghiệm
+                    </small>
+                  </Dropdown.Item>
+                  <Dropdown.Item eventKey="Địa điểm du lịch">
+                    <div>
+                      <p className="m-0 drop-title">
+                        <i className="bi bi-geo"></i> Địa điểm du lịch
+                      </p>
+                    </div>
+                    <small className="drop-sub">ㅤKhám phá điểm đến thú vị</small>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
               </Dropdown>
               <InputGroup>
                 <FormControl
@@ -311,11 +328,7 @@ function NavBar() {
             </Form>
 
             <Nav className="d-flex flex-column gap-3">
-              <Nav.Link
-                as={Link}
-                to={RoutePath.DASHBOARD}
-                onClick={toggleCanvas}
-              >
+              <Nav.Link as={Link} to={RoutePath.DASHBOARD} onClick={toggleCanvas}>
                 Trang chủ
               </Nav.Link>
               <Nav.Link as={Link} to={RoutePath.EVENT} onClick={toggleCanvas}>

@@ -1,6 +1,6 @@
 :root {
   --background-color: #fbfbfd;
-  --footer-button-background: #4763c8;
+  --footer-button-background: #007931;
 }
 .new_footer_area {
   background: var(--background-color);
@@ -106,7 +106,7 @@ button:focus {
 .btn_get_two {
   -webkit-box-shadow: none;
   box-shadow: none;
-  background: #4763c8;
+  background: var(--footer-button-background);
   color: #fff;
 }
 .new_footer_top .f_social_icon a:hover {
