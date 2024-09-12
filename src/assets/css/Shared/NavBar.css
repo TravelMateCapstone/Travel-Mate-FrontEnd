@@ -1,3 +1,10 @@
+.navbar {
+  height: 92px;
+}
+.btn-canvas{
+  height: 55px;
+  width: 55px;
+}
 .search-dropdown {
   position: relative;
   z-index: 1;
@@ -8,7 +15,14 @@
   background: #4763c8;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4) !important;
   font-size: 14px !important;
+  width: 130px;
 }
+
+.logo{
+  width: 55px;
+  height: 55px;
+}
+
 .search-dropdown-mb {
   position: relative;
   z-index: 1;
@@ -57,6 +71,16 @@
 
 .btn-login, .btn-register {
   min-width: 110px !important; 
+  height: 55px;
+  color: white !important;
+  text-wrap: nowrap;
+}
+
+.btn-login{
+  background: #4763c8 !important;
+}
+.btn-register{
+ background: #DF6B00 !important;
 }
 
 @media (min-width: 1024px) and (max-width: 1920px) {
@@ -170,3 +194,9 @@
     margin-left: 5px !important;
   }
 }
+@media (max-width: 576px){
+  .avatar{
+    height: 40px !important;
+    width: 40px !important;
+  }
+} 

@@ -95,14 +95,14 @@ function Destination() {
       />
       <Container>
         <Row className="mt-3">
-          <Col lg={4} md={6} className="mb-3">
+          <Col lg={4} md={4} className="mb-3">
             <Card className="rounded-0">
               <Card.Header className="text-center">
-                <Card.Title className="d-flex justify-content-center align-items-center ">
+                <Card.Title className="d-flex justify-content-center align-items-center">
                   <img style={{ width: "40px" }} src={house} alt="icon" />{" "}
-                  <h2 className="mb-0 mt-2 fw-bold">Local Host</h2>
+                  <h2 className="mb-0 mt-2 fw-bold info-title">Local Host</h2>
                 </Card.Title>
-                <Card.Text className="fw-bold">
+                <Card.Text className="fw-bolder info-subtext" >
                   Trải nghiệm cùng một trong 1254 Host tại Hà Nội.
                 </Card.Text>
               </Card.Header>
@@ -127,14 +127,14 @@ function Destination() {
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={4} md={6} className="mb-3">
+          <Col lg={4} md={4} className="mb-3">
             <Card className="rounded-0">
               <Card.Header className="text-center">
                 <Card.Title className="d-flex justify-content-center align-items-center">
                   <img style={{ width: "40px" }} src={fire} alt="icon" />{" "}
-                  <h2 className="mb-0 mt-2 fw-bold">Upcoming Host</h2>
+                  <h2 className="mb-0 mt-2 fw-bold info-title">Upcoming Host</h2>
                 </Card.Title>
-                <Card.Text className="fw-bold">
+                <Card.Text className="fw-bolder info-subtext" >
                   Gặp gỡ một số trong 96 du khách đến Hà Nội.
                 </Card.Text>
               </Card.Header>
@@ -159,14 +159,14 @@ function Destination() {
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={4} md={12} className="mb-3">
+          <Col lg={4} md={4} className="mb-3">
             <Card className="rounded-0">
               <Card.Header className="text-center">
                 <Card.Title className="d-flex justify-content-center align-items-center ">
                   <img style={{ width: "40px" }} src={bestFriend} alt="icon" />{" "}
-                  <h2 className="mb-0 mt-2 fw-bold">Hangout</h2>
+                  <h2 className="mb-0 mt-2 fw-bold info-title">Hangout</h2>
                 </Card.Title>
-                <Card.Text className="fw-bold">
+                <Card.Text className="fw-bolder info-subtext" >
                   20 thành viên đang sẵn sàng gặp gỡ ngay lúc này.
                 </Card.Text>
               </Card.Header>

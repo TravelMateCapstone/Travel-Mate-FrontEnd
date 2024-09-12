@@ -1,5 +1,7 @@
 
-
+.info-subtext{
+    font-size: 14px;
+}
 .destination-banner{
     height: 400px;
     object-fit: cover;
@@ -20,5 +22,13 @@
         display: grid;
         grid-template-columns: repeat(3, 2fr);
         gap: 1px;
+    }
+}
+@media (max-width: 768px){
+    .info-subtext{
+        font-size: 10px !important;
+    }
+    .info-title{
+        font-size: 16px !important;
     }
 }

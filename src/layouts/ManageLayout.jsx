@@ -6,7 +6,6 @@ function ManageLayout({ children }) {
   return (
     <Container fluid className='p-0'>
         <NavBar/>
-        ManageLayout
         <Container>
             <Row>
                 <Col lg={3} md={3} >Sidebar</Col>

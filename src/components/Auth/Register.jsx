@@ -3,7 +3,6 @@ import { Form, Button, Modal } from 'react-bootstrap';
 import '../../assets/css/Auth/Register.css';
 import google from '../../assets/images/google.png';
 import facebook from '../../assets/images/facebook.png';
-import '../../assets/css/Auth/Register.css'
 
 const Register = ({ show, handleClose }) => {
   const [email, setEmail] = useState('');
@@ -28,81 +27,47 @@ const Register = ({ show, handleClose }) => {
       centered
       dialogClassName="register-modal"
     >
-      <Modal.Header
-        style={{
-          color: "black",
-          height: "77px",
-          borderTopLeftRadius: "20px",
-          borderTopRightRadius: "20px",
-          borderBottom: "1px solid #8C8B8B",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "relative",
-        }}
-      >
-        <Modal.Title className="fw-semibold"
-          style={{
-            position: "absolute",
-            left: "50%",
-            transform: "translateX(-50%)",
-          }}
-        >
+      <Modal.Header className="modal-header-custom">
+        <Modal.Title className="modal-title-centered fw-semibold">
           Đăng kí
         </Modal.Title>
-        <Button
-          onClick={handleClose}
-          style={{
-            position: "absolute",
-            right: "15px",
-            top: "15px",
-            background: "transparent",
-            border: "none",
-            fontSize: "18px",
-            fontWeight: "bold",
-            color: "#000",
-            cursor: "pointer",
-          }}
-        >
+        <Button className="modal-close-btn" onClick={handleClose}>
           x
         </Button>
       </Modal.Header>
       <Modal.Body>
-        <Modal.Title style={{ fontSize: "20px"}} className="fw-medium">
+        <Modal.Title className="modal-body-title fw-medium">
           Chào mừng đến với Travel Mate
         </Modal.Title>
         <Form onSubmit={handleSubmit}>
-          <Form.Group
-            controlId="formEmail"
-            style={{ marginTop: "20px", height: "50px" }}
-          >
+          <Form.Group controlId="formEmail" className="mt-3">
             <Form.Control
               type="email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{ fontSize: "12px", height: "50px", borderRadius: "10px" }}
+              className="form-control-custom"
               required
             />
           </Form.Group>
-          <Form.Group controlId="formPassword" style={{ marginTop: "14px" }}>
+          <Form.Group controlId="formPassword" className="mt-2">
             <Form.Control
               type="password"
               placeholder="Mật khẩu"
               value={password}
-              style={{ fontSize: "12px", height: "50px", borderRadius: "10px" }}
               onChange={(e) => setPassword(e.target.value)}
+              className="form-control-custom"
               required
             />
           </Form.Group>
 
-          <Form.Group controlId="formConfirmPassword" style={{ marginTop: "14px" }}>
+          <Form.Group controlId="formConfirmPassword" className="mt-2">
             <Form.Control
               type="password"
               placeholder="Xác nhận mật khẩu"
               value={confirmPassword}
-              style={{ fontSize: "12px", height: "50px", borderRadius: "10px" }}
               onChange={(e) => setConfirmPassword(e.target.value)}
+              className="form-control-custom"
               required
             />
           </Form.Group>
@@ -115,37 +80,20 @@ const Register = ({ show, handleClose }) => {
             variant="primary"
             type="submit"
             className="btn-continue w-100 mt-3 fw-bold"
-            style={{ fontSize: "12px", borderRadius: '10px', height: '36px' }}
           >
             Tiếp tục
           </Button>
           <div className="text-center-divider mt-3">
-            <span style={{ fontSize: "8px", fontWeight: "bold" }}>hoặc</span>
+            <span>hoặc</span>
           </div>
           <div className="text-center mt-3">
-            <Button
-              variant="outline-dark"
-              className="w-100 mb-2 d-flex align-items-center justify-content-start"
-              style={{borderRadius: '10px'}}
-            >
-              <img
-                src={google}
-                alt="google icon"
-                style={{ width: "24px", height: "24px", marginRight: "10px" }}
-              />
-              <span className="mx-auto fw-bold" style={{fontSize: '12px'}}>Đăng kí bằng Google</span>
+            <Button variant="outline-dark" className="social-btn">
+              <img src={google} alt="google icon" />
+              <span>Đăng kí bằng Google</span>
             </Button>
-            <Button
-              variant="outline-dark"
-              className="w-100 d-flex align-items-center justify-content-start"
-              style={{borderRadius: '10px'}}
-            >
-              <img
-                src={facebook}
-                alt="facebook icon"
-                style={{ width: "24px", height: "24px", marginRight: "10px" }}
-              />
-              <span className="mx-auto fw-bold" style={{fontSize: '12px'}}>Đăng kí bằng Facebook</span>
+            <Button variant="outline-dark" className="social-btn">
+              <img src={facebook} alt="facebook icon" />
+              <span>Đăng kí bằng Facebook</span>
             </Button>
           </div>
         </Form>

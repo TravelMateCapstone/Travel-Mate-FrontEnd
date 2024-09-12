@@ -1,6 +1,6 @@
 .card-custom {
-  width: 100%; /* Adjust width to fit column size */
-  margin: 0 auto; /* Center the card in its column */
+  width: 100%;
+  margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
   border: 0px;
@@ -14,8 +14,8 @@
 }
 
 .profile-image {
-  width: 200px;
-  height: 200px;
+  width: 192px;
+  height: 192px;
   position: relative;
   z-index: 1;
   object-fit: cover;
@@ -31,14 +31,14 @@
 }
 
 .card-title-custom {
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-bottom: 10px;
   margin-top: 90px;
 }
 
 .card-text-custom {
   margin-bottom: 14px;
-  font-size: 0.9rem;
+  font-size: 16px;
 }
 
 .buttons-container {
@@ -48,8 +48,10 @@
 
 .button-custom {
   font-size: 0.8rem;
-  width: 90px;
+  width: 106px;
+  height: 35px;
   margin-bottom: 20px;
+  border-radius: 30px;
 }
 
 .accepting-text {
@@ -73,18 +75,19 @@
   margin: 0;
   font-size: 0.9rem;
 }
-.info-list > li{
-    margin-bottom: 19px;
-    font-size: 16px;
+
+.info-list > li {
+  margin-bottom: 19px;
+  font-size: 16px;
 }
 
-@media only screen and (min-width: 1440px) and (max-width: 1920px){
-  .card-custom{
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+  .card-custom {
     width: 332px;
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .button-custom {
     font-size: 10px;
     margin: 5px;
@@ -93,38 +96,44 @@
     text-wrap: nowrap;
     padding: 2px;
   }
+
   .card-title-custom {
     font-size: 1.2rem;
     margin-bottom: 5px;
     margin-top: 80px;
   }
-  .accepting-text{
+
+  .accepting-text {
     font-size: 14px;
     margin: 0px;
   }
-  .card-text-custom{
+
+  .card-text-custom {
     font-size: 10px !important;
     margin-bottom: 5px;
   }
-  .info-list li{
+
+  .info-list li {
     font-size: 12px;
     margin-bottom: 5px;
   }
+
   .profile-image {
     width: 130px !important;
     height: 130px !important;
   }
 }
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
   .card-custom {
-    width: 100%; /* Adjust width to fit column size */
-    margin: 0 auto; /* Center the card in its column */
+    width: 100%;
+    margin: 0 auto;
     border-radius: 15px;
     overflow: hidden;
     border: 0px;
   }
-  .buttons-container{
+
+  .buttons-container {
     display: flex;
     justify-content: center;
   }

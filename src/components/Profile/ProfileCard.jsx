@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, Image, Container } from 'react-bootstrap';
-import '../../assets/css/Profile/ProfileCard.css'
+import '../../assets/css/Profile/ProfileCard.css';
 import { Link } from 'react-router-dom';
 import RoutePath from '../../routes/RoutePath';
 
@@ -12,12 +12,13 @@ function ProfileCard() {
           src="https://cdn.oneesports.vn/cdn-data/sites/4/2024/01/Zed_38.jpg"
           roundedCircle
           className='profile-image'
-          style={{height: '192px', width: '192px'}}
         />
       </div>
       <Card.Body className='card-body-custom shadow rounded-top-3'>
-        <Card.Title className='card-title-custom fw-medium' style={{fontSize: '24px'}}>Tran Hai Dang</Card.Title>
-        <Card.Text className='card-text-custom fw-light' style={{fontSize: '16px'}}>
+        <Card.Title className='card-title-custom fw-medium'>
+          Tran Hai Dang
+        </Card.Title>
+        <Card.Text className='card-text-custom fw-light'>
           <i className="bi bi-geo-alt"></i> Ngu Hanh Son, Da Nang, Viet Nam
         </Card.Text>
 
@@ -25,10 +26,13 @@ function ProfileCard() {
           ACCEPTING GUEST
         </Card.Text>
         <Container className='buttons-container'>
-          <Button variant="light" className='button-custom fw-light' style={{width: '106px', height: '35px', borderRadius: '30px'}}><Link to={RoutePath.EDITPROFILE}>Edit profile</Link></Button>
-          <Button variant="light" className='button-custom' style={{width: '106px', height: '35px', borderRadius: '30px'}}>Setting</Button>
+          <Button variant="light" className='button-custom fw-light'>
+            <Link to={RoutePath.EDITPROFILE}>Edit profile</Link>
+          </Button>
+          <Button variant="light" className='button-custom'>
+            Setting
+          </Button>
         </Container>
-       
       </Card.Body>
       <Card.Body className='card-body-bottom shadow rounded-bottom-3'>
         <ul className='info-list fw-light text-nowrap'>

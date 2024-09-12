@@ -49,7 +49,7 @@ function NavBar() {
   };
   return (
     <Container>
-      <Navbar bg="light" expand="lg" className="shadow p-1" fixed="top" style={{height: '92px'}}>
+      <Navbar bg="light" expand="lg" className="shadow p-1" fixed="top">
         <Container fluid className="p-0">
           <Row className="w-100 align-items-center justify-content-between">
             {/* Left Side */}
@@ -59,14 +59,13 @@ function NavBar() {
                   <img
                     src={logo}
                     alt="Logo"
-                    style={{width: '55px', height: '55px'}}
-                    className="d-inline-block align-top rounded-5"
+                    className="d-inline-block align-top rounded-5 logo"
                   />
                 </Navbar.Brand>
 
                 <Form className="d-none d-md-flex w-100">
                   <Dropdown as={ButtonGroup} onSelect={handleSelect}>
-                    <Dropdown.Toggle id="dropdown-custom-1" variant="primary" className="search-dropdown" style={{width : '130px'}}>
+                    <Dropdown.Toggle id="dropdown-custom-1" variant="primary" className="search-dropdown">
                       {dropdownValue}
                     </Dropdown.Toggle>
 
@@ -128,8 +127,7 @@ function NavBar() {
                     <Dropdown align='end'>
                       <Dropdown.Toggle className="avatar bg-secondary rounded-5 border-0 p-0">
                         <img
-                          height={55}
-                          width={55}
+                          
                           className="object-fit-cover rounded-5"
                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRez3lFozeHy6f4R0eoyEaIlM5lunDXiEbICA&s"
                           alt="avatar"
@@ -149,20 +147,20 @@ function NavBar() {
                     </Dropdown>
 
                     {/* Offcanvas Button visible on md and below */}
-                    <Button variant="link" className="p-0 d-lg-none text-black" onClick={toggleCanvas} style={{ height: '55px', width: '55px' }}>
+                    <Button variant="link" className="p-0 d-lg-none text-black btn-canvas" onClick={toggleCanvas}>
                       <i className="bi bi-list fs-1"></i>
                     </Button>
                   </>
                 ) : (
                   <>
-                    <Button variant="" onClick={handleLoginModal} style={{background: '#4763c8', color: 'white', textWrap: "nowrap", height: '55px'}} className="fw-bold btn-login">
+                    <Button variant="" onClick={handleLoginModal} className="fw-bold btn-login">
                       Đăng nhập
                     </Button>
-                    <Button variant="" onClick={toggleRegisterModal} style={{background: '#DF6B00', color: 'white', textWrap: "nowrap", height: '55px'}} className="fw-bold btn-register">
+                    <Button variant="" onClick={toggleRegisterModal} className="fw-bold btn-register">
                       Đăng kí
                     </Button>
                       {/* Offcanvas Button visible on md and below */}
-                      <Button variant="link" className="p-0 d-lg-none text-black" onClick={toggleCanvas} style={{ height: '55px', width: '55px' }}>
+                      <Button variant="link" className="p-0 d-lg-none text-black btn-canvas" onClick={toggleCanvas} >
                       <i className="bi bi-list fs-1"></i>
                     </Button>
                   </>
