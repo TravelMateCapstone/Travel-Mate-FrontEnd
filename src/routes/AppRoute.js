@@ -13,7 +13,7 @@ import RoutePath from "./RoutePath"
 
 
 const publishRoutes = [
-    { path: RoutePath.DASHBOARD, component: Dashboard, layout: NewFeedLayout },
+    { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
     { path: RoutePath.DESTINATION, component: Destination, layout: DefaultLayout },
 ]

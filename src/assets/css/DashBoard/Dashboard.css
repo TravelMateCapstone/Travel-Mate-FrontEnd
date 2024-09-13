@@ -1,0 +1,78 @@
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: start;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffe609;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.btn-explore {
+  background: white;
+  color: black;
+}
+.btn-explore:hover {
+  background: white;
+  color: black;
+}
+.header-section{
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .banner-content h1{
+    font-size: 30px;
+  }
+  .banner-content p{
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .btn-explore{
+    font-size: 16px;
+  }
+  .banner-container{
+    height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+    .banner-content h1{
+      font-size: 16px;
+    }
+    .banner-content p{
+      font-size: 8px;
+      margin-bottom: 8px;
+    }
+    .btn-explore{
+      font-size: 8px;
+      width: 110px;
+    }
+    .banner-container{
+      height: 200px;
+    }
+}
