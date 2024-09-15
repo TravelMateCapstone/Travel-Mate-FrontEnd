@@ -27,7 +27,7 @@ function ProfileCard() {
         </Card.Text>
         <Container className='buttons-container'>
           <Button variant="light" className='button-custom fw-light'>
-            <Link to={RoutePath.EDITPROFILE}>Edit profile</Link>
+            <Link  to={RoutePath.EDITPROFILE}>Edit profile</Link>
           </Button>
           <Button variant="light" className='button-custom'>
             Setting

@@ -1,0 +1,55 @@
+.edit-pro-container{
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 1187px !important;
+    height: 1754px !important;
+    padding: 28px;
+    border-radius: 20px;
+   font-size: 20px;
+
+}
+.display-form{
+    /* display: flex;
+    justify-content: space-between; */
+   
+
+}
+.form-input{
+    width: 252.43px;
+    height: 30px;
+    border-radius: 20px;
+}
+.text-form{
+    border-radius: 20px;
+    height: 283px;
+    border: 1px solid black;
+}
+.text-form-favarite{
+    border-radius: 20px;
+    height: 67px;
+    border: 1px solid black;
+}
+.label-small-form{
+    /* width: 252.43px; */
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+    
+}
+  
+.no-padding-margin {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .vertical-divider {
+    border-left: 1px solid #ddd;
+    height: 100%;
+    width: 0; /* Đảm bảo đường thẳng không chiếm thêm không gian ngang */
+  }
+  
+  .label-middel-form {
+    /* width: 797.76px; */
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+  }
