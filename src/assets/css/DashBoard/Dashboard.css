@@ -44,6 +44,28 @@
   font-size: 30px;
 }
 
+.host-gallery {
+  display: flex;
+  flex-wrap: nowrap; /* Không cho phép các thẻ xuống dòng */
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  gap: 20px; /* Khoảng cách giữa các HostCard */
+  padding: 10px 0;
+}
+
+
+.swiper-scrollbar {
+  background-color: rgba(0, 0, 0, 0.2); /* Màu nền của scrollbar */
+  height: 8px; /* Chiều cao của scrollbar */
+  border-radius: 10px; /* Bo tròn thanh cuộn */
+}
+
+.swiper-scrollbar-drag {
+  background-color: #007bff; /* Màu của thanh kéo */
+  border-radius: 10px; /* Bo tròn thanh kéo */
+}
+
+
+
 @media (min-width: 768px) and (max-width: 991px){
   .banner-content h1{
     font-size: 30px;

@@ -11,12 +11,9 @@ function DestinationCard({ image, title, description }) {
       />
 
       {/* Content (Text + Button) */}
-      <div className="content">
-        <h1>{title}</h1>
+      <div className="content me-3">
+        <div className='d-flex justify-content-between'><h1>{title}</h1> <button>Chi tiết</button></div>
         <p>{description}</p>
-
-        {/* Button */}
-        <button>Chi tiết</button>
       </div>
     </div>
   );
