@@ -1,100 +1,218 @@
-.banner-container {
+.carousel-css {
+  border-radius: 20px;
+  max-width: 100%; /* Đảm bảo không vượt quá chiều rộng màn hình */
+}
+.mySwiper-event{
+  height: 481px !important;
+  width: 100% !important;
+}
+
+.event-slide {
   position: relative;
   width: 100%;
-  height: 450px;
-}
-
-.banner {
-  width: 100%;
   height: 100%;
+  height: 481px !important;
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  border-radius: 8px;
 }
 
-.banner-content {
+.event-slide::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 34%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%; /* You can adjust this value to control the gradient's height */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradient from bottom to top */
+  border-radius: 8px; /* Ensures the gradient respects the image's border radius */
+  z-index: 1; /* Ensure the gradient appears above the image */
+}
+
+.event-text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2; /* Ensure the text appears above the gradient */
   color: white;
-  text-align: start;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) !important;
 }
 
-.banner-content h1 {
-  font-size: 3rem;
+.event-title {
+  font-size: 36px;
   font-weight: bold;
-  color: #ffe609;
+  margin: 0;
 }
 
-.banner-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-.btn-explore {
-  background: white;
-  color: black;
-}
-.btn-explore:hover {
-  background: white;
-  color: black;
-}
-.header-section{
-  color: black;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 30px;
+.event-date, .event-location {
+  font-size: 16px;
+  margin: 5px 0 0 0;
 }
 
-.host-gallery {
-  display: flex;
-  flex-wrap: nowrap; /* Không cho phép các thẻ xuống dòng */
-  overflow-x: auto; /* Cho phép cuộn ngang */
-  gap: 20px; /* Khoảng cách giữa các HostCard */
-  padding: 10px 0;
+/* Mobile phones (<= 576px) */
+@media (max-width: 576px) {
+  .banner-content h1 {
+    font-size: 14px;
+  }
+  .banner-content p {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .btn-explore {
+    font-size: 8px;
+    width: 90px;
+  }
+  .banner-container {
+    height: 180px;
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng màn hình */
+    overflow: hidden; /* Ngăn việc tràn ra ngoài */
+  }
+  .header-section {
+    font-size: 20px;
+  }
+  .favorite-destination-title {
+    font-size: 18px;
+  }
+  .carousel-css {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng màn hình */
+  }
 }
 
-
-.swiper-scrollbar {
-  background-color: rgba(0, 0, 0, 0.2); /* Màu nền của scrollbar */
-  height: 8px; /* Chiều cao của scrollbar */
-  border-radius: 10px; /* Bo tròn thanh cuộn */
+/* Tablets (577px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .banner-container {
+    height: 250px;
+    max-width: 100%;
+    overflow: hidden; /* Ngăn việc tràn ra ngoài */
+  }
+  .banner-content h1 {
+    font-size: 18px;
+  }
+  .banner-content p {
+    font-size: 12px;
+  }
+  .btn-explore {
+    font-size: 10px;
+    width: 120px;
+  }
+  .header-section {
+    font-size: 22px;
+  }
+  .favorite-destination-title {
+    font-size: 20px;
+  }
+  .carousel-css {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    max-width: 100%;
+  }
 }
 
-.swiper-scrollbar-drag {
-  background-color: #007bff; /* Màu của thanh kéo */
-  border-radius: 10px; /* Bo tròn thanh kéo */
+/* Small laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .banner-container {
+    height: 350px;
+    max-width: 100%;
+    overflow: hidden; /* Ngăn việc tràn ra ngoài */
+  }
+  .banner-content h1 {
+    font-size: 22px;
+  }
+  .banner-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .btn-explore {
+    font-size: 14px;
+  }
+  .header-section {
+    font-size: 26px;
+  }
+  .favorite-destination-title {
+    font-size: 24px;
+  }
+  .carousel-css {
+    width: 100%;
+    height: 400px;
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng màn hình */
+  }
 }
 
-
-
-@media (min-width: 768px) and (max-width: 991px){
-  .banner-content h1{
+/* Larger laptops and desktops (>= 1025px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .banner-container {
+    height: 500px;
+    max-width: 100%;
+    overflow: hidden; /* Ngăn việc tràn ra ngoài */
+  }
+  .banner-content h1 {
     font-size: 30px;
   }
-  .banner-content p{
-    font-size: 16px;
-    margin-bottom: 8px;
+  .banner-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
   }
-  .btn-explore{
-    font-size: 16px;
+  .btn-explore {
+    font-size: 18px;
   }
-  .banner-container{
-    height: 300px;
+  .header-section {
+    font-size: 28px;
+  }
+  .favorite-destination-title {
+    font-size: 26px;
+  }
+  .carousel-css {
+    width: 100%;
+    height: 450px;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 767px) {
-    .banner-content h1{
-      font-size: 16px;
-    }
-    .banner-content p{
-      font-size: 8px;
-      margin-bottom: 8px;
-    }
-    .btn-explore{
-      font-size: 8px;
-      width: 110px;
-    }
-    .banner-container{
-      height: 200px;
-    }
+/* Large desktops (> 1440px) */
+@media (min-width: 1441px) {
+  .banner-container {
+    height: 673px;
+    max-width: 100%;
+    overflow: hidden; /* Ngăn việc tràn ra ngoài */
+  }
+  .banner-content h1 {
+    font-size: 30px;
+  }
+  .banner-content p {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .btn-explore {
+    font-size: 20px;
+  }
+  .header-section {
+    margin-top: 15px;
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  .favorite-destination-title {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  .carousel-css {
+    width: 100%;
+    height: 500px;
+    max-width: 100%;
+  }
+  .css-doq0dk {
+    width: 100% !important; /* Đảm bảo phần tử không vượt quá chiều rộng */
+    max-width: 100%;
+    box-sizing: border-box !important;
+    margin-left: auto; /* Tự động căn sang phải */
+    transform: translateX(0%); /* Dịch chuyển 10% về phía phải */
+    overflow: hidden; /* Ngăn việc phần tử tràn ra ngoài khung nhìn */
+  }
 }
