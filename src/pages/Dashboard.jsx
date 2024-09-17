@@ -13,6 +13,7 @@ import "swiper/css/free-mode";
 import { Mousewheel, FreeMode, Pagination } from "swiper/modules";
 import PostCard from "../components/Dashboard/PostCard";
 import FixedActionMenu from "../components/Dashboard/FixedActionMenu";
+import EventSlide from "../components/Dashboard/EventSlide";
 
 function Dashboard() {
   const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
@@ -200,6 +201,27 @@ function Dashboard() {
     },
   ];
 
+  const events = [
+    {
+      image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg",
+      title: "Vultures Listening Party",
+      date: "Thứ tư, 21/08/2023 vào lúc 7:00",
+      location: "20 Nguyên Minh Châu, Ngũ Hành Sơn, Đà Nẵng"
+    },
+    {
+      image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg",
+      title: "Zed Album Release",
+      date: "Thứ sáu, 15/09/2023 vào lúc 8:00",
+      location: "30 Lý Thái Tổ, Hoàn Kiếm, Hà Nội"
+    },
+    {
+      image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_0.jpg",
+      title: "Ekko DJ Night",
+      date: "Chủ nhật, 10/10/2023 vào lúc 9:00",
+      location: "60 Bạch Đằng, Hải Châu, Đà Nẵng"
+    }
+  ];
+
 
   return (
     <>
@@ -291,22 +313,16 @@ function Dashboard() {
               modules={[Mousewheel, Pagination]}
               className="mySwiper-event"
             >
-              <SwiperSlide>
-                <div className="event-slide">
-                  <img
-                    src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg"
-                    alt="Vultures Listening Party"
-                    className="event-image object-fit-cover h-100"
+                {events.map((event, index) => (
+                <SwiperSlide key={index}>
+                  <EventSlide
+                    image={event.image}
+                    title={event.title}
+                    date={event.date}
+                    location={event.location}
                   />
-                  <div className="event-text-overlay">
-                    <h3 className="event-title text-white">Vultures Listening Party</h3>
-                    <p className="event-date">Thứ tư, 21/08/2023 vào lúc 7:00</p>
-                    <p className="event-location">
-                      20 Nguyên Minh Châu, Ngũ Hành Sơn, Đà Nẵng
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </Col>
         </Row>

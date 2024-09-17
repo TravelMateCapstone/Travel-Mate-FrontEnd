@@ -13,7 +13,7 @@ const PostCard = ({ name, location, departureDate, participants, status }) => {
     return (
         <div className="post-card">
             <div>
-                <div className='d-flex gap-3'>
+                <div className='d-flex gap-3 card-info-user'>
                     <img
                         src="https://via.placeholder.com/50"
                         alt="User Avatar"
@@ -25,8 +25,8 @@ const PostCard = ({ name, location, departureDate, participants, status }) => {
                     </div>
                 </div>
 
-                <div className='d-flex gap-5 text-secondary'>
-                    <p className=' m-0 fw-medium d-flex gap-2'><i className="bi bi-calendar2-week"></i> Khởi hành: {departureDate}</p>
+                <div className='d-flex gap-5 text-secondary post-info'>
+                    <p className='m-0 fw-medium d-flex gap-2'><i className="bi bi-calendar2-week"></i> Khởi hành: {departureDate}</p>
                     <p className='fw-medium d-flex gap-2 m-0'><i className="bi bi-people-fill"></i> {participants} người tham gia</p>
                 </div>
             </div>
