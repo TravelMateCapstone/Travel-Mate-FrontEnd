@@ -10,6 +10,7 @@ const RoutePath = {
     PROFILE: '/profile',
     EDITPROFILE: '/editprofile',
     DESTINATION: '/destination',
+    EDITMYHOME: '/editmyhome',
     
 }
 

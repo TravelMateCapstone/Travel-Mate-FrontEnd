@@ -7,7 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import App from './App.jsx'
 import './assets/css/App.css'
 import store, { persistor } from './redux/store';
-
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 
 createRoot(document.getElementById('root')).render(
