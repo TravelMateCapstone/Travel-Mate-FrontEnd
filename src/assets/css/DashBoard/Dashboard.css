@@ -27,7 +27,8 @@
     overflow: hidden; /* Ngăn việc tràn ra ngoài */
   }
   .header-section {
-    font-size: 20px;
+    font-size: 16px;
+    margin-top: 10px;
   }
   .favorite-destination-title {
     font-size: 18px;
@@ -62,6 +63,7 @@
   }
   .header-section {
     font-size: 22px;
+    margin-top: 0px;
   }
   .favorite-destination-title {
     font-size: 20px;
@@ -93,6 +95,7 @@
   }
   .header-section {
     font-size: 26px;
+    margin-top: 30px !important;
   }
   .favorite-destination-title {
     font-size: 24px;
@@ -123,6 +126,7 @@
   }
   .header-section {
     font-size: 28px;
+    margin-top: 30px !important;
   }
   .favorite-destination-title {
     font-size: 26px;
@@ -152,7 +156,7 @@
     font-size: 20px;
   }
   .header-section {
-    margin-top: 15px;
+    margin-top: 30px !important;
     font-size: 30px;
     margin-bottom: 50px;
   }

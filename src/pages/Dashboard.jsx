@@ -14,6 +14,8 @@ import { Mousewheel, FreeMode, Pagination } from "swiper/modules";
 import PostCard from "../components/Dashboard/PostCard";
 import FixedActionMenu from "../components/Dashboard/FixedActionMenu";
 import EventSlide from "../components/Dashboard/EventSlide";
+import ThreeDCarousel from "../components/Dashboard/ThreeDCarousel";
+import CarouselComponent from "../components/Dashboard/CarouselComponent";
 
 function Dashboard() {
   const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
@@ -88,58 +90,66 @@ function Dashboard() {
   const hosts = [
     {
       avatar:
-        "https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-1/453485791_1503043053904971_7050613698555539407_n.jpg?stp=dst-jpg_s200x200&_nc_cat=101&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeH9dNwahuSWWMlIFaNwLtwfgpvy7Gq0Ot2Cm_LsarQ63YXL6fkNG_lyFOSLZqPVMpckM5fbx56S1CrHgNZV1_Gv&_nc_ohc=5jKy1lAxpXQQ7kNvgHHA51u&_nc_ht=scontent.fdad3-4.fna&_nc_gid=AQEZs1tbVq2wBKBVEoF54hA&oh=00_AYB51pgpbdIOWAqMYYCY0FDMRIydDwa99YI66_iHr_FNZA&oe=66EA030B",
+        "https://cellphones.com.vn/sforum/wp-content/uploads/2023/10/avatar-trang-4.jpg",
+      name: "Dung Nguyễn",
+      location: "Quảng Nam",
+    },
+    {
+      avatar:
+        "https://scontent.fdad3-6.fna.fbcdn.net/v/t1.6435-9/196345374_802283120647638_7621935877792246612_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHccyNO23Wfqx6YT4-Cuh2WQhFbNZzcAKVCEVs1nNwApT8aYcuSfh1zhBySQAsABrbDiKRm6eMLfUQF6abN_X-3&_nc_ohc=4VIJw9bzM1EQ7kNvgGDm8V8&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AgoUGNaKbluJYPsZE48nC4K&oh=00_AYAP13LEr7H-i2r0q9e-ykY7qpK3EaPg3etqKinhlHIgJw&oe=6711E9A4",
       name: "Nhơn Trần",
       location: "Quảng Nam",
     },
     {
       avatar:
-        "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/449745842_1897469880717181_9200307908320214870_n.jpg?stp=dst-jpg_s200x200&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeEaUDrrgrhYIaAHAwrfa5X5T6gmyhL90Z5PqCbKEv3Rnio8q_4Hg4Dxcm96T30mEuFqZ3LiD29zYuLjcLNIEP26&_nc_ohc=RGpH3kE5XdUQ7kNvgGfh_T7&_nc_ht=scontent.fdad3-1.fna&oh=00_AYBzzrB9dqzjbfpEKBaHwfcaiX5MosI4uGVh4alxvn_Neg&oe=66EA2BD0",
+        "https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/449953942_1897758114021691_3261686242135934155_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=bdeb5f&_nc_eui2=AeGDl3KmxuVYMQgR1x4aAqVHV6BF_GUu0MhXoEX8ZS7QyDLJKNG8MiAl0vaJTLnZsmFwYScjopr6GpS52Ym4OEGx&_nc_ohc=i5vpDVPBoKUQ7kNvgGgT8xf&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Aiph37rDgcTtDuK3KTY81ib&oh=00_AYBysnFMLPsu3IwbEYX-AAGWFjR_t_LE-B6Nb3aZhP3BDA&oe=66F062A2",
       name: "Hải Đăng",
       location: "Quảng Trị",
     },
     {
       avatar:
-        "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/422724159_3711517109169888_5660314751144490822_n.jpg?stp=dst-jpg_s200x200&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF2CPhBHysBPK6uHGM7JGho75lt6mZr6GjvmW3qZmvoaORlk9rCLtxxZX4oG-eaMRiFUnlt_Z6gwSIQ8QvxIEWJ&_nc_ohc=JlyNhriLj_QQ7kNvgFK5Kuk&_nc_ht=scontent.fdad3-1.fna&_nc_gid=AyuMyMs0uYXEsNDm-qwLNJF&oh=00_AYDKYVRHmfWSU3mqF9MOAmE9P79qDp8GB1LhOWOFpTbvjg&oe=66EA29AC",
+        "https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/422724159_3711517109169888_5660314751144490822_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF2CPhBHysBPK6uHGM7JGho75lt6mZr6GjvmW3qZmvoaORlk9rCLtxxZX4oG-eaMRiFUnlt_Z6gwSIQ8QvxIEWJ&_nc_ohc=jJpw5jYJQ7wQ7kNvgHAb2Cg&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AmXy9KbTv6JU07j3j9w2jvZ&oh=00_AYDS9smkbf_hBfxEXTkFf_w9b9gVbGj5NfaXLOt6oiUw8w&oe=66F04B2A",
       name: "Đăng Lên",
       location: "Quảng Nam",
     },
     {
       avatar:
-        "https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-1/453485791_1503043053904971_7050613698555539407_n.jpg?stp=dst-jpg_s200x200&_nc_cat=101&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeH9dNwahuSWWMlIFaNwLtwfgpvy7Gq0Ot2Cm_LsarQ63YXL6fkNG_lyFOSLZqPVMpckM5fbx56S1CrHgNZV1_Gv&_nc_ohc=5jKy1lAxpXQQ7kNvgHHA51u&_nc_ht=scontent.fdad3-4.fna&_nc_gid=AQEZs1tbVq2wBKBVEoF54hA&oh=00_AYB51pgpbdIOWAqMYYCY0FDMRIydDwa99YI66_iHr_FNZA&oe=66EA030B",
+        "https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/450130714_2492572681133064_8520867086168985175_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=669761&_nc_eui2=AeEWqDUKdNi--RFucrIjh0hyMGrdPQh4fp8wat09CHh-nye23c59AsdI3MvZwId8BstxInOxMVLJ_M41EBwzUr_i&_nc_ohc=Rc1E-WZbWfIQ7kNvgFgSuI6&_nc_ht=scontent.fdad3-6.fna&_nc_gid=ACl1SZjrSxEyfwf0EjCGtrr&oh=00_AYCOj7r9-5FZ_ZkxzjizLKLjH_X-3QZs9mk1a3oZgEV1gw&oe=66F0403D",
+      name: "Đức Lương",
+      location: "Quảng Trị",
+    },
+    {
+      avatar:
+        "https://cellphones.com.vn/sforum/wp-content/uploads/2023/10/avatar-trang-4.jpg",
+      name: "Dung Nguyễn",
+      location: "Quảng Nam",
+    },
+    {
+      avatar:
+        "https://scontent.fdad3-6.fna.fbcdn.net/v/t1.6435-9/196345374_802283120647638_7621935877792246612_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHccyNO23Wfqx6YT4-Cuh2WQhFbNZzcAKVCEVs1nNwApT8aYcuSfh1zhBySQAsABrbDiKRm6eMLfUQF6abN_X-3&_nc_ohc=4VIJw9bzM1EQ7kNvgGDm8V8&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AgoUGNaKbluJYPsZE48nC4K&oh=00_AYAP13LEr7H-i2r0q9e-ykY7qpK3EaPg3etqKinhlHIgJw&oe=6711E9A4",
       name: "Nhơn Trần",
       location: "Quảng Nam",
     },
     {
       avatar:
-        "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/449745842_1897469880717181_9200307908320214870_n.jpg?stp=dst-jpg_s200x200&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeEaUDrrgrhYIaAHAwrfa5X5T6gmyhL90Z5PqCbKEv3Rnio8q_4Hg4Dxcm96T30mEuFqZ3LiD29zYuLjcLNIEP26&_nc_ohc=RGpH3kE5XdUQ7kNvgGfh_T7&_nc_ht=scontent.fdad3-1.fna&oh=00_AYBzzrB9dqzjbfpEKBaHwfcaiX5MosI4uGVh4alxvn_Neg&oe=66EA2BD0",
+        "https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/449953942_1897758114021691_3261686242135934155_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=bdeb5f&_nc_eui2=AeGDl3KmxuVYMQgR1x4aAqVHV6BF_GUu0MhXoEX8ZS7QyDLJKNG8MiAl0vaJTLnZsmFwYScjopr6GpS52Ym4OEGx&_nc_ohc=i5vpDVPBoKUQ7kNvgGgT8xf&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Aiph37rDgcTtDuK3KTY81ib&oh=00_AYBysnFMLPsu3IwbEYX-AAGWFjR_t_LE-B6Nb3aZhP3BDA&oe=66F062A2",
       name: "Hải Đăng",
       location: "Quảng Trị",
     },
     {
       avatar:
-        "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/422724159_3711517109169888_5660314751144490822_n.jpg?stp=dst-jpg_s200x200&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF2CPhBHysBPK6uHGM7JGho75lt6mZr6GjvmW3qZmvoaORlk9rCLtxxZX4oG-eaMRiFUnlt_Z6gwSIQ8QvxIEWJ&_nc_ohc=JlyNhriLj_QQ7kNvgFK5Kuk&_nc_ht=scontent.fdad3-1.fna&_nc_gid=AyuMyMs0uYXEsNDm-qwLNJF&oh=00_AYDKYVRHmfWSU3mqF9MOAmE9P79qDp8GB1LhOWOFpTbvjg&oe=66EA29AC",
+        "https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/422724159_3711517109169888_5660314751144490822_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF2CPhBHysBPK6uHGM7JGho75lt6mZr6GjvmW3qZmvoaORlk9rCLtxxZX4oG-eaMRiFUnlt_Z6gwSIQ8QvxIEWJ&_nc_ohc=jJpw5jYJQ7wQ7kNvgHAb2Cg&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AmXy9KbTv6JU07j3j9w2jvZ&oh=00_AYDS9smkbf_hBfxEXTkFf_w9b9gVbGj5NfaXLOt6oiUw8w&oe=66F04B2A",
       name: "Đăng Lên",
       location: "Quảng Nam",
     },
     {
       avatar:
-        "https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-1/453485791_1503043053904971_7050613698555539407_n.jpg?stp=dst-jpg_s200x200&_nc_cat=101&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeH9dNwahuSWWMlIFaNwLtwfgpvy7Gq0Ot2Cm_LsarQ63YXL6fkNG_lyFOSLZqPVMpckM5fbx56S1CrHgNZV1_Gv&_nc_ohc=5jKy1lAxpXQQ7kNvgHHA51u&_nc_ht=scontent.fdad3-4.fna&_nc_gid=AQEZs1tbVq2wBKBVEoF54hA&oh=00_AYB51pgpbdIOWAqMYYCY0FDMRIydDwa99YI66_iHr_FNZA&oe=66EA030B",
-      name: "Nhơn Trần",
-      location: "Quảng Nam",
-    },
-    {
-      avatar:
-        "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/449745842_1897469880717181_9200307908320214870_n.jpg?stp=dst-jpg_s200x200&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeEaUDrrgrhYIaAHAwrfa5X5T6gmyhL90Z5PqCbKEv3Rnio8q_4Hg4Dxcm96T30mEuFqZ3LiD29zYuLjcLNIEP26&_nc_ohc=RGpH3kE5XdUQ7kNvgGfh_T7&_nc_ht=scontent.fdad3-1.fna&oh=00_AYBzzrB9dqzjbfpEKBaHwfcaiX5MosI4uGVh4alxvn_Neg&oe=66EA2BD0",
-      name: "Hải Đăng",
+        "https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/450130714_2492572681133064_8520867086168985175_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=669761&_nc_eui2=AeEWqDUKdNi--RFucrIjh0hyMGrdPQh4fp8wat09CHh-nye23c59AsdI3MvZwId8BstxInOxMVLJ_M41EBwzUr_i&_nc_ohc=Rc1E-WZbWfIQ7kNvgFgSuI6&_nc_ht=scontent.fdad3-6.fna&_nc_gid=ACl1SZjrSxEyfwf0EjCGtrr&oh=00_AYCOj7r9-5FZ_ZkxzjizLKLjH_X-3QZs9mk1a3oZgEV1gw&oe=66F0403D",
+      name: "Đức Lương",
       location: "Quảng Trị",
     },
-    {
-      avatar:
-        "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/422724159_3711517109169888_5660314751144490822_n.jpg?stp=dst-jpg_s200x200&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF2CPhBHysBPK6uHGM7JGho75lt6mZr6GjvmW3qZmvoaORlk9rCLtxxZX4oG-eaMRiFUnlt_Z6gwSIQ8QvxIEWJ&_nc_ohc=JlyNhriLj_QQ7kNvgFK5Kuk&_nc_ht=scontent.fdad3-1.fna&_nc_gid=AyuMyMs0uYXEsNDm-qwLNJF&oh=00_AYDKYVRHmfWSU3mqF9MOAmE9P79qDp8GB1LhOWOFpTbvjg&oe=66EA29AC",
-      name: "Đăng Lên",
-      location: "Quảng Nam",
-    },
+    
+
   ];
 
   const posts = [
@@ -203,44 +213,37 @@ function Dashboard() {
 
   const events = [
     {
-      image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg",
+      image: "https://tourism.danang.vn/wp-content/uploads/2023/02/cau-rong-da-nang.jpeg",
       title: "Vultures Listening Party",
       date: "Thứ tư, 21/08/2023 vào lúc 7:00",
       location: "20 Nguyên Minh Châu, Ngũ Hành Sơn, Đà Nẵng"
     },
     {
-      image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg",
+      image: "https://hnm.1cdn.vn/2019/01/16/hanoimoi.com.vn-uploads-lequyen-2019-1-16-_1-3-.jpg",
       title: "Zed Album Release",
       date: "Thứ sáu, 15/09/2023 vào lúc 8:00",
       location: "30 Lý Thái Tổ, Hoàn Kiếm, Hà Nội"
     },
     {
-      image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_0.jpg",
+      image: "https://sunhome.com.vn/wp-content/uploads/2022/08/Sk-le-hoi-am-nhac-dien-te-Da-Nang-Carnival.jpg",
       title: "Ekko DJ Night",
       date: "Chủ nhật, 10/10/2023 vào lúc 9:00",
       location: "60 Bạch Đằng, Hải Châu, Đà Nẵng"
     }
   ];
 
+  const images = [
+    'https://cdn.tcdulichtphcm.vn/upload/2-2021/images/2021-06-03/1622716610-thumbnail-width1200height628-watermark.jpg',
+    'https://baobariavungtau.com.vn/dataimages/202312/original/images1909456_Ch_o_thuy_n_kayak_l__ho_t___ng__a_th_ch_c_a_du_kh_ch_khi___n_V_nh_H__Long..jpg',
+    'https://cdn.oneesports.vn/cdn-data/sites/4/2024/01/Zed_38.jpg'
+  ]
 
   return (
     <>
-      <Container fluid className="banner-container">
-        <Carousel indicators={false} controls={false}>
-          <Carousel.Item>
-            <img src="https://cdn.oneesports.vn/cdn-data/sites/4/2024/01/Zed_38.jpg" alt="" className="banner-container object-fit-cover" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src="https://cdn.oneesports.vn/cdn-data/sites/4/2024/01/Zed_38.jpg" alt="" className="banner-container object-fit-cover" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src="https://cdn.oneesports.vn/cdn-data/sites/4/2024/01/Zed_38.jpg" alt="" className="banner-container object-fit-cover" />
-          </Carousel.Item>
-        </Carousel>
-      </Container>
-
+      <CarouselComponent images={images} />
       <Container fluid >
         <p className="fw-semibold fst-italic text-center favorite-destination-title">Những điểm đến hấp dẫn</p>
+        <ThreeDCarousel />
         <h1 className="header-section text-black fw-bold text-center">
           Người địa phương
         </h1>
@@ -276,7 +279,12 @@ function Dashboard() {
           >
             {hosts.map((host, index) => (
               <SwiperSlide key={index}>
-                <HostCard />
+                <HostCard name={host.name} imageSrc={host.avatar} location={host.location} onContactClick={
+                  () => {
+                    // handle route over there
+                    console.log("Contact button clicked");
+                  }
+                } />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -313,7 +321,7 @@ function Dashboard() {
               modules={[Mousewheel, Pagination]}
               className="mySwiper-event"
             >
-                {events.map((event, index) => (
+              {events.map((event, index) => (
                 <SwiperSlide key={index}>
                   <EventSlide
                     image={event.image}
