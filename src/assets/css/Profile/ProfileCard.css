@@ -4,6 +4,7 @@
   border-radius: 15px;
   overflow: hidden;
   border: 0px;
+
 }
 
 .image-container {
@@ -23,11 +24,13 @@
 
 .card-body-custom {
   text-align: center;
-  padding: 10px;
-  background-color: #4763c8;
-  color: #fff;
+  background-color: #ffffff;
+  color: black;
   position: relative;
   top: -90px;
+  border: 1px solid #D9D9D9 !important;
+  border-bottom: 0px;
+  padding: 0px 25px;
 }
 
 .card-title-custom {
@@ -43,31 +46,58 @@
 
 .buttons-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
 }
 
-.button-custom {
+.button-custom-edit {
   font-size: 0.8rem;
   width: 106px;
   height: 35px;
   margin-bottom: 20px;
   border-radius: 30px;
-  
+  background: #007931;
+  border: 0px;
+}
+.button-custom-edit  a{
+  color: white !important;
+}
+.button-custom-setting{
+  font-size: 0.8rem;
+  width: 106px;
+  height: 35px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  background: #D9D9D9 ;
+  border: 0px;
+  color: black;
+}
+
+
+.button-custom a{
+  color: white !important;
 }
 
 .accepting-text {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffd700;
+  color: #007931;
   margin-bottom: 16px;
 }
 
 .card-body-bottom {
-  background-color: #4763c8;
-  color: white;
+  background-color: #ffffff;
+  color: black;
   position: relative;
   top: -90px;
-  border-top: 1px solid #000;
+  border: 1px solid #D9D9D9 !important;
+  border-top: 0px solid #bebebe !important;
+  padding: 0px 25px;
+  padding-top: 25px;
+}
+
+.green-text{
+  color: #007931;
 }
 
 .info-list {
@@ -101,7 +131,7 @@
   .card-title-custom {
     font-size: 1.2rem;
     margin-bottom: 5px;
-    margin-top: 80px;
+    margin-top: 90px;
   }
 
   .accepting-text {
@@ -132,6 +162,7 @@
     border-radius: 15px;
     overflow: hidden;
     border: 0px;
+    height: 100%;
   }
 
   .buttons-container {

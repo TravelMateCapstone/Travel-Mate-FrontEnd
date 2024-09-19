@@ -23,25 +23,25 @@ function ProfileCard() {
         </Card.Text>
 
         <Card.Text className='accepting-text'>
-          ACCEPTING GUEST
+        CHÀO ĐÓN KHÁCH
         </Card.Text>
         <Container className='buttons-container'>
-          <Button variant="light" className='button-custom fw-light'>
-            <Link  to={RoutePath.EDITPROFILE}>Edit profile</Link>
+          <Button variant="light" className='button-custom-edit button-custom'>
+            <Link className='fw-light' to={RoutePath.EDITPROFILE}>Hồ sơ</Link>
           </Button>
-          <Button variant="light" className='button-custom'>
-            Setting
+          <Button className='button-custom-setting button-custom'>
+            Cài đặt
           </Button>
         </Container>
       </Card.Body>
-      <Card.Body className='card-body-bottom shadow rounded-bottom-3'>
-        <ul className='info-list fw-light text-nowrap'>
+      <Card.Body className='card-body-bottom rounded-bottom-3'>
+        <ul className='info-list fw-normal text-nowrap'>
           <li><i className="bi bi-person"></i> 22, Male</li>
           <li><i className="bi bi-geo-alt"></i> Ngu Hanh Son, Da Nang, Viet Nam</li>
           <li><i className="bi bi-building"></i> Đại học FPT Đà Nẵng</li>
           <li><i className="bi bi-translate"></i> English, Japanese</li>
           <li><i className="bi bi-check-circle"></i> Member since 2024</li>
-          <li><i className="bi bi-shield-shaded"></i> Profile 65% complete</li>
+          <li className='green-text'><i className="bi bi-shield-shaded"></i> Profile 65% complete</li>
         </ul>
       </Card.Body>
     </Card>

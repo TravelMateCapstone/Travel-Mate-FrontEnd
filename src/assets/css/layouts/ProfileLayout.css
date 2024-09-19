@@ -1,7 +1,8 @@
 @media only screen and (min-width: 1440px) and (max-width: 1920px) {
   .container-profile {
     margin-top: 139px;
-    padding-right: 67px;
+    padding-right: 169px;
+    padding-left: 169px;
   }
 }
 @media (max-width: 576px) {
