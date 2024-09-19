@@ -10,4 +10,5 @@ export default defineConfig({
     globals: true,         // Cho phép sử dụng các biến toàn cục như 'describe', 'test', 'expect'
     setupFiles: './src/setupTests.js',  // Đường dẫn file setup cho test (nếu cần)
   },
+ 
 })

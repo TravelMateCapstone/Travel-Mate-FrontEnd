@@ -16,6 +16,11 @@
 .search-dropdown i {
   font-size: 12px; /* Điều chỉnh kích thước icon */
 }
+.search-dropdown{
+  background: #007931 !important;
+  color: white !important;
+}
+
 .search-dropdown, .dropdown-menu {
   position: absolute !important;
 }

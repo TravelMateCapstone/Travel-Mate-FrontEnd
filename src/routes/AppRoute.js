@@ -4,6 +4,7 @@ import NewFeedLayout from "../layouts/NewFeedLayout"
 import ProfileLayout from "../layouts/ProfileLayout"
 import Dashboard from "../pages/Dashboard"
 import Destination from "../pages/Destination"
+import EditMyHome from "../pages/EditMyHome"
 import EditProfile from "../pages/EditProfile"
 import Event from "../pages/Event"
 import Group from "../pages/Group"
@@ -13,7 +14,7 @@ import RoutePath from "./RoutePath"
 
 
 const publishRoutes = [
-    { path: RoutePath.DASHBOARD, component: Dashboard, layout: NewFeedLayout },
+    { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
     { path: RoutePath.DESTINATION, component: Destination, layout: DefaultLayout },
 ]
@@ -23,6 +24,7 @@ const privateRoutes = [
     { path: RoutePath.EVENT, component: Event, layout: DefaultLayout },
     { path: RoutePath.PROFILE, component: Profile, layout: ProfileLayout },
     { path: RoutePath.EDITPROFILE, component: EditProfile, layout: ProfileLayout },
+    { path: RoutePath.EDITMYHOME, component: EditMyHome, layout: ProfileLayout },
     
 ]
 

@@ -3,6 +3,7 @@ import { LOGIN_SUCCESS, LOGOUT } from "../actionTypes";
 const initialState = {
   isAuthenticated: false,
   user: null,
+  token: null, // Thêm token vào state
 };
 
 const authReducer = (state = initialState, action) => {
@@ -11,7 +12,8 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         isAuthenticated: true,
-        user: action.payload,
+        user: action.payload.user, // Thông tin người dùng
+        token: action.payload.token, // Lưu token
       };
 
     case LOGOUT:
@@ -19,6 +21,7 @@ const authReducer = (state = initialState, action) => {
         ...state,
         isAuthenticated: false,
         user: null,
+        token: null, // Xóa token khi logout
       };
 
     default:

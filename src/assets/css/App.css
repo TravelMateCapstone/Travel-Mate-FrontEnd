@@ -9,6 +9,16 @@ body {
   font-optical-sizing: auto;
   background-color: #ffffff;
 }
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }

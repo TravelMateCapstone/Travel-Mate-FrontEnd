@@ -1,5 +1,7 @@
 /* Login.css */
 
+
+
 .modal-header {
   color: black;
   height: 77px;
@@ -102,6 +104,10 @@
   font-size: 12px;
   font-weight: bold;
   margin: 0 auto;
+}
+
+.modal-content {
+  border-radius: 20px !important;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1920px) {

@@ -104,3 +104,10 @@
   font-weight: bold;
   margin: 0 auto;
 }
+@media (max-width: 767px){
+  .register-modal .modal-content {
+    width: 468px !important;  /* Chiều rộng */
+    height: auto !important; /* Chiều cao */
+    border-radius: 20px;
+  }
+}
