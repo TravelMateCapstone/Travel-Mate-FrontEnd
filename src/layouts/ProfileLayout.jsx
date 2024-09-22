@@ -14,7 +14,7 @@ function ProfileLayout({ children }) {
           <Col xs={12} sm={4} md={4} lg={3} className="left-side">
             <ProfileCard />
           </Col>
-  
+
           <Col xs={12} sm={8} md={8} lg={9}>
             {children}
           </Col>

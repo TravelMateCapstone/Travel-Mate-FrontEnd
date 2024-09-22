@@ -3,7 +3,7 @@ import { Card, Image, Container, Row, Col, Button } from 'react-bootstrap';
 
 function Friends() {
   return (
-    <Container className='p-3' style={{ background: '#F3F6FF' }}>
+    <Container className='p-3 border rounded-3'>
       <h1 className="mb-4 text-success"><i class="bi bi-people"></i> BẠN BÈ</h1>
       <Row>
         <Col md={6}>

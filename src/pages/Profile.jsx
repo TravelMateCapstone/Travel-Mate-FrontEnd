@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Card, Container } from 'react-bootstrap';
 import '../assets/css/Profile/Profile.css';
 import AboutMe from '../components/Profile/AboutMe';
 import Favorites from '../components/Profile/Favorites';
@@ -15,22 +16,31 @@ function Profile() {
   // Component array for mapping
   const tabComponents = [
     <AboutMe />,
-    <Favorites />,
-    <Friends />,
     <MyHome />,
     <PastTrips />,
+    <Friends />,
+    <Favorites />,
+  ];
+
+  const tabIcons = [
+    'bi bi-info-circle',
+    'bi bi-house',
+    'bi bi-clock-history',
+    'bi bi-people',
+    'bi bi-heart'
   ];
 
   return (
     <div className="tabs">
       <div className="tab-header">
-        {['About Me', 'Favorites', 'Friends', 'My Home', 'Past Trips'].map((tab, index) => (
+        {['Giới thiệu', 'Nhà của tôi', 'Chuyến đi', 'Bạn bè', 'Địa điểm'].map((tab, index) => (
           <div
             key={index}
             className={activeTab === index ? 'active' : ''}
             onClick={() => handleTabClick(index)}
           >
-            {tab}
+            {/* Add icon before the tab name */}
+            <i className={tabIcons[index]}></i> {tab}
           </div>
         ))}
       </div>
@@ -41,7 +51,7 @@ function Profile() {
 
       <div className="tab-body">
         <div className="active">
-          {tabComponents[activeTab]} {/* Render the corresponding component based on the activeTab */}
+          {tabComponents[activeTab]}
         </div>
       </div>
     </div>

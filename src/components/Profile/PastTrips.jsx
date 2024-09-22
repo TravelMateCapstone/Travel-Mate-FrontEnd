@@ -3,7 +3,7 @@ import { Card, Image, Container, Nav } from 'react-bootstrap';
 
 function PastTrips() {
   return (
-    <Container className='p-3' style={{ background: '#F3F6FF' }}>
+    <Container className='p-3 border rounded-3'>
       <h1 className="mb-4 text-success"><i className="bi bi-clipboard-check"></i> CHUYẾN ĐI</h1>
 
       <div className='mx-2'>
@@ -28,19 +28,16 @@ function PastTrips() {
             style={{ width: '80px', height: '80px' }} // Adjust image size
           />
           <div>
-            <Card.Title className='mb-0 fw-bold'>Tran Hai Dang </Card.Title>
-            <Card.Text> tại Phố cổ Hội An, Quảng Nam</Card.Text>
-
+            <div className='d-flex'>
+              <Card.Title className='mb-0 fw-bold mx-2'>Tran Hai Dang </Card.Title>
+              <Card.Text> tại Phố cổ Hội An, Quảng Nam</Card.Text>
+            </div>
+            <div className='mx-2'>
+              <Card.Link className='text-muted border rounded px-3 py-1 me-2 fs-6'>
+                16 tháng 8
+              </Card.Link>
+            </div>
           </div>
-        </div>
-
-        <div className="d-flex mt-3">
-          <Card.Link className='text-muted border rounded px-3 py-1 me-2 fs-6'>
-            16 tháng 8
-          </Card.Link>
-          <Card.Link className='text-muted border rounded px-3 py-1 me-2 fs-6'>
-            1 Guest
-          </Card.Link>
         </div>
 
         <Card.Text className='mt-3'>

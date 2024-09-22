@@ -5,7 +5,7 @@ import { Card, Image, Container, Row, Col, Button } from 'react-bootstrap';
 function Favorites() {
   return (
 
-    <Container className='p-3' style={{ background: '#F3F6FF' }}>
+    <Container className='p-3 border rounded-3' >
       <h1 className="mb-4 text-success"><i class="bi bi-pin-map"></i> ĐỊA ĐIỂM ƯA THÍCH</h1>
       <Row>
         <Col md={6}>

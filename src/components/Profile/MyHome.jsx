@@ -3,7 +3,7 @@ import { Card, Container } from 'react-bootstrap';
 
 function MyHome() {
   return (
-    <Container className='p-3' style={{ background: '#F3F6FF' }}>
+    <Container className='p-3 border rounded-3'>
       <h1 className=" mb-4 text-success"><i class="bi bi-house-door"></i> NHÀ CỦA TÔI</h1>
 
       <Card className="mb-3">
