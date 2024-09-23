@@ -5,16 +5,16 @@ const FixedActionMenu = () => {
   return (
     <div className="fixed-action-menu">
       <div className="icon">
-        <i className="bi bi-plus-square"></i>
+        <i className="bi bi-plus-square-fill"></i>
       </div>
       <div className="icon">
-        <i className="bi bi-people"></i>
+        <i className="bi bi-people-fill"></i>
       </div>
       <div className="icon">
-        <i className="bi bi-calendar-plus"></i>
+        <i className="bi bi-calendar-plus-fill"></i>
       </div>
       <div className="icon">
-        <i className="bi bi-car-front"></i>
+        <i className="bi bi-car-front-fill"></i>
       </div>
       <div className="icon">
         <i className="bi bi-card-text"></i>

@@ -12,7 +12,7 @@ import "swiper/css/free-mode";
 // import required modules
 import { Mousewheel, FreeMode, Pagination } from "swiper/modules";
 import PostCard from "../components/Dashboard/PostCard";
-import FixedActionMenu from "../components/Dashboard/FixedActionMenu";
+import FixedActionMenu from "../components/Shared/FixedActionMenu";
 import EventSlide from "../components/Dashboard/EventSlide";
 import ThreeDCarousel from "../components/Dashboard/ThreeDCarousel";
 import CarouselComponent from "../components/Dashboard/CarouselComponent";
