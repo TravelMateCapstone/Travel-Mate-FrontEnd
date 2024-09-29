@@ -3,8 +3,8 @@ import { Card, Image, Container, Nav } from 'react-bootstrap';
 
 function PastTrips() {
   return (
-    <Container className='p-3' style={{ background: '#F3F6FF' }}>
-      <h1 className="mb-4"><i className="bi bi-clipboard-check"></i> PAST TRIPS</h1>
+    <Container className='p-3 border rounded-3'>
+      <h1 className="mb-4 text-success"><i className="bi bi-clipboard-check"></i> CHUYẾN ĐI</h1>
 
       <div className='mx-2'>
         <Nav variant="tabs" defaultActiveKey="/home">
@@ -28,24 +28,20 @@ function PastTrips() {
             style={{ width: '80px', height: '80px' }} // Adjust image size
           />
           <div>
-            <Card.Title className='mb-0 fw-bold'>Stunning nature beauty Da Nang City</Card.Title>
-            <Card.Text>Hosted by Tran Hai Dang</Card.Text>
+            <div className='d-flex'>
+              <Card.Title className='mb-0 fw-bold mx-2'>Tran Hai Dang </Card.Title>
+              <Card.Text> tại Phố cổ Hội An, Quảng Nam</Card.Text>
+            </div>
+            <div className='mx-2'>
+              <Card.Link className='text-muted border rounded px-3 py-1 me-2 fs-6'>
+                16 tháng 8
+              </Card.Link>
+            </div>
           </div>
         </div>
 
-        <div className="d-flex mt-3">
-          <Card.Link className='text-muted border rounded px-3 py-1 me-2 fs-6'>
-            Da Nang, Viet Nam
-          </Card.Link>
-          <Card.Link className='text-muted border rounded px-3 py-1 me-2 fs-6'>
-            1 Guest
-          </Card.Link>
-        </div>
-
         <Card.Text className='mt-3'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti viverra dictum nunc natoque torquent ligula duis.
-          Sit gravida imperdiet sem nec eget morbi sodales. Eros lacus lectus vulputate viverra lacinia dictumst dictumst.
-          Iaculis dolor ad tortor praesent facilisi blandit ridiculus.
+          Hội An – phố cổ với những con hẻm nhỏ, đèn lồng lung linh và không khí yên bình. Mỗi góc phố đều mang trong mình dấu ấn thời gian, khiến mình như lạc vào một khung cảnh hoài cổ, thơ mộng. Đêm xuống, phố lên đèn, cảm giác thật bình yên và dịu dàng. Nhất định phải ghé thăm lần nữa! 🏮✨
         </Card.Text>
 
         {/* Styled image container */}
@@ -89,8 +85,7 @@ function PastTrips() {
             <Card.Text className='text-muted'>Dien Ban, Quang Nam</Card.Text>
           </div>
         </div>
-        <Card.Text >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti viverra dictum nunc natoque torquent ligula duis.
-          Sit gravida imperdiet sem nec eget morbi sodales. Eros lacus lectus vulputate viverra lacinia dictumst dictumst.</Card.Text>
+        <Card.Text >"Đăng là người bạn đồng hành tuyệt vời! Vui vẻ, thân thiện và rất am hiểu về Hội An. Nhờ cậu ấy mà chuyến đi của mình thêm phần thú vị. Rất vui được gặp và đi cùng bạn!"</Card.Text>
 
       </Card>
 
