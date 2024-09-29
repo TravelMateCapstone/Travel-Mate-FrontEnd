@@ -11,7 +11,11 @@ const RoutePath = {
     EDITPROFILE: '/editprofile',
     DESTINATION: '/destination',
     EDITMYHOME: '/editmyhome',
-    
+    // Admin
+    ADMIN: '/admin',
+    ADMIN_ACCOUNTLIST: '/accountList',
+    ADMIN_REPORT: '/report',
+    ADMIN_TRANSACTION: '/transaction'
 }
 
 export default RoutePath;
