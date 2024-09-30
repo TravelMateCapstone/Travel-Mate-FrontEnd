@@ -1,61 +1,67 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { publishRoutes, privateRoutes } from "./routes/AppRoute";
-import { Fragment } from "react"; // Import Fragment for wrapping
+import { Fragment } from "react"; 
 import DefaultLayout from "./layouts/DefaultLayout";
 import { ToastContainer } from "react-toastify";
-function App() {
-  const renderRoutes = (routes) => {
-    return routes.map(
-      ({ path, component: Component, layout: Layout }, index) => {
-        // If Layout is null, wrap with Fragment
-        if (Layout === null) {
-          return (
-            <Route
-              key={index}
-              path={path}
-              element={
-                <Fragment>
-                  <Component />
-                </Fragment>
-              }
-            />
-          );
-        }
+import { useDispatch, useSelector } from "react-redux"; 
+import { openLoginModal } from "./redux/actions/modalActions"; 
 
-        // If Layout is undefined, use DefaultLayout
-        const AppliedLayout = Layout || DefaultLayout;
+const RouteWrapper = ({ component: Component, layout: Layout, path }) => {
+  const dispatch = useDispatch(); 
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); 
 
-        return (
-          <Route
-            key={index}
-            path={path}
-            element={
-              <AppliedLayout>
-                <ToastContainer
-                  position="bottom-right" // Hiển thị thông báo ở góc dưới bên phải
-                  autoClose={3000} // Thông báo tự đóng sau 5 giây
-                  hideProgressBar={false} // Hiển thị thanh tiến trình
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
-                />
-                <Component />
-              </AppliedLayout>
-            }
-          />
-        );
-      }
+  if (privateRoutes.some(route => route.path === path) && !isAuthenticated) {
+    
+    dispatch(openLoginModal());
+    return <Navigate to="/" replace />;
+  } 
+
+  if (Layout === null) {
+    return (
+      <Fragment>
+        <Component />
+      </Fragment>
     );
-  };
+  }
 
+  const AppliedLayout = Layout || DefaultLayout;
+
+  return (
+    <AppliedLayout>
+      <ToastContainer
+        position="bottom-right" 
+        autoClose={3000} 
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <Component />
+    </AppliedLayout>
+  );
+};
+
+function App() {
   return (
     <Router basename="/Travel-Mate-FrontEnd">
       <Routes>
-        {renderRoutes(publishRoutes)}
-        {renderRoutes(privateRoutes)}
+        {publishRoutes.map(({ path, component: Component, layout: Layout }, index) => (
+          <Route
+            key={index}
+            path={path}
+            element={<RouteWrapper component={Component} layout={Layout} path={path} />}
+          />
+        ))}
+        {privateRoutes.map(({ path, component: Component, layout: Layout }, index) => (
+          <Route
+            key={index}
+            path={path}
+            element={<RouteWrapper component={Component} layout={Layout} path={path} />}
+          />
+        ))}
       </Routes>
     </Router>
   );
