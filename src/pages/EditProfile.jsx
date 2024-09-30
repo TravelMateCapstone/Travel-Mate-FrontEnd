@@ -1,20 +1,18 @@
 import React from 'react';
 import { Container, Form, Row, Col, Button, Badge } from 'react-bootstrap';
 import '../assets/css/Profile/EditProfile.css';
+import { Link } from 'react-router-dom';
+import RoutePath from '../routes/RoutePath';
 
 const EditProfile = () => {
   return (
     <Container className="mt-4 edit-pro-container">
       <Form>
         {/* Phần tiêu đề */}
-        <Row className="mb-4 p-0">
-          <Col xs="auto">
-            <h5 className="text-success me-4 fw-medium">GIỚI THIỆU</h5>
-          </Col>
-          <Col xs="auto">
-            <h5 className='fw-medium'>NHÀ CỦA TÔI</h5>
-          </Col>
-        </Row>
+        <div className="d-flex justify-content-start mb-4">
+          <h5 className="me-4 text-success">GIỚI THIỆU</h5>
+          <h5 className=''><Link to={RoutePath.EDITMYHOME}>NHÀ CỦA TÔI</Link></h5>
+        </div>
 
         {/* Trạng thái đón khách */}
         <Form.Group as={Row} controlId="status" className="mb-3 align-items-center">

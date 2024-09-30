@@ -4,6 +4,7 @@
     padding: 28px;
     border-radius: 20px;
     font-size: 24px;
+    margin-top: 100px !important;
 }
 
 .badge-custom {
@@ -40,6 +41,7 @@
     .edit-pro-container {
         padding: 20px;
         font-size: 10px;
+        margin-top: 40px !important;
     }
     .text-decription {
         height: auto;
@@ -55,6 +57,7 @@
     .edit-pro-container {
         padding: 15px;
         font-size: 18px;
+        margin-top: 0px !important;
     }
     .text-decription {
         height: auto;
