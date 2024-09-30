@@ -3,8 +3,8 @@ import '../../assets/css/Shared/AdminNavbar.css';
 
 function AdminNavbar() {
     return (
-        <div className="admin-navbar">
-            <div className="search-bar-nav d-none d-md-flex">
+        <div className="admin-navbar mt-2">
+            <div className="search-bar-nav d-none d-md-flex ms-lg-5">
                 <i className="bi bi-search"></i>
                 <input type="text" placeholder="Search" className='' />
             </div>
