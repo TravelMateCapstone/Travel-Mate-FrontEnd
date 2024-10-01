@@ -1,4 +1,5 @@
 import React from 'react';
+import flying from '../../assets/images/flying.png';
 
 function ChatList({ chats, activeChat, onChatClick }) {
   return (
@@ -7,17 +8,20 @@ function ChatList({ chats, activeChat, onChatClick }) {
         {chats.map((chat) => (
           <li
             key={chat.id}
-            className={activeChat === chat.id ? 'active' : ''}
+            className={activeChat === chat.id ? 'active' : 'd-flex'}
             onClick={() => onChatClick(chat.id)}
           >
-            <img src={chat.avatar} alt={`${chat.name} avatar`} className="chat-avatar" />
-            <div className="chat-details">
-              <span className="chat-name">{chat.name}</span>
-              <span className="chat-last-message">{chat.lastMessage}</span>
-            </div>
-            <div className="chat-meta">
-              <span className="chat-timestamp">{chat.timestamp}</span>
-              <span className="chat-actions">🔔</span> {/* Optional action icons */}
+            <div><img src={chat.avatar} alt={`${chat.name} avatar`} className="chat-avatar" /></div>
+            <div className='d-lg-flex align-items-lg-end gap-lg-4 content-chat'>
+              <div className="chat-details">
+                <div className='d-flex justify-content-between'><span className="chat-name fw-medium">{chat.name}</span>
+                  <div className="chat-meta">
+                    <span className="chat-timestamp me-2">{chat.timestamp}</span>
+                    <span className="chat-actions"><img src={flying} alt="" style={{width: '15px'}} /></span> 
+                  </div>
+                </div>
+                <span className="chat-last-message fw-light">{chat.lastMessage}</span>
+              </div>
             </div>
           </li>
         ))}
