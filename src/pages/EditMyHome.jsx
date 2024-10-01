@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import '../assets/css/Profile/EditMyHome.css';
+import { Link } from 'react-router-dom';
 
 const MyHome = () => {
   return (
@@ -8,8 +9,8 @@ const MyHome = () => {
       <Form>
         {/* Title */}
         <div className="d-flex justify-content-start mb-4 ">
-          <h5 className="text-success me-4">GIỚI THIỆU</h5>
-          <h5>NHÀ CỦA TÔI</h5>
+          <h5 className="me-4"><Link to={'/editprofile'}>GIỚI THIỆU</Link></h5>
+          <h5 className='text-success'>NHÀ CỦA TÔI</h5>
         </div>
 
         {/* Form Fields */}
