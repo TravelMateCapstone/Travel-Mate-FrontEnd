@@ -16,6 +16,7 @@ import AdminAccountList from "../pages/Admin/AdminAccountList"
 import AdminReport from "../pages/Admin/AdminReport"
 import AdminTransaction from "../pages/Admin/AdminTransactionList"
 import AdminTripHistory from "../pages/Admin/AdminTripHistory"
+import Chat from "../pages/Chat"
 const publishRoutes = [
     { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
@@ -33,6 +34,7 @@ const privateRoutes = [
     { path: RoutePath.ADMIN_REPORT, component: AdminReport, layout: AdminLayout },
     { path: RoutePath.ADMIN_TRANSACTION, component: AdminTransaction, layout: AdminLayout },
     { path: RoutePath.ADMIN_TRIPHISTORY, component: AdminTripHistory, layout: AdminLayout },
+    { path: RoutePath.CHAT, component: Chat, layout: DefaultLayout },
 ]
 
 export { publishRoutes, privateRoutes }
