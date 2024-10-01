@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, Image, Container, Nav } from 'react-bootstrap';
+import { Card, Image, Container, Nav, Dropdown } from 'react-bootstrap';
 
 function PastTrips() {
   return (
     <Container className='p-3 border rounded-3'>
-      <h1 className="mb-4 text-success"><i className="bi bi-clipboard-check"></i> CHUYẾN ĐI</h1>
+      <h2 className="mb-4 text-success fw-bold"><i className="bi bi-clipboard-check"></i> CHUYẾN ĐI</h2>
 
       <div className='mx-2'>
         <Nav variant="tabs" defaultActiveKey="/home">
@@ -20,24 +20,37 @@ function PastTrips() {
         </Nav>
       </div>
       <Card className="p-3 mb-3">
-        <div className="d-flex align-items-center">
-          <Image
-            src="https://cdn.oneesports.vn/cdn-data/sites/4/2024/01/Zed_38.jpg"
-            roundedCircle
-            className='me-3'
-            style={{ width: '80px', height: '80px' }} // Adjust image size
-          />
-          <div>
-            <div className='d-flex'>
-              <Card.Title className='mb-0 fw-bold mx-2'>Tran Hai Dang </Card.Title>
-              <Card.Text> tại Phố cổ Hội An, Quảng Nam</Card.Text>
-            </div>
-            <div className='mx-2'>
-              <Card.Link className='text-muted border rounded px-3 py-1 me-2 fs-6'>
-                16 tháng 8
-              </Card.Link>
+        <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center">
+            <Image
+              src="https://cdn.oneesports.vn/cdn-data/sites/4/2024/01/Zed_38.jpg"
+              roundedCircle
+              className="me-3"
+              style={{ width: '80px', height: '80px' }} // Adjust image size
+            />
+            <div>
+              <div className="d-flex">
+                <Card.Title className="mb-0 fw-bold mx-2">Tran Hai Dang</Card.Title>
+                <Card.Text>tại Phố cổ Hội An, Quảng Nam</Card.Text>
+              </div>
+              <div className="mx-2">
+                <Card.Link className="text-muted border rounded px-3 py-1 me-2 fs-6">
+                  16 tháng 8
+                </Card.Link>
+              </div>
             </div>
           </div>
+
+          <Dropdown align="end">
+            <Dropdown.Toggle as="div" id="dropdown-custom-components" style={{ cursor: 'pointer' }}>
+              <i className="bi bi-three-dots-vertical"></i>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Chỉnh sửa</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Xóa</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
 
         <Card.Text className='mt-3'>

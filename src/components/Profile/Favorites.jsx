@@ -6,7 +6,7 @@ function Favorites() {
   return (
 
     <Container className='p-3 border rounded-3' >
-      <h1 className="mb-4 text-success"><i class="bi bi-pin-map"></i> ĐỊA ĐIỂM ƯA THÍCH</h1>
+      <h2 className="mb-4 text-success fw-bold"><i class="bi bi-pin-map"></i> ĐỊA ĐIỂM ƯA THÍCH</h2>
       <Row>
         <Col md={6}>
           <Card className="p-3 mb-3">

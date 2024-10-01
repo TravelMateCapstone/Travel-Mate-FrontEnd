@@ -18,8 +18,8 @@ body {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: #000000;
-    left: 10%;
+    background: #222222;
+    left: 7%;
     margin-left: -6px
 }
 
@@ -28,6 +28,7 @@ body {
 }
 
 .cbp_tmtimeline>li:first-child .cbp_tmicon {
+    font-size: 50%;
     background: #fff;
     color: #ffffff
 }
@@ -38,7 +39,7 @@ body {
 
 
 .cbp_tmtimeline>li .cbp_tmlabel {
-    margin: 0 0 20px 15%;
+    margin: 0 0 20px 9.5%;
     background: #ffffff;
     position: relative;
     border-radius: 5px
@@ -49,8 +50,8 @@ body {
 }
 
 .cbp_tmtimeline>li .cbp_tmicon {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -65,7 +66,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 0 3px #4e4e4f;
     text-align: center;
-    left: 10%;
+    left: 8%;
     top: 0;
     margin: 0 0 0 -25px
 }

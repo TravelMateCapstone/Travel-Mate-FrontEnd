@@ -4,7 +4,7 @@ import { Card, Image, Container, Row, Col, Button } from 'react-bootstrap';
 function Friends() {
   return (
     <Container className='p-3 border rounded-3'>
-      <h1 className="mb-4 text-success"><i class="bi bi-people"></i> BẠN BÈ</h1>
+      <h2 className="mb-4 text-success fw-bold"><i class="bi bi-people"></i> BẠN BÈ</h2>
       <Row>
         <Col md={6}>
           <Card className="p-3 mb-3">
