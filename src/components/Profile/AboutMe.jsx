@@ -7,35 +7,35 @@ function AboutMe() {
     <Container className='p-3 border rounded-3'>
       <Row>
         <Col md={12}>
-          <h1 className="mb-4 text-success"><i class="bi bi-info-circle"></i> GIỚI THIỆU</h1>
+          <h2 className="mb-4 text-success fw-bold"><i class="bi bi-info-circle"></i> GIỚI THIỆU</h2>
           <ul className="cbp_tmtimeline">
             <li>
               <div className="cbp_tmicon bg-info"><i className="zmdi zmdi-label"></i></div>
               <div className="cbp_tmlabel">
-                <h3> MÔ TẢ</h3>
+                <h4> MÔ TẢ</h4>
                 <p>Hi, I'm a passionate developer with a love for building web and mobile applications.</p>
               </div>
             </li>
             <li>
               <div className="cbp_tmicon bg-info"><i className="zmdi zmdi-label"></i></div>
               <div className="cbp_tmlabel">
-                <h3>TẠI SAO TÔI SỬ DỤNG TRAVEL MATE</h3>
+                <h4>TẠI SAO TÔI SỬ DỤNG TRAVEL MATE</h4>
                 <p>I’m here to expand my knowledge, collaborate on exciting projects, and share my skills.</p>
               </div>
             </li>
             <li>
               <div className="cbp_tmicon bg-info"><i className="zmdi zmdi-case"></i></div>
               <div className="cbp_tmlabel">
-                <h3>SỞ THÍCH</h3>
-                <p className="small btn btn-success mx-3">Coding</p>
-                <p className="small btn btn-success mx-3">Coding</p>
-                <p className="small btn btn-success mx-3">Coding</p>
+                <h4>SỞ THÍCH</h4>
+                <p className="small border border-dark btn mx-3 rounded-pill">Coding</p>
+                <p className="small border border-dark btn mx-3 rounded-pill">Coding</p>
+                <p className="small border border-dark btn mx-3 rounded-pill">Coding</p>
               </div>
             </li>
             <li>
               <div className="cbp_tmicon bg-info"><i className="zmdi zmdi-case"></i></div>
               <div className="cbp_tmlabel">
-                <h3>ÂM NHẠC, PHIM ẢNH & SÁCH</h3>
+                <h4>ÂM NHẠC, PHIM ẢNH & SÁCH</h4>
                 <p>I love a mix of genres—from indie pop and jazz to rock. Always up for discovering new tunes, especially local music scenes. Big fan of films that make you think or feel deeply. I enjoy everything from Nolan’s thrillers to Studio Ghibli’s magic, and I’m always on the hunt for indie gems.
                   Books are my escape. Whether it’s fiction or non-fiction, I’m into anything that tells a good story. Always happy to swap book recommendations over a coffee!</p>
               </div>

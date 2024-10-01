@@ -26,7 +26,6 @@
   display: flex;
   align-items: center;
   height: var(--sidebar-height-desktop);
-  /* Use desktop height by default */
   z-index: 2;
 }
 
@@ -53,8 +52,20 @@
 
 .tabs .tab-header>div.active {
   font-weight: 800;
-  text-decoration: underline;
   color: green;
+  position: relative;
+}
+
+.tabs .tab-header>div.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15%;
+  height: 3px;
+  background-color: green;
+  width: 90%;
+  margin-left: 5%;
 }
 
 .tabs .tab-indicator {
@@ -93,8 +104,12 @@
   }
 
   .tabs .tab-header {
-    height: var(--sidebar-height-tablet);
-    /* Use tablet height */
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: var(--sidebar-height-desktop);
+    z-index: 2;
   }
 
   .tabs .tab-indicator {
@@ -130,8 +145,8 @@
   }
 
   .tabs .tab-header {
-    height: var(--sidebar-height-mobile);
-    /* Use mobile height */
+    width: 100%;
+    height: var(--sidebar-height-desktop);
   }
 
   .tabs .tab-indicator {
@@ -157,4 +172,5 @@
     font-size: var(--font-size-mobile);
     /* Use mobile font size */
   }
+
 }
