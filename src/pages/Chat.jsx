@@ -174,8 +174,7 @@ function Chat() {
         setSelectedChat(updatedChat);
       };
 
-      // Giả lập nhận tin nhắn sau mỗi 5 giây
-      const intervalId = setInterval(receiveMessage, 5000);
+      const intervalId = setInterval(receiveMessage, 60000);
 
       // Hủy bỏ interval khi component unmount hoặc khi chat thay đổi
       return () => clearInterval(intervalId);
@@ -214,7 +213,6 @@ function Chat() {
                   isSentByUser={message.sender === userName}
                 />
               ))}
-              {/* Đây là điểm cuộn đến cuối */}
               <div ref={messagesEndRef} />
             </div>
             <ChatInput onSendMessage={handleSendMessage} />
@@ -272,16 +270,15 @@ function Chat() {
         </Offcanvas.Body>
       </Offcanvas>
 
-      {/* Sidebar hiển thị trên các thiết bị lớn */}
       <div className="chat-sidebar d-none d-md-block">
         <input
           type="text"
           placeholder="Search..."
-          className="search-bar"
+          className="search-bar px-4"
           value={searchTerm}
           onChange={handleSearch}
         />
-        <div className="tab-buttons">
+        <div className="tab-buttons p-2">
           <button
             className={activeTab === 'chat' ? 'active' : ''}
             onClick={() => handleTabClick('chat')}
