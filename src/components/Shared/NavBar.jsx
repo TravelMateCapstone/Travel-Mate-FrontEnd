@@ -160,15 +160,6 @@ function NavBar() {
                 >
                   Nhóm
                 </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  to={RoutePath.SETTING}
-                  className={`text-nowrap fw-semibold ${
-                    location.pathname === RoutePath.SETTING ? "active" : ""
-                  }`}
-                >
-                  Cài đặt
-                </Nav.Link>
               </Nav>
             </Col>
 
