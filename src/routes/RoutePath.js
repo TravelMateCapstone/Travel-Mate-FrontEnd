@@ -1,3 +1,4 @@
+import LocalWalletManagement from "../pages/Local/LocalWalletManagement";
 
 
 const RoutePath = {
@@ -18,7 +19,12 @@ const RoutePath = {
     ADMIN_REPORT: '/report',
     ADMIN_TRANSACTION: '/transaction',
     ADMIN_TRIPHISTORY: '/admintriphistory',
-    
+
+    // LOCAL
+    LOCAL_WALLET_MANAGEMENT: '/localwallet',
+    // LOCAL_TRIP_HISTORY: '/localtriphistory',
+    // LOCAL_CALENDAR_MANAGEMENT: '/localcalendar'
+
 }
 
 export default RoutePath;
