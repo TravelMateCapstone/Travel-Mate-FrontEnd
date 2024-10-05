@@ -83,11 +83,23 @@
     font-weight: bold;
 }
 
+.icon-bank {
+    margin-right: 1%;
+}
+
 /* Media Query for Large Screens */
 @media (min-width: 1024px) {
+    .body-dashboard {
+        width: 100%;
+    }
+
     .wallet-overview {
-        width: 60%;
+        width: 100%;
         /* Keep width constraint on large screens */
+    }
+
+    .overview-card-wallet {
+        width: 100%;
     }
 
     .table-search {
@@ -100,9 +112,18 @@
 
 /* Media Query for Tablets (screens between 768px and 1024px) */
 @media (max-width: 1024px) {
-    .wallet-overview {
+    .body-dashboard {
         width: 100%;
-        /* Full width on tablets */
+        font-size: 90%;
+    }
+
+    .wallet-overview {
+        width: 100% !important;
+        /* Keep width constraint on large screens */
+    }
+
+    .overview-card-wallet {
+        width: 50%;
     }
 
     .overview-card-wallet {
@@ -114,18 +135,31 @@
 
 /* Media Query for Mobile (screens less than 768px wide) */
 @media (max-width: 768px) {
-    .wallet-overview {
-        flex-direction: column;
-        /* Change the layout to column for smaller screens */
+    .wallet {
+        margin: 0px !important;
+    }
+
+    .body-dashboard {
         width: 100%;
+        font-size: 80%;
+        padding: 0 !important;
+    }
+
+    .wallet-overview {
+        width: 100% !important;
+        /* Keep width constraint on large screens */
     }
 
     .overview-card-wallet {
-        margin-bottom: 20px;
+        width: 100%;
     }
 
     .table-container {
         overflow-x: auto;
         /* Allow horizontal scroll for the table if needed */
+    }
+
+    .local-wallet-management {
+        padding: 0;
     }
 }
