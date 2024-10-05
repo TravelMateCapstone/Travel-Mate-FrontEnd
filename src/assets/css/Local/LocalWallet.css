@@ -14,11 +14,10 @@
 
 .overview-card-wallet {
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px solid #409034 !important;
     height: 200px;
     width: 100%;
-    /* Take full width for smaller screens */
     max-width: 360px;
     /* Limit max width */
     flex: 1;
@@ -162,4 +161,10 @@
     .local-wallet-management {
         padding: 0;
     }
+}
+
+@media (max-width: 375px) {
+    .local-wallet-management {
+        padding: 0 !important;
+    }   
 }
