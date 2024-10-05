@@ -1,28 +1,5 @@
-.local-wallet-management {
+.local-trip-management {
     padding: 20px;
-}
-
-.wallet-overview {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-    width: 60%;
-}
-
-.overview-card {
-    flex: 1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.overview-card h3 {
-    margin-bottom: 10px;
-}
-
-.overview-card .bank {
-    font-size: 20px;
 }
 
 .table-container {
@@ -67,4 +44,24 @@
     background: #007931;
     border: 0px;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .local-trip-management {
+        padding: 0px;
+    }
+
+    .trip-history {
+        margin: 0px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .local-trip-management {
+        padding: 0px !important;
+    }
+
+    .body-dashboard-trip {
+        padding: 0px !important;
+    }
 }

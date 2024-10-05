@@ -84,36 +84,33 @@ function LocalTripHistory() {
     };
 
     return (
-        <div className="local-wallet-management">
-            <h1 className='mx-4 fw-bold'>Lịch sử các chuyến đi</h1>
-            <div className='body-dashboard'>
+        <div className="local-trip-management">
+            <h1 className='mx-4 fw-bold trip-history'>Lịch sử các chuyến đi</h1>
+            <div className='body-dashboard-trip'>
                 {/* Transaction Table */}
                 <div className="table-container">
-                    <div className='d-flex justify-content-between'>
-                        <h1>Danh sách</h1>
-                        <div>
-                            <InputGroup className="mb-3" style={{ width: '400px' }}>
-                                <FormControl
-                                    placeholder="Search"
-                                    aria-label="Search"
-                                    aria-describedby="basic-addon2"
-                                    id='search-input'
-                                    className='rounded-5'
-                                />
-                                <Button variant="" id="button-addon2">
-                                    <i className="bi bi-funnel fs-3"></i> {/* Bootstrap icon for search */}
-                                </Button>
-                            </InputGroup>
-                        </div>
+                    <div>
+                        <InputGroup className="mb-3" style={{ width: '50%' }}>
+                            <FormControl
+                                placeholder="Search"
+                                aria-label="Search"
+                                aria-describedby="basic-addon2"
+                                id='search-input'
+                                className='rounded-5'
+                            />
+                            <Button variant="" id="button-addon2">
+                                <i className="bi bi-funnel fs-3"></i> {/* Bootstrap icon for search */}
+                            </Button>
+                        </InputGroup>
                     </div>
 
                     <Table borderless hover responsive>
                         <thead>
                             <tr>
-                                <th>Traveller</th>
+                                <th>Khách du lịch</th>
                                 <th>Địa điểm</th>
-                                <th>Ngày</th>
-                                <th>Amount</th>
+                                <th>Thời gian diễn ra</th>
+                                <th>Số tiền</th>
                                 <th>Hành động</th>
                             </tr>
                         </thead>

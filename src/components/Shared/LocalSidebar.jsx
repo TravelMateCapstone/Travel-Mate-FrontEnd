@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../../assets/css/Shared/AdminSidebar.css';
+import '../../assets/css/Shared/LocalSidebar.css';
 import RoutePath from '../../routes/RoutePath';
 
 function LocalSidebar() {
@@ -8,7 +8,7 @@ function LocalSidebar() {
 
     return (
         <div className="sidebar">
-            <h2 className="d-flex fw-bold mx-4 my-0 mb-2" style={{ fontSize: '32px' }}>
+            <h2 className="d-flex fw-bold mx-2 my-0 mb-2" style={{ fontSize: '32px' }}>
                 <div className="text-primary">Travel</div><div>mate</div>
             </h2>
             <ul className="menu">
