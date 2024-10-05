@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import '../../assets/css/Local/LocalWallet.css';
 import { Table, InputGroup, FormControl, Button } from 'react-bootstrap';
 import ReactPaginate from 'react-paginate';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../assets/css/Local/LocalWallet.css';
+
 
 const transactionData = [
   {
@@ -93,7 +95,7 @@ function LocalWalletManagement() {
 
   return (
     <div className="local-wallet-management">
-      <h1 className='mx-3 fw-bold'>Ví tiền</h1>
+      <h1 className='mx-3 fw-bold wallet'>Ví tiền</h1>
 
       <div className='body-dashboard'>
         {/* Overview Cards */}
@@ -113,44 +115,46 @@ function LocalWalletManagement() {
               <h4>Phương pháp rút tiền</h4>
               <i class="bi bi-plus-circle"></i>
             </div>
-            <div className='d-flex'>
-              <p className="bank"><i class="bi bi-bank"></i> 1502********4832 </p>
-              <div className='mx-5'><i class="bi bi-copy"></i> <i class="bi bi-trash3"></i></div>
+            <div className='d-flex bank-number'>
+              <i className="bi bi-bank icon-bank"></i>
+              <p className="bank mx-2"> 1502********4832</p>
+              <div className='mx-3'><i className="bi bi-copy"></i> <i class="bi bi-trash3"></i></div>
             </div>
-            <div className='d-flex'>
-              <p className="bank"><i class="bi bi-bank"></i> 1502********4832 </p>
-              <div className='mx-5'><i class="bi bi-copy"></i> <i class="bi bi-trash3"></i></div>
+            <div className='d-flex bank_number'>
+              <i className="bi bi-bank icon-bank"></i>
+              <p className="bank mx-2"> 1502********4832 </p>
+              <div className='mx-3'><i class="bi bi-copy"></i> <i class="bi bi-trash3"></i></div>
             </div>
           </div>
         </div>
 
         {/* Transaction Table */}
         <div className="table-container my-5">
-          <div className='d-flex justify-content-between'>
-            <h1>Lịch sử giao dịch</h1>
-            <div>
-              <InputGroup className="mb-3" style={{ width: '400px' }}>
-                <FormControl
-                  placeholder="Search"
-                  aria-label="Search"
-                  aria-describedby="basic-addon2"
-                  id='search-input'
-                  className='rounded-5'
-                />
-                <Button variant="" id="button-addon2">
-                  <i className="bi bi-funnel fs-3"></i> {/* Bootstrap icon for search */}
-                </Button>
-              </InputGroup>
-            </div>
+          {/* <div className='d-flex justify-content-between'> */}
+          <h1>Lịch sử giao dịch</h1>
+          <div>
+            <InputGroup className="mb-3" style={{ width: '50%' }}>
+              <FormControl
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="basic-addon2"
+                id='search-input'
+                className='rounded-5'
+              />
+              <Button variant="" id="button-addon2">
+                <i className="bi bi-funnel fs-3"></i> {/* Bootstrap icon for search */}
+              </Button>
+            </InputGroup>
           </div>
+          {/* </div> */}
 
           <Table borderless hover responsive>
             <thead>
               <tr>
-                <th>Traveller</th>
-                <th>Status</th>
-                <th>Date</th>
-                <th>Amount</th>
+                <th>Khách giao dịch</th>
+                <th>Trạng thái</th>
+                <th>Thời gian giao dịch</th>
+                <th>Số tiền</th>
               </tr>
             </thead>
             <tbody>
