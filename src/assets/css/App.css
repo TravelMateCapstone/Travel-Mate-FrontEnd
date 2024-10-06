@@ -36,3 +36,7 @@ a {
 img{
   width: 100%;
 }
+
+.dropdown-item:hover{
+  background: #006f2b;
+}
