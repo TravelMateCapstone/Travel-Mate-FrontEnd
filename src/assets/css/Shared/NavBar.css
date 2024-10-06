@@ -135,6 +135,9 @@
   z-index: 1050 !important; /* Đảm bảo dropdown nằm ở trên các thành phần khác */
   position: absolute !important; /* Hoặc relative nếu cần */
 }
+.navbar-custom{
+  border-bottom: 1px solid #d9d9d9;
+}
 
 @media (min-width: 992px) {
   .navbar {
