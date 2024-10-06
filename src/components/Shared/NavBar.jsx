@@ -58,7 +58,7 @@ function NavBar() {
 
   return (
     <Container>
-      <Navbar bg="light" expand="lg" className="p-1 navbar-custom" fixed="top">
+      <Navbar bg="white" expand="lg" className="p-1 navbar-custom" fixed="top">
         <Container fluid className="p-0">
           <Row className="w-100 align-items-center justify-content-between">
             <Col
