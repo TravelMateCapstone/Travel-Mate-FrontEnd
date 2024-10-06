@@ -58,7 +58,7 @@ function NavBar() {
 
   return (
     <Container>
-      <Navbar bg="light" expand="lg" className="shadow p-1" fixed="top">
+      <Navbar bg="light" expand="lg" className="shadow p-1 navbar-custom" fixed="top">
         <Container fluid className="p-0">
           <Row className="w-100 align-items-center justify-content-between">
             <Col
@@ -81,9 +81,12 @@ function NavBar() {
                 </Navbar.Brand>
                 <Form className="d-none d-md-flex w-100">
                   <InputGroup>
+                    <InputGroup.Text className="search-icon">
+                      <i className="bi bi-search"></i>
+                    </InputGroup.Text>
                     <FormControl
                       type="search"
-                      placeholder="🔍Nhập từ khóa"
+                      placeholder="Nhập từ khóa"
                       aria-label="Search"
                       className="border searchBar"
                     />
@@ -92,12 +95,12 @@ function NavBar() {
                     <Dropdown.Toggle
                       id="dropdown-custom-1"
                       variant="secondary"
-                      className="search-dropdown text-dropdown text-black"
+                      className="search-dropdown text-dropdown text-black rounded-start-0"
                     >
                       {dropdownValue}
                       <i className="bi bi-chevron-down ms-2"></i>
                     </Dropdown.Toggle>
-                    <Dropdown.Menu>
+                    <Dropdown.Menu className="p-0">
                       <Dropdown.Item eventKey="Người địa phương">
                         <div>
                           <p className="m-0">
@@ -125,6 +128,7 @@ function NavBar() {
                     </Dropdown.Menu>
                   </Dropdown>
                 </Form>
+
               </div>
             </Col>
 
@@ -136,27 +140,24 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={RoutePath.DASHBOARD}
-                  className={`text-nowrap fw-semibold ${
-                    location.pathname === RoutePath.DASHBOARD ? "active" : ""
-                  }`}
+                  className={`text-nowrap fw-light ${location.pathname === RoutePath.DASHBOARD ? "active" : ""
+                    }`}
                 >
                   Trang chủ
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to={RoutePath.EVENT}
-                  className={`text-nowrap fw-semibold ${
-                    location.pathname === RoutePath.EVENT ? "active" : ""
-                  }`}
+                  className={`text-nowrap fw-light ${location.pathname === RoutePath.EVENT ? "active" : ""
+                    }`}
                 >
                   Sự kiện
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to={RoutePath.GROUP}
-                  className={`text-nowrap fw-semibold ${
-                    location.pathname === RoutePath.GROUP ? "active" : ""
-                  }`}
+                  className={`text-nowrap fw-light ${location.pathname === RoutePath.GROUP ? "active" : ""
+                    }`}
                 >
                   Nhóm
                 </Nav.Link>
@@ -174,11 +175,11 @@ function NavBar() {
                 {isAuthenticated ? (
                   <>
                     <Dropdown align="end">
-                      <Dropdown.Toggle className="messages_action bg-secondary rounded-5 border-0">
-                        <i className="bi bi-messenger fs-3"></i>
+                      <Dropdown.Toggle className="messages_action bg-secondary rounded-5 border-0 d-flex justify-content-center align-items-center">
+                        <i className="bi bi-messenger icon-action"></i>
                       </Dropdown.Toggle>
 
-                      <Dropdown.Menu>
+                      <Dropdown.Menu className="p-0">
                         <Dropdown.Item href="#message1">
                           Message 1
                         </Dropdown.Item>
@@ -192,11 +193,11 @@ function NavBar() {
                     </Dropdown>
 
                     <Dropdown align="end">
-                      <Dropdown.Toggle className="notify_action bg-secondary rounded-5 border-0">
-                        <i className="bi bi-bell-fill fs-3"></i>
+                      <Dropdown.Toggle className="notify_action bg-secondary rounded-5 border-0 d-flex justify-content-center align-items-center">
+                        <i className="bi bi-bell-fill icon-action"></i>
                       </Dropdown.Toggle>
 
-                      <Dropdown.Menu>
+                      <Dropdown.Menu className="p-0">
                         <Dropdown.Item href="#notification1">
                           Notification 1
                         </Dropdown.Item>
@@ -210,15 +211,17 @@ function NavBar() {
                     </Dropdown>
 
                     <Dropdown align="end">
-                      <Dropdown.Toggle className="avatar bg-secondary rounded-5 border-0 p-0">
+                      <Dropdown.Toggle className="avatar bg-secondary rounded-5 border-0 p-0 d-flex justify-content-center align-items-center gap-0">
                         <img
                           className="object-fit-cover rounded-5"
-                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRez3lFozeHy6f4R0eoyEaIlM5lunDXiEbICA&s"
+                          src="https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/449745842_1897469880717181_9200307908320214870_n.jpg?stp=dst-jpg_s200x200&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=Y3ls6zXN1FkQ7kNvgHaVl16&_nc_ht=scontent.fdad1-3.fna&_nc_gid=Ast3ANCkPa-DxFkrY9dgnTq&oh=00_AYBe08CtFb4taXCbRVq4JOQjHc2uuRLLLvpkYfxQ1B_SFg&oe=67087E50"
                           alt="avatar"
                         />
+
+                        <i className="bi bi-list fs-3 text-black"></i>
                       </Dropdown.Toggle>
 
-                      <Dropdown.Menu>
+                      <Dropdown.Menu className="p-0">
                         <Dropdown.Item as={Link} to={RoutePath.PROFILE}>
                           Hồ sơ
                         </Dropdown.Item>
@@ -273,7 +276,6 @@ function NavBar() {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title className="fw-bold">
               <img src={logo} alt="logo" className="logo" />
-              Travelmate
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
