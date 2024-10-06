@@ -22,24 +22,35 @@ import Register from "../Auth/Register";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/actions/authActions";
 
+import { openLoginModal, closeLoginModal, openRegisterModal, closeRegisterModal } from "../../redux/actions/modalActions";
+
 function NavBar() {
   const [dropdownValue, setDropdownValue] = useState("Người địa phương");
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-
+  const isLoginModalOpen = useSelector((state) => state.modal.isLoginModalOpen);
+  const isRegisterModalOpen = useSelector((state) => state.modal.isRegisterModalOpen);
   const [showCanvas, setShowCanvas] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
-
   const location = useLocation(); // Lấy đường dẫn hiện tại
-
   const handleSelect = (eventKey) => {
     setDropdownValue(eventKey);
   };
-
   const dispatch = useDispatch();
   const toggleCanvas = () => setShowCanvas(!showCanvas);
-  const handleLoginModal = () => setShowLoginModal(!showLoginModal);
-  const toggleRegisterModal = () => setShowRegisterModal(!showRegisterModal);
+  const handleLoginModal = () => {
+    if (isLoginModalOpen) {
+      dispatch(closeLoginModal());
+    } else {
+      dispatch(openLoginModal());
+    }
+  };
+
+  const handleRegisterModal = () => {
+    if (isRegisterModalOpen) {
+      dispatch(closeRegisterModal());
+    } else {
+      dispatch(openRegisterModal());
+    }
+  };
 
   const handleLogout = () => {
     dispatch(logout());
@@ -241,7 +252,7 @@ function NavBar() {
                   <>
                     <Button
                       variant=""
-                      onClick={toggleRegisterModal}
+                      onClick={handleRegisterModal}
                       className="btn-register fw-medium"
                     >
                       Đăng kí
@@ -344,8 +355,8 @@ function NavBar() {
           </Offcanvas.Body>
         </Offcanvas>
       </Navbar>
-      <Login show={showLoginModal} handleClose={handleLoginModal} />
-      <Register show={showRegisterModal} handleClose={toggleRegisterModal} />
+      <Login show={isLoginModalOpen} handleClose={handleLoginModal} />
+      <Register show={isRegisterModalOpen} handleClose={handleRegisterModal} />
     </Container>
   );
 }
