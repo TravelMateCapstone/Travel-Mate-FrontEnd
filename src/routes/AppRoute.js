@@ -19,7 +19,7 @@ import AdminTripHistory from "../pages/Admin/AdminTripHistory"
 import LocalWalletManagement from "../pages/Local/LocalWalletManagement"
 import LocalLayout from "../layouts/LocalLayout"
 import LocalTripHistory from "../pages/Local/LocalTripHistory"
-// import LocalCalendarManagement from "../pages/Local/LocalCalendarManagement"
+import LocalCalendarManagement from "../pages/Local/LocalCalendarManagement"
 const publishRoutes = [
     { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
@@ -40,7 +40,7 @@ const privateRoutes = [
 
     { path: RoutePath.LOCAL_WALLET_MANAGEMENT, component: LocalWalletManagement, layout: LocalLayout },
     { path: RoutePath.LOCAL_TRIP_HISTORY, component: LocalTripHistory, layout: LocalLayout },
-    // { path: RoutePath.LOCAL_CALENDAR_MANAGEMENT, component: LocalCalendarManagement, layout: LocalLayout },
+    { path: RoutePath.LOCAL_CALENDAR_MANAGEMENT, component: LocalCalendarManagement, layout: LocalLayout },
 
 ]
 

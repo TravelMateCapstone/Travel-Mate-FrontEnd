@@ -30,13 +30,13 @@ function LocalSidebar() {
                         <span className="text">Chuyến đi</span>
                     </Link>
                 </li>
-                {/*   <li className={`menu-item ${location.pathname === RoutePath.LOCAL_CALENDAR_MANAGEMENT ? 'active' : ''}`}>
+                <li className={`menu-item ${location.pathname === RoutePath.LOCAL_CALENDAR_MANAGEMENT ? 'active' : ''}`}>
                     <Link to={RoutePath.LOCAL_CALENDAR_MANAGEMENT}>
                         <i className="bi bi-wallet-fill icon"></i>
                         <span className="text">Lịch</span>
                     </Link>
                 </li>
-                <li className={`menu-item ${location.pathname === RoutePath.ADMIN_TRIPHISTORY ? 'active' : ''}`}>
+                {/* <li className={`menu-item ${location.pathname === RoutePath.ADMIN_TRIPHISTORY ? 'active' : ''}`}>
                     <Link to={RoutePath.ADMIN_TRIPHISTORY}>
                         <i className="bi bi-bus-front-fill icon"></i>
                         <span className="text">Kế hoạch</span>
