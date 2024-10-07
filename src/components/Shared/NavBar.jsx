@@ -278,6 +278,10 @@ function NavBar() {
                             <NotifyItem avatar={notification.avatar} content={notification.content} isRequest={notification.isRequest} name={notification.name} />
                           </Dropdown.Item>
                         ))}
+                         <div className="d-flex align-items-center justify-content-center">
+                          <p className="m-0 messege-more">Xem thêm thông báo</p>
+                          <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                        </div>
                       </Dropdown.Menu>
                     </Dropdown>
 
