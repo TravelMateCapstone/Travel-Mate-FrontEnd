@@ -5,12 +5,12 @@
 
 
 
-.grouplist-card {
+.eventlist-card {
     border-radius: 8px;
     overflow: hidden;
 }
 
-.grouplist-pagination {
+.eventlist-pagination {
     margin-top: 1rem;
 }
 
@@ -34,7 +34,7 @@ button.bi-funnel {
     /* Add appropriate icons */
 }
 
-.grouplist-card .location-and-members {
+.eventlist-card .location-and-members {
     display: flex;
     justify-content: space-between;
     /* Align the address and members count horizontally */
@@ -44,31 +44,28 @@ button.bi-funnel {
     /* Add a small space below the line */
 }
 
-.grouplist-card .description {
+.eventlist-card .description {
     font-size: 13px;
     /* Set the font size for the description */
     margin-bottom: 12px;
     /* Adjust spacing as needed */
 }
 
-.grouplist-card .btn-join {
+/* .eventlist-card .btn-join {
     font-size: 14px;
-    /* Adjust the button text size */
     padding: 10px 20px;
-    /* Adjust button padding */
     border-radius: 50px;
-    /* Make the button rounded */
-}
+} */
 
 
-.grouplist-search-input {
+.eventlist-search-input {
     border-radius: 30px;
     border: 1px solid;
     height: 38px;
     margin-top: 5px;
 }
 
-.grouplist-card {
+.eventlist-card {
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -92,6 +89,9 @@ button.bi-funnel {
 }
 
 .btn-join {
+    background-color: white;
+    color: #388e3c;
+    font-weight: bold;
     font-size: 14px;
     /* Adjust the button font size */
     padding: 10px 20px;
@@ -102,9 +102,33 @@ button.bi-funnel {
     /* Make the button full-width */
     height: 38px;
     align-items: center;
+
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    align-items: center;
+    /* Căn giữa cả chữ và icon theo chiều dọc */
+    position: relative;
 }
 
-.group-image {
+.btn-text {
+    flex-grow: 1;
+    /* Đảm bảo chữ chiếm không gian giữa */
+    text-align: center;
+    /* Căn giữa chữ trong khoảng trống */
+}
+
+.icon-join {
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    /* Đặt icon cách bên phải 10px */
+    display: flex;
+    align-items: center;
+}
+
+.event-image {
     object-fit: cover;
     /* Ensure the image fills the space properly */
     height: 180px;

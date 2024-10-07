@@ -3,27 +3,107 @@ import { Row, Col, Form, Button, Card, InputGroup } from 'react-bootstrap';
 import '../../assets/css/Event/EventList.css';
 
 function EventList() {
+    const eventData = [
+        {
+            title: "Surfing Club",
+            location: "Da Nang, Viet Nam",
+            membersCount: 35,
+            time: "10:00 AM - 2:00 PM",
+            member: 35,
+            description: "Our expert instructors and fun community will help you improve your skills and enjoy the ocean.",
+            imageURL: "https://toquoc.mediacdn.vn/280518851207290880/2024/1/7/dsdgtdy-1704616308047440689926.jpg"
+        },
+        {
+            title: "Yoga Retreat",
+            location: "Hoi An, Viet Nam",
+            membersCount: 20,
+            time: "8:00 AM - 12:00 PM",
+            member: 20,
+            description: "Find your balance and peace with our rejuvenating yoga retreat program.",
+            imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHoMev2VPeG81wrzcm0l7YanrC8N8rkApsCQ&s"
+        },
+        {
+            title: "Mountain Biking Club",
+            location: "Da Lat, Viet Nam",
+            membersCount: 40,
+            time: "9:00 AM - 3:00 PM",
+            member: 40,
+            description: "Join our adventurous group for mountain biking through breathtaking landscapes.",
+            imageURL: "https://img.freepik.com/free-vector/music-event-poster-with-photo-2021_52683-42065.jpg"
+        },
+        {
+            title: "Mountain Biking Club",
+            location: "Da Lat, Viet Nam",
+            membersCount: 40,
+            time: "9:00 AM - 3:00 PM",
+            member: 40,
+            description: "Join our adventurous group for mountain biking through breathtaking landscapes.",
+            imageURL: "https://img.freepik.com/free-vector/music-event-poster-with-photo-2021_52683-42065.jpg"
+        },
+        {
+            title: "Mountain Biking Club",
+            location: "Da Lat, Viet Nam",
+            membersCount: 40,
+            time: "9:00 AM - 3:00 PM",
+            member: 40,
+            description: "Join our adventurous group for mountain biking through breathtaking landscapes.",
+            imageURL: "https://img.freepik.com/free-vector/music-event-poster-with-photo-2021_52683-42065.jpg"
+        },
+        {
+            title: "Mountain Biking Club",
+            location: "Da Lat, Viet Nam",
+            membersCount: 40,
+            time: "9:00 AM - 3:00 PM",
+            member: 40,
+            description: "Join our adventurous group for mountain biking through breathtaking landscapes.",
+            imageURL: "https://img.freepik.com/free-vector/music-event-poster-with-photo-2021_52683-42065.jpg"
+        },
+        // Thêm các sự kiện khác
+    ];
+
+    const popularEventsData = [
+        {
+            title: "Surfing Club",
+            location: "Da Nang, Viet Nam",
+            membersCount: 35,
+            time: "10:00 AM - 2:00 PM",
+            member: 35,
+            description: "Our expert instructors and fun community will help you improve your skills and enjoy the ocean.",
+            imageURL: "https://toquoc.mediacdn.vn/280518851207290880/2024/1/7/dsdgtdy-1704616308047440689926.jpg"
+        },
+        {
+            title: "Photography Workshop",
+            location: "Ha Long Bay, Viet Nam",
+            membersCount: 25,
+            time: "1:00 PM - 5:00 PM",
+            member: 25,
+            description: "Capture stunning views and improve your photography skills in this workshop.",
+            imageURL: "https://img.freepik.com/free-vector/music-event-poster-with-photo-2021_52683-42065.jpg"
+        }
+        // Thêm các sự kiện khác
+    ];
+
     return (
         <Row className="eventlist">
-            {/* Group List */}
-            <Col xs={12} md={12} lg={8} className="group-list-section mx-auto">
+            {/* Event List */}
+            <Col xs={12} md={12} lg={8} className="event-list-section mx-auto">
                 {/* Search and Filter UI */}
-                <Row className="my-3 grouplist-search">
+                <Row className="my-3 eventlist-search">
                     <Col md={8}>
                         <InputGroup>
                             <Form.Control
                                 type="text"
                                 placeholder="Nhập tên nhóm cần tìm..."
-                                className="grouplist-search-input"
+                                className="eventlist-search-input"
                             />
                         </InputGroup>
                     </Col>
                     <Col md={2}>
-                        <Form.Control type="text" placeholder="Địa điểm" className='grouplist-search-input' />
+                        <Form.Control type="text" placeholder="Địa điểm" className='eventlist-search-input' />
                     </Col>
                     <Col md={2}>
-                        <Button variant="outline-secondary grouplist-search-input">
-                            <i class="bi bi-funnel"></i> Lọc
+                        <Button variant="outline-secondary eventlist-search-input">
+                            <i className="bi bi-funnel"></i> Lọc
                         </Button>
                     </Col>
                 </Row>
@@ -31,61 +111,69 @@ function EventList() {
                 {/* Filter buttons */}
                 <Row className="mb-3">
                     <Col>
-                        <Button variant="outline-dark" className="me-2 grouplist-search-input">10km ✖</Button>
-                        <Button variant="outline-dark" className="me-2 grouplist-search-input">Đã xác thực ✖</Button>
-                        <Button variant="outline-dark" className="me-2 grouplist-search-input">Nam ✖</Button>
-                        <Button variant="outline-dark" className="me-2 grouplist-search-input">18-25 tuổi ✖</Button>
+                        <Button variant="outline-dark" className="me-2 eventlist-search-input">10km ✖</Button>
+                        <Button variant="outline-dark" className="me-2 eventlist-search-input">Đã xác thực ✖</Button>
+                        <Button variant="outline-dark" className="me-2 eventlist-search-input">Nam ✖</Button>
+                        <Button variant="outline-dark" className="me-2 eventlist-search-input">18-25 tuổi ✖</Button>
                         <Button variant="link" className="text-success">Xóa tất cả</Button>
                     </Col>
                 </Row>
 
-                {/* Group Cards */}
+                {/* Event Cards */}
                 <Row>
-                    {Array.from({ length: 8 }).map((_, idx) => (
+                    {eventData.map((event, idx) => (
                         <Col xs={12} md={6} lg={4} className="mb-4" key={idx}>
-                            <Card className="grouplist-card">
-                                {/* Updated Image with link */}
-                                <Card.Img variant="top" src="https://toquoc.mediacdn.vn/280518851207290880/2024/1/7/dsdgtdy-1704616308047440689926.jpg" className="group-image" />
+                            <Card className="eventlist-card">
+                                <Card.Img variant="top" src={event.imageURL} className="event-image" />
                                 <Card.Body>
-                                    <Card.Title>Surfing Club</Card.Title>
-                                    {/* Location and members count */}
                                     <div className="location-and-members">
-                                        <span><i className='bi bi-geo-alt'></i> Da Nang, Viet Nam</span>
-                                        <span><i className='bi bi-person-circle'></i> 35 </span>
+                                        <span><i className='bi bi-clock'></i> {event.time}</span>
+                                        <span><i className='bi bi-person-circle'></i> {event.member}</span>
                                     </div>
-                                    {/* Description */}
-                                    <Card.Text className="description">
-                                        Our expert instructors and fun community will help you improve your skills and enjoy the ocean.
-                                    </Card.Text>
+                                    <Card.Title >{event.title}</Card.Title>
+
+                                    <div className="location-and-members">
+                                        <span><i className='bi bi-geo-alt'></i> {event.location}</span>
+                                    </div>
                                     <Button variant="success" className="btn-join">
-                                        Tham gia
+                                        <span className="btn-text">Tham gia</span>
+                                        <div className="icon-join">
+                                            <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                                        </div>
                                     </Button>
+
+                                    {/* Ẩn description */}
                                 </Card.Body>
                             </Card>
                         </Col>
                     ))}
                 </Row>
+
             </Col>
 
-            {/* Popular Groups */}
-            <Col xs={12} md={12} lg={3} className='popular-group-section mx-3'>
+            {/* Popular events */}
+            <Col xs={12} md={12} lg={3} className='popular-event-section mx-3'>
                 <h5 className='fontsize-popular'>Sự kiện nổi bật</h5>
-                {Array.from({ length: 2 }).map((_, idx) => (
+                {popularEventsData.map((event, idx) => (
                     <Col xs={12} md={6} lg={12} key={idx}>
-                        <Card className="grouplist-card popular-group-card mt-4">
-                            <Card.Img variant="top" src="https://toquoc.mediacdn.vn/280518851207290880/2024/1/7/dsdgtdy-1704616308047440689926.jpg" className="group-image" />
+                        <Card className="eventlist-card popular-event-card mt-4">
+                            <Card.Img variant="top" src={event.imageURL} className="event-image" />
                             <Card.Body>
-                                <Card.Title>Surfing Club</Card.Title>
                                 <div className="location-and-members">
-                                    <span><i className='bi bi-geo-alt'></i> Da Nang, Viet Nam</span>
-                                    <span><i className='bi bi-person-circle'></i> 35 thành viên</span>
+                                    <span><i className='bi bi-clock'></i> {event.time}</span>
+                                    <span><i className='bi bi-person-circle'></i> {event.member}</span>
                                 </div>
-                                <Card.Text className="description">
-                                    Our expert instructors and fun community will help you improve your skills and enjoy the ocean.
-                                </Card.Text>
+                                <Card.Title>{event.title}</Card.Title>
+                                <div className="location-and-members">
+                                    <span><i className='bi bi-geo-alt'></i> {event.location}</span>
+                                </div>
                                 <Button variant="success" className="btn-join">
-                                    Tham gia
+                                    <span className="btn-text">Tham gia</span>
+                                    <div className="icon-join">
+                                        <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                                    </div>
                                 </Button>
+
                             </Card.Body>
                         </Card>
                     </Col>
