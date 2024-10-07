@@ -37,9 +37,9 @@ img{
   width: 100%;
 }
 
-.dropdown-item:hover{
+/* .dropdown-item:hover{
   background: #006f2b;
-}
+} */
 
 .dropdown-menu{
   background: white;
