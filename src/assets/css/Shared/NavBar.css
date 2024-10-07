@@ -18,6 +18,12 @@
   height: 30px;
   width: 30px;
 }
+
+.messages_action img,
+.notify_action img {
+  height: 20px;
+  width: 20px;
+}
 .avatar {
   height: 50px;
   width: 82px;
@@ -138,14 +144,26 @@
 .navbar-custom{
   border-bottom: 1px solid #d9d9d9;
 }
+.nav-link{
+  font-size: 16px !important;
+  font-weight: 500;
+  margin-right: 10px;
+}
 
+
+.nav-link.active{
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
 @media (min-width: 992px) {
   .navbar {
     height: 68px;
   }
 
+ 
+
   .navbar-custom {
-    padding: 0 85px !important;
+    padding: 0 65px !important;
   }
   .icon-action {
     font-size: 12px;
@@ -168,11 +186,24 @@
   }
 }
 
+.dropdown-search-menu{
+  left: -200px !important;
+}
+
+.search-dropdown-item:hover{
+  background: white !important;
+  color: black !important;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar {
     height: 82px;
   }
 
+  .dropdown-search-menu{
+    left: -190px !important;
+  }
   .logo {
     width: 100px;
     height: 30px;
