@@ -20,6 +20,8 @@ import LocalWalletManagement from "../pages/Local/LocalWalletManagement"
 import LocalLayout from "../layouts/LocalLayout"
 import LocalTripHistory from "../pages/Local/LocalTripHistory"
 import LocalCalendarManagement from "../pages/Local/LocalCalendarManagement"
+import EventList from "../components/Event/EventList"
+import EventLayout from "../layouts/EventLayout"
 const publishRoutes = [
     { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
@@ -28,7 +30,7 @@ const publishRoutes = [
 
 const privateRoutes = [
     { path: RoutePath.GROUP, component: Group, layout: DefaultLayout },
-    { path: RoutePath.EVENT, component: Event, layout: DefaultLayout },
+    { path: RoutePath.EVENT, component: EventList, layout: EventLayout },
     { path: RoutePath.PROFILE, component: Profile, layout: ProfileLayout },
     { path: RoutePath.EDITPROFILE, component: EditProfile, layout: ProfileLayout },
     { path: RoutePath.EDITMYHOME, component: EditMyHome, layout: ProfileLayout },
