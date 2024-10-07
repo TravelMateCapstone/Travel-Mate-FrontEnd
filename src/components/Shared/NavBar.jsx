@@ -21,9 +21,11 @@ import Login from "../Auth/Login";
 import Register from "../Auth/Register";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/actions/authActions";
-
 import { openLoginModal, closeLoginModal, openRegisterModal, closeRegisterModal } from "../../redux/actions/modalActions";
-
+import chatbubble from '../../assets/images/chatbubbles.svg'
+import notify from '../../assets/images/notify.svg'
+import search from '../../assets/images/search.svg'
+import dropdown_arrow from '../../assets/images/dropdown-arrow.svg'
 function NavBar() {
   const [dropdownValue, setDropdownValue] = useState("Người địa phương");
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -59,7 +61,7 @@ function NavBar() {
   return (
     <Container>
       <Navbar bg="white" expand="lg" className="p-1 navbar-custom" fixed="top">
-        <Container fluid className="p-0">
+        <Container fluid className="p-0 m-0">
           <Row className="w-100 align-items-center justify-content-between">
             <Col
               lg={4}
@@ -82,7 +84,7 @@ function NavBar() {
                 <Form className="d-none d-md-flex w-100">
                   <InputGroup>
                     <InputGroup.Text className="search-icon">
-                      <i className="bi bi-search"></i>
+                      <img src={search} alt="icon search" />
                     </InputGroup.Text>
                     <FormControl
                       type="search"
@@ -96,34 +98,68 @@ function NavBar() {
                       id="dropdown-custom-1"
                       variant="secondary"
                       className="search-dropdown text-dropdown text-black rounded-start-0"
+                      style={{
+                        fontWeight: '550',
+                      }}
                     >
                       {dropdownValue}
-                      <i className="bi bi-chevron-down ms-2"></i>
+                     <img src={dropdown_arrow} alt="icon dropdown" style={{
+                      width: '7.69px',
+                      height: '2.96px',
+                      marginLeft: '10px',
+                     }}/>
                     </Dropdown.Toggle>
-                    <Dropdown.Menu className="p-0">
-                      <Dropdown.Item eventKey="Người địa phương">
+                    <Dropdown.Menu className="dropdown-search-menu" style={{
+                      width: '306px',
+                      padding: '24px 0',
+                    }}>
+                      <Dropdown.Item eventKey="Người địa phương" className="p-0 search-dropdown-item" style={{
+                        marginBottom: '20px'
+                      }}>
                         <div>
-                          <p className="m-0">
-                            <i className="bi bi-people"></i> Người địa phương
+                          <p className="m-0 " style={{
+                            fontSize: '16px',
+                            paddingLeft: '24px',
+                          }}>
+                             Người địa phương
                           </p>
                         </div>
-                        <small>ㅤTìm bạn cùng khám phá thành phố</small>
+                        <small style={{
+                          fontSize: '12px',
+                          paddingLeft: '24px'
+                        }}
+                 
+                        >Tìm bạn cùng khám phá thành phố</small>
                       </Dropdown.Item>
-                      <Dropdown.Item eventKey="Khách du lịch">
+                      <Dropdown.Item eventKey="Khách du lịch" className="p-0 search-dropdown-item" style={{
+                        marginBottom: '20px'
+                      }}>
                         <div>
-                          <p className="m-0">
-                            <i className="bi bi-backpack"></i> Khách du lịch
+                          <p className="m-0" style={{
+                            fontSize: '16px',
+                             paddingLeft: '24px'
+                          }}>
+                             Khách du lịch
                           </p>
                         </div>
-                        <small>ㅤKết nối với bạn để trải nghiệm</small>
+                        <small style={{
+                          fontSize: '12px',
+                           paddingLeft: '24px'
+                        }}>Kết nối với bạn để trải nghiệm</small>
                       </Dropdown.Item>
-                      <Dropdown.Item eventKey="Địa điểm du lịch">
+                      <Dropdown.Item eventKey="Địa điểm du lịch" className="p-0 search-dropdown-item" >
                         <div>
-                          <p className="m-0">
-                            <i className="bi bi-geo"></i> Địa điểm du lịch
+                          <p className="m-0" style={{
+                            fontSize: '16px',
+                             paddingLeft: '24px'
+                          }}>
+                            Địa điểm du lịch
                           </p>
                         </div>
-                        <small>ㅤKhám phá điểm đến thú vị</small>
+                        <small style={{
+                          fontSize: '12px',
+                           paddingLeft: '24px'
+                        }}>Khám phá điểm đến thú vị</small>
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
@@ -140,7 +176,7 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={RoutePath.DASHBOARD}
-                  className={`text-nowrap fw-light ${location.pathname === RoutePath.DASHBOARD ? "active" : ""
+                  className={`text-nowrap  ${location.pathname === RoutePath.DASHBOARD ? "active" : ""
                     }`}
                 >
                   Trang chủ
@@ -148,7 +184,7 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={RoutePath.EVENT}
-                  className={`text-nowrap fw-light ${location.pathname === RoutePath.EVENT ? "active" : ""
+                  className={`text-nowrap  ${location.pathname === RoutePath.EVENT ? "active" : ""
                     }`}
                 >
                   Sự kiện
@@ -156,7 +192,7 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={RoutePath.GROUP}
-                  className={`text-nowrap fw-light ${location.pathname === RoutePath.GROUP ? "active" : ""
+                  className={`text-nowrap  ${location.pathname === RoutePath.GROUP ? "active" : ""
                     }`}
                 >
                   Nhóm
@@ -171,12 +207,12 @@ function NavBar() {
               xs={6}
               className="d-flex justify-content-end p-0"
             >
-              <Nav className="d-flex align-items-center flex-row gap-1">
+              <Nav className="d-flex align-items-center flex-row gap-3">
                 {isAuthenticated ? (
                   <>
                     <Dropdown align="end">
-                      <Dropdown.Toggle className="messages_action bg-secondary rounded-5 border-0 d-flex justify-content-center align-items-center">
-                        <i className="bi bi-messenger icon-action"></i>
+                      <Dropdown.Toggle className="messages_action bg-white rounded-5 border-0 d-flex justify-content-center align-items-center">
+                      <img src={chatbubble} alt="" />
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu className="p-0">
@@ -193,8 +229,8 @@ function NavBar() {
                     </Dropdown>
 
                     <Dropdown align="end">
-                      <Dropdown.Toggle className="notify_action bg-secondary rounded-5 border-0 d-flex justify-content-center align-items-center">
-                        <i className="bi bi-bell-fill icon-action"></i>
+                      <Dropdown.Toggle className="notify_action bg-white rounded-5 border-0 d-flex justify-content-center align-items-center">
+                        <img src={notify} alt="notify" />
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu className="p-0">
@@ -211,14 +247,14 @@ function NavBar() {
                     </Dropdown>
 
                     <Dropdown align="end">
-                      <Dropdown.Toggle className="avatar bg-secondary rounded-5 border-0 p-0 d-flex justify-content-center align-items-center gap-0">
+                      <Dropdown.Toggle className="avatar bg-secondary rounded-5 border-0 p-0 d-flex justify-content-between px-2 align-items-center gap-0">
                         <img
                           className="object-fit-cover rounded-5"
                           src="https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/449745842_1897469880717181_9200307908320214870_n.jpg?stp=dst-jpg_s200x200&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=Y3ls6zXN1FkQ7kNvgHaVl16&_nc_ht=scontent.fdad1-3.fna&_nc_gid=Ast3ANCkPa-DxFkrY9dgnTq&oh=00_AYBe08CtFb4taXCbRVq4JOQjHc2uuRLLLvpkYfxQ1B_SFg&oe=67087E50"
                           alt="avatar"
                         />
 
-                        <i className="bi bi-list fs-3 text-black"></i>
+                        <i className="bi bi-list fs-5 text-black"></i>
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu className="p-0">
@@ -331,7 +367,7 @@ function NavBar() {
               </InputGroup>
             </Form>
 
-            <Nav className="d-flex flex-column gap-3">
+            <Nav className="d-flex flex-column">
               <Nav.Link as={Link} to={RoutePath.DASHBOARD} onClick={toggleCanvas}>
                 Trang chủ
               </Nav.Link>

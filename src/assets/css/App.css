@@ -40,3 +40,10 @@ img{
 .dropdown-item:hover{
   background: #006f2b;
 }
+
+.dropdown-menu{
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  border: 0px !important;
+  border-radius: 16px;
+}
