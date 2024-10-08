@@ -6,6 +6,8 @@ const RoutePath = {
     LOGIN: '/login',
     REGISTER: '/register',
     GROUP: '/group',
+    GROUPCREATED: '/groupcreated',
+    GROUPJOINED: '/groupjoined',
     EVENT: '/event',
     SETTING: '/setting',
     PROFILE: '/profile',

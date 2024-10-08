@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../../assets/css/Shared/Sidebar.css';
+import GroupJoinedList from '../Group/GroupJoinedList';
 
 const SidebarItem = ({ icon, title, path, active }) => {
     return (
@@ -14,7 +15,7 @@ const SidebarItem = ({ icon, title, path, active }) => {
     );
 };
 
-const Sidebar = ({ items }) => {
+const Sidebar = ({ items, createBtn, isShowGroupList }) => {
     const location = useLocation(); // Lấy đường dẫn hiện tại
 
     return (
@@ -28,6 +29,15 @@ const Sidebar = ({ items }) => {
                     active={location.pathname === item.path}
                 />
             ))}
+            {createBtn && (
+                <button className="btn btn-outline-dark create-btn mt-2">
+                    {createBtn}
+                </button>
+            )}
+
+            {isShowGroupList && (
+                <GroupJoinedList />
+            )}
         </div>
     );
 };
