@@ -19,7 +19,7 @@ function GroupCreated() {
     {
         id: 2,
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95DegtOM6_WVdoeH-RAidSP_ceOkXcLlOPQ&s',
-        title: 'Leo núi',
+        title: 'Leo núi Everest',
         location: 'Sapa',
         members: '25 thành viên',
         text: 'Tham gia cùng chúng tôi trong cuộc phiêu lưu trên núi và nâng cao trải nghiệm leo núi của bạn!',
