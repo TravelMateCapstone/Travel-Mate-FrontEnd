@@ -56,7 +56,6 @@ const DetailLayout = ({ children }) => {
     return (
         <Container fluid className='p-0 m-0'>
             <NavBar />
-
             <Container fluid className='container-layout-detail'>
                 <Row>
                     <Col lg={2} md={3} className='p-0 d-none d-md-block'>

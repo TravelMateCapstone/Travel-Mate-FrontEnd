@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../assets/css/Group/GroupJoinedList.css'
 function GroupJoinedList() {
     // Dữ liệu giả lập cho các nhóm
     const groups = [
@@ -45,7 +45,7 @@ function GroupJoinedList() {
 
             {/* Lặp qua mảng groups để render các card */}
             {groups.map(group => (
-                <div key={group.id} className="card mb-3 shadow" style={{
+                <div key={group.id} className="card mb-3 shadow card-group-container" style={{
                     padding: '18px',
                     height: '92px',
                     borderRadius: '10px'

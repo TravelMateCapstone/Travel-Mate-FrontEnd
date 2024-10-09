@@ -62,6 +62,22 @@
   font-size: 24px;
 }
 
+.group-card-button {
+  transition: all 0.3s ease; /* Thêm transition để tạo hiệu ứng mượt mà */
+}
+
+/* Hiệu ứng hover cho nút */
+.group-card-button:hover {
+  color: white !important; /* Đổi màu chữ khi hover */
+  background-color: #007931; /* Đổi màu nền (tùy chọn) */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Thêm shadow để tạo cảm giác nổi lên */
+}
+
+/* Hiệu ứng khi nhấn nút */
+.group-card-button:active {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Giảm độ cao của bóng */
+}
+
 /* Tablet: screen width between 768px and 1024px */
 @media (max-width: 1024px) {
   .group-card {
@@ -73,10 +89,18 @@
     height: 90px !important;
   }
   .group-name {
-    font-size: 12px;
-    margin: 0px !important;
-    margin-bottom: 3px !important;
-  }
+    font-size: 10px;
+    margin: 0px;
+    margin-bottom: 3px;
+    white-space: nowrap;       
+    overflow: hidden;         
+    text-overflow: ellipsis;   
+}
+.group-card-body {
+  height: 193px;
+  padding: 10px;
+}
+
 
   .group-card-info {
     font-size: 7px !important;
