@@ -1,15 +1,13 @@
 import React from 'react';
-
+import '../../assets/css/Group/CommentPostGroupDetail.css'
 function CommentPostGroupDetail({ comment }) {
   return (
-    <div className='' style={{
-      padding: '12px 16px',
+    <div className='comment-post-group-detail-container' style={{
       display: 'flex',
-      gap: '15px',
-      border: '1px solid #D9D9D9',
+      gap: '10px',
       width: '810px',
       borderRadius: '20px',
-      marginBottom: '20px'
+      marginBottom: '30px'
     }}>
       <img src={comment.avatar} alt="avatar" style={{
         width: '60px',
@@ -19,7 +17,9 @@ function CommentPostGroupDetail({ comment }) {
       }} />
 
       <div>
-        <div className='d-flex align-items-center gap-2'>
+        <div className='d-flex align-items-center' style={{
+            gap: '15px'
+        }}>
           <strong style={{ fontSize: '16px' }}>{comment.name}</strong>
           <p className='m-0' style={{ fontSize: '12px' }}>{comment.location}</p>
         </div>
