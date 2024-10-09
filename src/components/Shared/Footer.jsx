@@ -1,62 +1,48 @@
 import React, { memo } from 'react';
 import '../../assets/css/Shared/Footer.css';
-
+import foooterApp from '../../assets/images/android_ios.png'
+import logo from '../../assets/images/logo.png'
 const Footer = () => {
   return (
-    <footer className="new_footer_area bg_color">
-      <div className="new_footer_top">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 col-md-12 col-sm-12">
-              <div className="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style={{ visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeInLeft' }}>
-                <h3 className="f-title f_600 t_color f_size_18">Liên hệ</h3>
-                <p>Đừng bỏ lỡ bất kỳ bản cập nhật nào về mẫu và tiện ích mở rộng mới của chúng tôi!</p>
-                <form action="#" className="f_subscribe_two mailchimp d-flex" method="post" _lpchecked={1}>
-                  <input type="text" name="EMAIL" className="form-control memail" placeholder="Email" />
-                  <button className="btn btn_get btn_get_two" type="submit">Gửi mail</button>
-                  <p className="mchimp-errmessage" style={{ display: 'none' }} />
-                  <p className="mchimp-sucmessage" style={{ display: 'none' }} />
-                </form>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-left">
+          <ul className="footer-nav d-md-flex gap-md-5 text-uppercase fw-semibold">
+            <li><a href="#about-us">Về chúng tôi</a></li>
+            <li><a href="#safety">An toàn</a></li>
+            <li><a href="#support">Hỗ trợ</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+          <div className="footer-logo">
+            <div>
+              <img src={logo} alt="icon" className='logo-footer'/>
               </div>
-            </div>
-
-            <div className="col-lg-6 col-md-12 col-sm-12 mt-3">
-              <div className="row">
-                <div className="f_widget col-6 col-md-4 col-sm-6 about-widget wow fadeInLeft" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}>
-                  <h3 className="f-title f_600 t_color f_size_18">Cài đặt</h3>
-                  <ul className="list-unstyled f_list">
-                    <li><a href="#">Ứng dụng Android</a></li>
-                    <li><a href="#">Tài liệu</a></li>
-                  </ul>
-                </div> 
-                <div className="f_widget col-6 col-md-4 col-sm-6 about-widget wow fadeInLeft" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}>
-                  <h3 className="f-title f_600 t_color f_size_18">Hỗ trợ</h3>
-                  <ul className="list-unstyled f_list">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Điều khoản & Điều kiện</a></li>
-                    <li><a href="#">Ủng hộ</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">chính sách bảo mật</a></li>
-                  </ul>
-                </div>
-                <div className="f_widget col-12 col-md-4 social-widget wow fadeInLeft" data-wow-delay="0.8s" style={{ visibility: 'visible', animationDelay: '0.8s', animationName: 'fadeInLeft' }}>
-                  <h3 className="f-title f_600 t_color f_size_18">Liên hệ với chúng tôi</h3>
-                  <div className="f_social_icon d-flex">
-                    <a href="#" className="bi bi-facebook" />
-                    <a href="#" className="bi bi-twitter" />
-                    <a href="#" className="bi bi-linkedin" />
-                    <a href="#" className="bi bi-pinterest" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <p className='mt-2'>Kết nối du khách và người địa phương để trải nghiệm đa dạng, tạo ra trải nghiệm đáng nhớ.</p>
           </div>
         </div>
-        <div className="footer_bg">
-          <div className="footer_bg_one" />
-          <div className="footer_bg_two" />
+        <div className="footer-right">
+          <div className="footer-social">
+            <span>KẾT NỐI VỚI CHÚNG TÔI</span>
+            <ul>
+              <li><a href="#facebook"><i className="bi bi-facebook social-icon"></i></a></li>
+              <li><a href="#twitter"><i className="bi bi-twitter social-icon"></i></a></li>
+              <li><a href="#instagram"><i className="bi bi-instagram social-icon"></i></a></li>
+              <li><a href="#youtube"><i className="bi bi-youtube social-icon"></i></a></li>
+            </ul>
+          </div>
+          <div className="footer-app">
+            <span>ỨNG DỤNG DI ĐỘNG</span>
+            <img src={foooterApp} alt="app" className='app-img'/>
+          </div>
         </div>
+      </div>
+
+      <div className="footer-bottom d-flex align-items-cente gap-5">
+        <p className='p-0 m-0 text-black'>© 2024 TravelMate Team. All Rights Reserved</p>
+        <ul className="footer-bottom-nav m-0 p-0">
+          <li><a href="#terms" className='term'>Điều khoản</a></li>
+          <li className='ms-5'><a href="#privacy" className='privacy'>Bảo mật</a></li>
+        </ul>
       </div>
     </footer>
   );

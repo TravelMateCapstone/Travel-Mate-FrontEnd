@@ -44,6 +44,7 @@ const privateRoutes = [
     { path: RoutePath.LOCAL_TRIP_HISTORY, component: LocalTripHistory, layout: LocalLayout },
     { path: RoutePath.LOCAL_CALENDAR_MANAGEMENT, component: LocalCalendarManagement, layout: LocalLayout },
 
+    { path: RoutePath.CHAT, component: Chat, layout: NavbarLayout },
 ]
 
 export { publishRoutes, privateRoutes }

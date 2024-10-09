@@ -3,8 +3,9 @@
     width: 1187px !important;
     height: 1900px !important;
     padding: 28px;
-    border-radius: 20px;
-    font-size: 18px !important;
+    border-radius: 20px !important;
+    font-size: 24px !important;
+    margin-top: 100px;
 }
 .vertical-divider {
     border-left: 1px solid #ddd;
@@ -26,13 +27,14 @@
  
   .img-thumbnail {
     object-fit: cover;
-    width: 280px;
-    height: 280px;
-    margin: 10px; }
-  
+    margin: 10px; 
+  }
   
   .image-grid-container {
-    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .form-input-myhome{
     width: 252.43px;
@@ -57,4 +59,66 @@
 .display-form-myhome{
     display: flex;
     justify-content: space-between;
+    align-items: center !important;
 }
+.image-tiltle{
+  font-size: 24px !important;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+ 
+  .edit-pro-container-myhome{
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 500px !important;
+    height: 1900px !important;
+    padding: 28px;
+    border-radius: 20px;
+    font-size: 18px !important;
+    margin-top: 40px !important;
+}
+.display-form-myhome{
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.image-tiltle{
+  font-size: 18px !important;
+}
+  
+}
+
+@media (max-width: 767px) {
+  .edit-pro-container-myhome{
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 366px !important;
+    height: 1900px !important;
+    padding: 28px;
+    border-radius: 20px;
+    font-size: 10px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 0px;
+}
+.display-form-myhome{
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+.image-tiltle{
+  font-size: 10px !important;
+}
+.img-thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 5px; 
+}
+
+.display-form-myhome {
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+  
+}
+

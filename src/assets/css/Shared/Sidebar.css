@@ -1,0 +1,34 @@
+/* src/components/Sidebar/Sidebar.css */
+.sidebar-custom {
+    width: 100% !important;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center !important;
+    text-decoration: none;
+    color: black;
+    height: 51.66px;
+    padding-left: 44px;
+    gap: 15px;
+
+}
+
+.sidebar-item ion-icon {
+    font-size: 37px; /* Kích thước biểu tượng */
+    color: inherit; /* Giữ màu sắc của văn bản */
+}
+
+.sidebar-item:hover {
+
+}
+
+.active-sidebar {
+    color: white !important;
+    background-color: #409034;
+    border-radius: 60px;
+}
+
+.active .sidebar-item {
+    font-weight: bold;
+}
