@@ -8,6 +8,8 @@ const RoutePath = {
     GROUP: '/group',
     GROUPCREATED: '/groupcreated',
     GROUPJOINED: '/groupjoined',
+    JOINGROUPDETAILS: '/joingroupdetails',
+    MYGROUPDETAIL: '/mygroupdetail',
     EVENT: '/event',
     SETTING: '/setting',
     PROFILE: '/profile',

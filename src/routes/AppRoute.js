@@ -25,6 +25,9 @@ import NavbarLayout from "../layouts/NavbarLayout"
 import ListLayout from "../layouts/ListLayout"
 import GroupJoined from "../pages/GroupJoined"
 import GroupCreated from "../pages/GroupCreate"
+import JoinedGroupDetail from "../pages/JoinedGroupDetail"
+import DetailLayout from "../layouts/DetailLayout"
+import MyGroupDetail from "../pages/MyGroupDetail"
 const publishRoutes = [
     { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
@@ -51,6 +54,8 @@ const privateRoutes = [
     // { path: RoutePath.LOCAL_CALENDAR_MANAGEMENT, component: LocalCalendarManagement, layout: LocalLayout },
 
     { path: RoutePath.CHAT, component: Chat, layout: NavbarLayout },
+    { path: RoutePath.JOINGROUPDETAILS, component: JoinedGroupDetail, layout: DetailLayout },
+    { path: RoutePath.MYGROUPDETAIL, component: MyGroupDetail, layout: DetailLayout },
 ]
 
 export { publishRoutes, privateRoutes }
