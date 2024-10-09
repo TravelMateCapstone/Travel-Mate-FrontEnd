@@ -1,4 +1,3 @@
-// src/components/Sidebar/Sidebar.js
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../../assets/css/Shared/Sidebar.css';
@@ -14,7 +13,7 @@ const SidebarItem = ({ icon, title, path, active }) => {
     );
 };
 
-const Sidebar = ({ items }) => {
+const Sidebar = ({ items, createbtn }) => {
     const location = useLocation(); // Lấy đường dẫn hiện tại
 
     return (
@@ -28,6 +27,13 @@ const Sidebar = ({ items }) => {
                     active={location.pathname === item.path}
                 />
             ))}
+
+            {/* Kiểm tra nếu createbtn khác null thì render nút */}
+            {createbtn && (
+                <button className="btn-create">
+                    {createbtn}
+                </button>
+            )}
         </div>
     );
 };

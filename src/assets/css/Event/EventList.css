@@ -1,9 +1,6 @@
 .eventlist {
     padding: 0;
-    margin-top: 80px;
 }
-
-
 
 .eventlist-card {
     border-radius: 8px;
@@ -51,15 +48,14 @@ button.bi-funnel {
     /* Adjust spacing as needed */
 }
 
-/* .eventlist-card .btn-join {
-    font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 50px;
-} */
 
+.event-search .event-search-control {
+
+    border-radius: 20px !important;
+}
 
 .eventlist-search-input {
-    border-radius: 30px;
+    border-radius: 20px;
     border: 1px solid;
     height: 38px;
     margin-top: 5px;
@@ -182,4 +178,13 @@ button.bi-funnel {
 
 .menu-item.active .icon {
     color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .eventlist {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
 }

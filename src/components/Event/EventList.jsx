@@ -86,15 +86,15 @@ function EventList() {
     return (
         <Row className="eventlist">
             {/* Event List */}
-            <Col xs={12} md={12} lg={8} className="event-list-section mx-auto">
+            <Col xs={12} md={12} lg={10} className="event-list-section mx-auto">
                 {/* Search and Filter UI */}
                 <Row className="my-3 eventlist-search">
                     <Col md={8}>
-                        <InputGroup>
+                        <InputGroup className='event-search'>
                             <Form.Control
                                 type="text"
                                 placeholder="Nhập tên nhóm cần tìm..."
-                                className="eventlist-search-input"
+                                className="eventlist-search-input event-search-control"
                             />
                         </InputGroup>
                     </Col>
@@ -141,8 +141,6 @@ function EventList() {
                                             <ion-icon name="chevron-forward-circle-outline"></ion-icon>
                                         </div>
                                     </Button>
-
-                                    {/* Ẩn description */}
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -152,7 +150,7 @@ function EventList() {
             </Col>
 
             {/* Popular events */}
-            <Col xs={12} md={12} lg={3} className='popular-event-section mx-3'>
+            {/* <Col xs={12} md={12} lg={3} className='popular-event-section mx-3'>
                 <h5 className='fontsize-popular'>Sự kiện nổi bật</h5>
                 {popularEventsData.map((event, idx) => (
                     <Col xs={12} md={6} lg={12} key={idx}>
@@ -178,7 +176,7 @@ function EventList() {
                         </Card>
                     </Col>
                 ))}
-            </Col>
+            </Col> */}
         </Row>
     );
 }
