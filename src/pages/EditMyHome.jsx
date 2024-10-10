@@ -20,7 +20,7 @@ const MyHome = () => {
             <h5 className="text-danger fw-medium">ƯU TIÊN</h5>
             <Form.Group controlId="maxGuests" className="mb-3">
               <Form.Label className='fw-medium'>Số lượng khách tối đa</Form.Label>
-              <Form.Control type="text" placeholder="10"  className='label-small-form-myhome' />
+              <Form.Control type="text" placeholder=""  className='label-small-form-myhome' />
             </Form.Group>
 
             <Form.Group controlId="genderPreference" className="mb-3">
@@ -86,7 +86,7 @@ const MyHome = () => {
         <div className='display-form-myhome mt-4' >
           <h5 className=" fw-medium image-tiltle">Hình ảnh nhà của bạn</h5>
           <div className="d-flex justify-content-start">
-            <button className="btn btn-outline-primary">Nhấn vào đây để upload</button>
+            <button className="btn btn-outline-primary input-save">Nhấn vào đây để upload</button>
           </div>
         </div>
         <div className="container">
@@ -127,8 +127,15 @@ const MyHome = () => {
 
         {/* Save/Cancel Buttons */}
         <div className="d-flex justify-content-end mt-4">
-          <Button variant="success" className="me-2">Lưu thay đổi</Button>
-          <Button variant="secondary">Hủy</Button>
+          <Button variant="success" className="me-2" style={{
+            borderRadius: '20px',
+          }}>Lưu thay đổi</Button>
+          <Button variant="secondary" style={{
+            borderRadius: '20px',
+            border: '1px solid',
+            backgroundColor: 'white',
+            color: 'black',
+          }}>Hủy</Button>
         </div>
       </Form>
     </div>

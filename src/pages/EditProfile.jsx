@@ -110,8 +110,15 @@ const EditProfile = () => {
         </Form.Group>
         {/* Nút lưu và hủy */}
         <div className="d-flex justify-content-end mt-4">
-          <Button variant="success" className="me-2 fw-medium">Lưu thay đổi</Button>
-          <Button variant="light" className='fw-medium'>Hủy</Button>
+          <Button variant="success" className="me-2 fw-medium" style={{
+            borderRadius: '20px',
+          }}>Lưu thay đổi</Button>
+          <Button style={{
+            borderRadius: '20px',
+            border: '1px solid',
+            backgroundColor: 'white',
+            color: 'black',
+          }} variant="light" className='fw-medium' suppressContentEditableWarning>Hủy</Button>
         </div>
       </Form>
     </Container>
