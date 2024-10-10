@@ -49,9 +49,6 @@ const ListLayout = ({ children }) => {
         if (location.pathname === RoutePath.GROUP) {
             createbtn = 'Tạo nhóm';
         }
-        if (location.pathname === RoutePath.GROUPJOINED) {
-            showGroupList = true;
-        }
     } else {
         itemsToDisplay = sidebarItemsDefault;
     }

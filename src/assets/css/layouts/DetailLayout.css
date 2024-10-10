@@ -87,11 +87,18 @@
 }
 
 @media (max-width: 480px) {
+    .sidebar-toggle{
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
     .container-detail {
         padding: 0 10px; 
     }
     .container-layout-detail {
         margin-top: 75px;
+        padding: 0;
     }
     .btn-filter {
         flex: 0 0 auto; 
@@ -102,4 +109,5 @@
         height: 30px !important; 
        
     }
+    
 }
