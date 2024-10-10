@@ -20,8 +20,6 @@ import LocalWalletManagement from "../pages/Local/LocalWalletManagement"
 import LocalLayout from "../layouts/LocalLayout"
 import LocalTripHistory from "../pages/Local/LocalTripHistory"
 import LocalCalendarManagement from "../pages/Local/LocalCalendarManagement"
-import EventList from "../components/Event/EventList"
-import EventLayout from "../layouts/EventLayout"
 import Chat from "../pages/Chat"
 import NavbarLayout from "../layouts/NavbarLayout"
 import ListLayout from "../layouts/ListLayout"
@@ -40,7 +38,6 @@ const privateRoutes = [
     { path: RoutePath.GROUP, component: Group, layout: ListLayout },
     { path: RoutePath.GROUPCREATED, component: GroupCreated, layout: ListLayout },
     { path: RoutePath.GROUPJOINED, component: GroupJoined, layout: ListLayout },
-    { path: RoutePath.GROUP, component: Group, layout: ListLayout },
     { path: RoutePath.EVENT, component: Event, layout: ListLayout },
     { path: RoutePath.PROFILE, component: Profile, layout: ProfileLayout },
     { path: RoutePath.EDITPROFILE, component: EditProfile, layout: ProfileLayout },

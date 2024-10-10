@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Button, Col, Container, FormControl, InputGroup, Row, Offcanvas } from 'react-bootstrap';
+import { Button, Col, Container, FormControl, InputGroup, Row, Offcanvas } from 'react-bootstrap';
 import NavBar from '../components/Shared/NavBar';
 import Footer from '../components/Shared/Footer';
 import Sidebar from '../components/Shared/Sidebar';
@@ -13,9 +13,9 @@ import GroupJoinedList from '../components/Group/GroupJoinedList';
 const ListLayout = ({ children }) => {
 
     const sidebarItemsEvent = [
-        { icon: 'list-circle', title: 'Sự kiện đã tạo', path: RoutePath.EVENT },
+        { icon: 'list-circle', title: 'Danh sách sự kiện', path: RoutePath.EVENT },
         { icon: 'people-circle', title: 'Sự kiện đã tham gia', path: RoutePath.GROUP },
-        { icon: 'add-circle', title: 'Settings', path: RoutePath.ADMIN }
+        { icon: 'add-circle', title: 'Sự kiện đã tạo', path: RoutePath.ADMIN }
     ];
 
     const sidebarItemsGroup = [
@@ -42,6 +42,7 @@ const ListLayout = ({ children }) => {
     if (location.pathname === RoutePath.EVENT || location.pathname === RoutePath.EVENT_DETAIL) {
         itemsToDisplay = sidebarItemsEvent;
         showProposeEvent = true;
+        createbtn = 'Tạo sự kiện';
     } else if (location.pathname === RoutePath.GROUP || location.pathname === RoutePath.GROUPJOINED || location.pathname === RoutePath.GROUPCREATED) {
         itemsToDisplay = sidebarItemsGroup;
         showProposeGroup = true;
@@ -56,13 +57,13 @@ const ListLayout = ({ children }) => {
     }
 
     return (
-        <Container fluid className='p-0 m-0'>
+        <Container fluid className='p-0 m-0 list-layout-custom'>
             <NavBar />
 
             <Container fluid className='container-layout-list'>
                 <Row>
                     <Col lg={2} md={3} className='p-0 d-none d-md-block'>
-                        <Sidebar items={itemsToDisplay} createBtn={createbtn} isShowGroupList={showGroupList}/>
+                        <Sidebar items={itemsToDisplay} createBtn={createbtn} isShowGroupList={showGroupList} />
                     </Col>
                     <Button
                         variant="outline-dark"
@@ -111,7 +112,7 @@ const ListLayout = ({ children }) => {
                         </Offcanvas.Body>
                     </Offcanvas>
 
-                    <Col lg={8} md={9} className='p-0'>
+                    <Col lg={8} md={10} xs={12} className='p-0 list-card'>
                         {/* Search and Filter on large screens */}
                         <Container className='container-list d-none d-md-flex'>
                             <InputGroup className='search-list-container'>
@@ -144,14 +145,13 @@ const ListLayout = ({ children }) => {
                             </Button>
                         </Container>
 
-                        <Container className='p-0' style={{ marginTop: '20px' }}>
+                        <Container className='p-0 item-card' style={{ marginTop: '20px' }}>
                             {children}
                         </Container>
                     </Col>
-
                     {/* Chỉ hiển thị ProposeGroup nếu showProposeGroup là true */}
                     {showProposeGroup && (
-                        <Col lg={2} className='p-0 propose d-none d-lg-block'>
+                        <Col lg={2} md={3} className='p-0 propose d-none d-lg-block'>
                             <p style={{
                                 fontSize: '24px',
                                 fontWeight: 'bold',
@@ -162,7 +162,7 @@ const ListLayout = ({ children }) => {
 
                     {/* Chỉ hiển thị ProposeEvent nếu showProposeEvent là true */}
                     {showProposeEvent && (
-                        <Col lg={2} className='p-0 propose d-none d-lg-block'>
+                        <Col lg={2} md={3} className='p-0 propose d-none d-lg-block'>
                             <p style={{
                                 fontSize: '24px',
                                 fontWeight: 'bold',

@@ -19,7 +19,7 @@ const Sidebar = ({ items, createBtn, isShowGroupList, createbtn }) => {
     const location = useLocation(); // Lấy đường dẫn hiện tại
 
     // Kiểm tra đường dẫn hiện tại
-    const isJoinGroupDetails = location.pathname === RoutePath.JOINGROUPDETAILS; 
+    const isJoinGroupDetails = location.pathname === RoutePath.JOINGROUPDETAILS;
     const isMyGroupDetail = location.pathname === RoutePath.MYGROUPDETAIL;
 
     return (
@@ -46,7 +46,7 @@ const Sidebar = ({ items, createBtn, isShowGroupList, createbtn }) => {
                 );
             })}
             {createBtn && (
-                <button className="btn btn-outline-dark create-btn mt-2">
+                <button className="btn btn-outline-dark create-btn w-100">
                     {createBtn}
                 </button>
             )}
