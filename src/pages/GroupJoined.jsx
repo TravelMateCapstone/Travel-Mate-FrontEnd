@@ -4,10 +4,11 @@ import Col from 'react-bootstrap/Col';
 import ReactPaginate from 'react-paginate'; // Import react-paginate
 import '../assets/css/Shared/Pagination.css'; // Import your custom pagination CSS
 import GroupCard from '../components/Group/GroupCard';
-import '../assets/css/Group/Group.css'
+import '../assets/css/Group/GroupJoined.css'
 
-function Group() {
+function GroupJoined() {
 
+  
   const cardData = [
     {
         id: 1,
@@ -140,4 +141,4 @@ function Group() {
   );
 }
 
-export default Group;
+export default GroupJoined

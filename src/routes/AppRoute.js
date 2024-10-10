@@ -25,6 +25,11 @@ import EventLayout from "../layouts/EventLayout"
 import Chat from "../pages/Chat"
 import NavbarLayout from "../layouts/NavbarLayout"
 import ListLayout from "../layouts/ListLayout"
+import GroupJoined from "../pages/GroupJoined"
+import GroupCreated from "../pages/GroupCreate"
+import JoinedGroupDetail from "../pages/JoinedGroupDetail"
+import DetailLayout from "../layouts/DetailLayout"
+import MyGroupDetail from "../pages/MyGroupDetail"
 const publishRoutes = [
     { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
@@ -33,7 +38,10 @@ const publishRoutes = [
 
 const privateRoutes = [
     { path: RoutePath.GROUP, component: Group, layout: ListLayout },
-    { path: RoutePath.EVENT, component: EventList, layout: ListLayout },
+    { path: RoutePath.GROUPCREATED, component: GroupCreated, layout: ListLayout },
+    { path: RoutePath.GROUPJOINED, component: GroupJoined, layout: ListLayout },
+    { path: RoutePath.GROUP, component: Group, layout: ListLayout },
+    { path: RoutePath.EVENT, component: Event, layout: ListLayout },
     { path: RoutePath.PROFILE, component: Profile, layout: ProfileLayout },
     { path: RoutePath.EDITPROFILE, component: EditProfile, layout: ProfileLayout },
     { path: RoutePath.EDITMYHOME, component: EditMyHome, layout: ProfileLayout },
@@ -48,6 +56,8 @@ const privateRoutes = [
     { path: RoutePath.LOCAL_CALENDAR_MANAGEMENT, component: LocalCalendarManagement, layout: LocalLayout },
 
     { path: RoutePath.CHAT, component: Chat, layout: NavbarLayout },
+    { path: RoutePath.JOINGROUPDETAILS, component: JoinedGroupDetail, layout: DetailLayout },
+    { path: RoutePath.MYGROUPDETAIL, component: MyGroupDetail, layout: DetailLayout },
 ]
 
 export { publishRoutes, privateRoutes }
