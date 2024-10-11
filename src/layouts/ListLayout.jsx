@@ -9,6 +9,7 @@ import '../assets/css/layouts/ListLayout.css';
 import ProposeEvent from '../components/Event/ProposeEvent';
 import ProposeGroup from '../components/Group/ProposeGroup';
 import GroupJoinedList from '../components/Group/GroupJoinedList';
+import ProposeSearchListCard from '../components/SearchList/ProposeSearchListCard';
 
 const ListLayout = ({ children }) => {
 
@@ -30,6 +31,11 @@ const ListLayout = ({ children }) => {
         { icon: 'add-circle', title: 'Settings', path: '/settings' }
     ];
 
+    const sidebarItemSearch = [
+        { icon: 'list-circle', title: 'Người địa phương', path: RoutePath.SEARCHLISTLOCAL },
+        { icon: 'people-circle', title: 'Khách du lịch', path: RoutePath.SEARCHLISTTRAVELLER },
+    ]
+
     const location = useLocation();
     const [showOffcanvas, setShowOffcanvas] = useState(false);
 
@@ -37,6 +43,7 @@ const ListLayout = ({ children }) => {
     let createbtn = '';
     let showProposeGroup = false;
     let showProposeEvent = false;
+    let showSearchlistLocal = false;
     let showGroupList = false;
 
     if (location.pathname === RoutePath.EVENT || location.pathname === RoutePath.EVENT_DETAIL) {
@@ -48,7 +55,12 @@ const ListLayout = ({ children }) => {
         if (location.pathname === RoutePath.GROUP) {
             createbtn = 'Tạo nhóm';
         }
-    } else {
+    }
+    else if (location.pathname === RoutePath.SEARCHLISTLOCAL || location.pathname === RoutePath.SEARCHLISTTRAVELLER) {
+        itemsToDisplay = sidebarItemSearch;
+        showSearchlistLocal = true;
+    }
+    else {
         itemsToDisplay = sidebarItemsDefault;
     }
 
@@ -59,7 +71,7 @@ const ListLayout = ({ children }) => {
             <Container fluid className='container-layout-list'>
                 <Row>
                     <Col lg={2} md={3} className='p-0 d-none d-md-block'>
-                        <Sidebar items={itemsToDisplay} createBtn={createbtn} isShowGroupList={showGroupList}/>
+                        <Sidebar items={itemsToDisplay} createBtn={createbtn} isShowGroupList={showGroupList} />
                     </Col>
                     <Button
                         variant="outline-dark"
@@ -167,6 +179,18 @@ const ListLayout = ({ children }) => {
                             <ProposeEvent />
                         </Col>
                     )}
+
+                    { showSearchlistLocal && (
+                        <Col lg={2} className='p-0 propose d-none d-lg-block'>
+                             <p style={{
+                                fontSize: '24px',
+                                fontWeight: 'bold',
+                            }}>Đề xuất</p>
+                            <ProposeSearchListCard/>
+                        </Col>
+                    )
+
+                    }
 
                 </Row>
             </Container>
