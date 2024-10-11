@@ -26,14 +26,14 @@ function ProposeSearchListCard() {
 
     const currentItemsTraveller = [
         {
-            id: 1,
+            id: 3,
             title: "Card Title traveller",
             connections: 35,
             description: "Went from a computer science intern to the head of a $2 billion company.",
             imageUrl: "https://yt3.googleusercontent.com/oN0p3-PD3HUzn2KbMm4fVhvRrKtJhodGlwocI184BBSpybcQIphSeh3Z0i7WBgTq7e12yKxb=s900-c-k-c0x00ffffff-no-rj"
         },
         {
-            id: 2,
+            id: 4,
             title: "Card Title 2",
             connections: 40,
             description: "Has worked in the tech industry for over a decade.",
@@ -52,6 +52,7 @@ function ProposeSearchListCard() {
             <Row className='m-0 p-0'>
                 {itemsToDisplay.map((item) => (
                     <SearchListCard
+                    key={item.id}
                         title={item.title}
                         connections={item.connections}
                         description={item.description}

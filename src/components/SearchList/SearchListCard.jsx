@@ -23,7 +23,7 @@ function SearchListCard({ title, connections, description, imageUrl }) {
                     marginBottom: '5px'
                  }}>
                  <ion-icon name="people-outline"></ion-icon> 
-                 <p className='p-0 m-0'>{connections} kết nối</p>
+                 <span className='p-0 m-0'>{connections} kết nối</span>
                 </Card.Text>
                 
                 <Card.Text style={{
