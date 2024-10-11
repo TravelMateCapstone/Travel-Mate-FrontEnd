@@ -88,6 +88,7 @@
   .group-card-img {
     height: 90px !important;
   }
+
   .group-name {
     font-size: 10px;
     margin: 0px;
@@ -108,7 +109,7 @@
   }
 
   .group-card-text {
-    font-size: 8px !important; 
+    font-size: 8px !important;
     margin: 0px !important;
   }
 
@@ -126,12 +127,13 @@
 
 /* Mobile: screen width below 768px */
 @media (max-width: 768px) {
-    .group-name{
-        font-size: 10px;
-        margin: 0px;
-        margin-bottom: 3px;
-        height: 20px;
-    }
+  .group-name {
+    font-size: 10px;
+    margin: 0px;
+    margin-bottom: 3px;
+    height: 20px;
+  }
+
   .group-card {
     width: 100%;
     max-width: 350px;
@@ -139,11 +141,13 @@
   }
 
   .group-card-img {
-    height: 140px; /* Adjusted height for smaller screens */
+    height: 140px;
+    /* Adjusted height for smaller screens */
   }
 
   .group-card-body {
-    padding: 10px; /* Reduced padding for mobile */
+    padding: 10px;
+    /* Reduced padding for mobile */
     height: auto;
   }
 
@@ -152,7 +156,8 @@
   }
 
   .group-card-text {
-    font-size: 12px; /* Adjusted font size for mobile */
+    font-size: 12px;
+    /* Adjusted font size for mobile */
     height: auto;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -160,7 +165,8 @@
 
   .group-card-button {
     height: 28px;
-    font-size: 12px; /* Adjusted button font size */
+    font-size: 12px;
+    /* Adjusted button font size */
   }
 
   .group-card-icon {

@@ -1,4 +1,3 @@
-// src/components/Sidebar/Sidebar.js
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../../assets/css/Shared/Sidebar.css';
@@ -16,11 +15,11 @@ const SidebarItem = ({ icon, title, path, active }) => {
     );
 };
 
-const Sidebar = ({ items, createBtn, isShowGroupList }) => {
+const Sidebar = ({ items, createBtn, isShowGroupList, createbtn }) => {
     const location = useLocation(); // Lấy đường dẫn hiện tại
 
     // Kiểm tra đường dẫn hiện tại
-    const isJoinGroupDetails = location.pathname === RoutePath.JOINGROUPDETAILS; 
+    const isJoinGroupDetails = location.pathname === RoutePath.JOINGROUPDETAILS;
     const isMyGroupDetail = location.pathname === RoutePath.MYGROUPDETAIL;
 
     return (
@@ -47,13 +46,20 @@ const Sidebar = ({ items, createBtn, isShowGroupList }) => {
                 );
             })}
             {createBtn && (
-                <button className="btn btn-outline-dark create-btn mt-2">
+                <button className="btn btn-outline-dark create-btn w-100">
                     {createBtn}
                 </button>
             )}
 
             {isShowGroupList && (
                 <GroupJoinedList />
+            )}
+
+            {/* Kiểm tra nếu createbtn khác null thì render nút */}
+            {createbtn && (
+                <button className="btn-create">
+                    {createbtn}
+                </button>
             )}
         </div>
     );

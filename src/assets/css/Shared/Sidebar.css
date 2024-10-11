@@ -14,15 +14,21 @@
 }
 
 .sidebar-item ion-icon {
-    font-size: 37px; 
+    font-size: 37px;
 }
 
-.create-btn{
+.create-btn {
+    margin-top: 19px;
     width: 100% !important;
     height: 36px;
     border-radius: 36px;
     font-size: 13px;
     font-weight: 600;
+}
+
+.create-btn:hover {
+    background-color: #409034;
+
 }
 
 .active-sidebar {
@@ -41,9 +47,11 @@
         font-size: 12px;
         height: 40px;
     }
+
     .sidebar-item ion-icon {
-        font-size: 25px; 
+        font-size: 25px;
     }
+
     .create-btn {
         font-size: 12px;
         height: 40px;

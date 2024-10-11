@@ -1,4 +1,3 @@
-import LocalWalletManagement from "../pages/Local/LocalWalletManagement";
 
 
 const RoutePath = {
@@ -26,8 +25,8 @@ const RoutePath = {
 
     // LOCAL
     LOCAL_WALLET_MANAGEMENT: '/localwallet',
-    // LOCAL_TRIP_HISTORY: '/localtriphistory',
-    // LOCAL_CALENDAR_MANAGEMENT: '/localcalendar'
+    LOCAL_TRIP_HISTORY: '/localtriphistory',
+    LOCAL_CALENDAR_MANAGEMENT: '/localcalendar'
 
 }
 

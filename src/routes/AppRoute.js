@@ -18,8 +18,8 @@ import AdminTransaction from "../pages/Admin/AdminTransactionList"
 import AdminTripHistory from "../pages/Admin/AdminTripHistory"
 import LocalWalletManagement from "../pages/Local/LocalWalletManagement"
 import LocalLayout from "../layouts/LocalLayout"
-// import LocalTripHistory from "../pages/Local/LocalTripHistory"
-// import LocalCalendarManagement from "../pages/Local/LocalCalendarManagement"
+import LocalTripHistory from "../pages/Local/LocalTripHistory"
+import LocalCalendarManagement from "../pages/Local/LocalCalendarManagement"
 import Chat from "../pages/Chat"
 import NavbarLayout from "../layouts/NavbarLayout"
 import ListLayout from "../layouts/ListLayout"
@@ -38,7 +38,6 @@ const privateRoutes = [
     { path: RoutePath.GROUP, component: Group, layout: ListLayout },
     { path: RoutePath.GROUPCREATED, component: GroupCreated, layout: ListLayout },
     { path: RoutePath.GROUPJOINED, component: GroupJoined, layout: ListLayout },
-    { path: RoutePath.GROUP, component: Group, layout: ListLayout },
     { path: RoutePath.EVENT, component: Event, layout: ListLayout },
     { path: RoutePath.PROFILE, component: Profile, layout: ProfileLayout },
     { path: RoutePath.EDITPROFILE, component: EditProfile, layout: ProfileLayout },
@@ -50,8 +49,8 @@ const privateRoutes = [
     { path: RoutePath.ADMIN_TRIPHISTORY, component: AdminTripHistory, layout: AdminLayout },
 
     { path: RoutePath.LOCAL_WALLET_MANAGEMENT, component: LocalWalletManagement, layout: LocalLayout },
-    // { path: RoutePath.LOCAL_TRIP_HISTORY, component: LocalTripHistory, layout: LocalLayout },
-    // { path: RoutePath.LOCAL_CALENDAR_MANAGEMENT, component: LocalCalendarManagement, layout: LocalLayout },
+    { path: RoutePath.LOCAL_TRIP_HISTORY, component: LocalTripHistory, layout: LocalLayout },
+    { path: RoutePath.LOCAL_CALENDAR_MANAGEMENT, component: LocalCalendarManagement, layout: LocalLayout },
 
     { path: RoutePath.CHAT, component: Chat, layout: NavbarLayout },
     { path: RoutePath.JOINGROUPDETAILS, component: JoinedGroupDetail, layout: DetailLayout },
