@@ -16,12 +16,16 @@ const RoutePath = {
     DESTINATION: '/destination',
     EDITMYHOME: '/editmyhome',
     CHAT: '/chat',
+    SEARCHLISTLOCAL: '/searchlistlocal',
+    SEARCHLISTTRAVELLER: '/searchlisttraveller',
+
     // Admin
     ADMIN: '/admin',
     ADMIN_ACCOUNTLIST: '/accountList',
     ADMIN_REPORT: '/report',
     ADMIN_TRANSACTION: '/transaction',
     ADMIN_TRIPHISTORY: '/admintriphistory',
+
 
     // LOCAL
     LOCAL_WALLET_MANAGEMENT: '/localwallet',

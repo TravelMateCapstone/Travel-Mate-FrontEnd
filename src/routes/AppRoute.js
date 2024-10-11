@@ -28,6 +28,8 @@ import GroupCreated from "../pages/GroupCreate"
 import JoinedGroupDetail from "../pages/JoinedGroupDetail"
 import DetailLayout from "../layouts/DetailLayout"
 import MyGroupDetail from "../pages/MyGroupDetail"
+import SearchListLocal from "../pages/SearchListLocal"
+import SearchListTraveller from "../pages/SearchListTraveller"
 const publishRoutes = [
     { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
@@ -55,6 +57,9 @@ const privateRoutes = [
     { path: RoutePath.CHAT, component: Chat, layout: NavbarLayout },
     { path: RoutePath.JOINGROUPDETAILS, component: JoinedGroupDetail, layout: DetailLayout },
     { path: RoutePath.MYGROUPDETAIL, component: MyGroupDetail, layout: DetailLayout },
+
+    { path: RoutePath.SEARCHLISTLOCAL, component: SearchListLocal, layout: ListLayout },
+    { path: RoutePath.SEARCHLISTTRAVELLER, component: SearchListTraveller, layout: ListLayout },
 ]
 
 export { publishRoutes, privateRoutes }
