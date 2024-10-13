@@ -28,6 +28,8 @@ import GroupCreated from "../pages/GroupCreate"
 import JoinedGroupDetail from "../pages/JoinedGroupDetail"
 import DetailLayout from "../layouts/DetailLayout"
 import MyGroupDetail from "../pages/MyGroupDetail"
+import JoinedEventDetail from "../pages/JoinedEventDetail"
+import EventDetail from "../components/Event/EventDetail"
 const publishRoutes = [
     { path: RoutePath.DASHBOARD, component: Dashboard, layout: DefaultLayout },
     { path: RoutePath.SETTING, component: Setting, layout: DefaultLayout },
@@ -35,10 +37,19 @@ const publishRoutes = [
 ]
 
 const privateRoutes = [
+    //group
     { path: RoutePath.GROUP, component: Group, layout: ListLayout },
     { path: RoutePath.GROUPCREATED, component: GroupCreated, layout: ListLayout },
     { path: RoutePath.GROUPJOINED, component: GroupJoined, layout: ListLayout },
+    { path: RoutePath.JOINGROUPDETAILS, component: JoinedGroupDetail, layout: DetailLayout },
+    { path: RoutePath.MYGROUPDETAIL, component: MyGroupDetail, layout: DetailLayout },
+    //Event
     { path: RoutePath.EVENT, component: Event, layout: ListLayout },
+    { path: RoutePath.JOINEVENTDETAILS, component: JoinedEventDetail, layout: DetailLayout },
+
+    // { path: RoutePath.MYGROUPDETAIL, component: MyGroupDetail, layout: DetailLayout },
+
+
     { path: RoutePath.PROFILE, component: Profile, layout: ProfileLayout },
     { path: RoutePath.EDITPROFILE, component: EditProfile, layout: ProfileLayout },
     { path: RoutePath.EDITMYHOME, component: EditMyHome, layout: ProfileLayout },
@@ -53,8 +64,6 @@ const privateRoutes = [
     { path: RoutePath.LOCAL_CALENDAR_MANAGEMENT, component: LocalCalendarManagement, layout: LocalLayout },
 
     { path: RoutePath.CHAT, component: Chat, layout: NavbarLayout },
-    { path: RoutePath.JOINGROUPDETAILS, component: JoinedGroupDetail, layout: DetailLayout },
-    { path: RoutePath.MYGROUPDETAIL, component: MyGroupDetail, layout: DetailLayout },
 ]
 
 export { publishRoutes, privateRoutes }

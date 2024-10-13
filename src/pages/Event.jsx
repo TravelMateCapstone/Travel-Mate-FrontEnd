@@ -9,7 +9,7 @@ import '../assets/css/Event/Event.css'
 function Event() {
   const eventData = [
     {
-      title: "Surfing Club Surfing Club",
+      title: "Surfing Club Surfing ClubSurfing Club",
       location: "Da Nang, Viet Nam",
       membersCount: 35,
       time: "10:00 AM - 2:00 PM",
