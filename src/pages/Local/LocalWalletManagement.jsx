@@ -4,7 +4,6 @@ import ReactPaginate from 'react-paginate';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../assets/css/Local/LocalWallet.css';
 
-
 const transactionData = [
   {
     id: 1,
@@ -96,44 +95,53 @@ function LocalWalletManagement() {
   return (
     <div className="local-wallet-management">
       <h1 className='mx-3 fw-bold wallet'>Ví tiền</h1>
-
       <div className='body-dashboard'>
         {/* Overview Cards */}
         <div className="wallet-overview d-flex">
           <div className="overview-card-wallet balance">
-            <div className='d-flex justify-content-between align-items-center my-2'>
-              <h4>Số dư của bạn</h4>
+            <div className='d-flex justify-content-between align-items-center'>
+              <p className='wallet_title'>Số dư của bạn</p>
             </div>
-            <p className="value">3.250.000 <span className=''>VND</span></p>
+            <p className="value">3.250.000 <span className='vnd'>VND</span></p>
             <div className='d-flex justify-content-between align-items-center'>
               <button className='button-custom mx-3'>Nạp tiền <i class="bi bi-arrow-down-left"></i></button>
               <button className='button-custom mx-3'>Rút tiền <i class="bi bi-arrow-up-right"></i></button>
             </div>
           </div>
           <div className="overview-card-wallet">
-            <div className='d-flex justify-content-between align-items-center my-2'>
-              <h4>Phương pháp rút tiền</h4>
-              <i class="bi bi-plus-circle"></i>
+            <div className='d-flex justify-content-between align-items-center'>
+              <p className='wallet_title'>Phương pháp rút tiền</p>
+              <i className='add-icon'><ion-icon name="add-circle-outline"></ion-icon></i>
             </div>
-            <div className='d-flex bank-number'>
-              <i className="bi bi-bank icon-bank"></i>
-              <p className="bank mx-2"> 1502********4832</p>
-              <div className='mx-3'><i className="bi bi-copy"></i> <i class="bi bi-trash3"></i></div>
+            <div className='d-flex bank-number bank-number-first'>
+              <i className='bank-icon mt-1'>
+                <ion-icon name="card-outline"></ion-icon>
+              </i>
+              <p className="bank mx-3"> 1502********4832</p>
+              <div className='action-icon'>
+                <i className='setting-icon'><ion-icon name="settings-outline"></ion-icon></i>
+                <i className='delete-icon'><ion-icon name="trash-outline"></ion-icon></i>
+
+              </div>
             </div>
             <div className='d-flex bank_number'>
-              <i className="bi bi-bank icon-bank"></i>
-              <p className="bank mx-2"> 1502********4832 </p>
-              <div className='mx-3'><i class="bi bi-copy"></i> <i class="bi bi-trash3"></i></div>
+              <i className='bank-icon mt-1'>
+                <ion-icon name="card-outline"></ion-icon>
+              </i>
+              <p className="bank mx-3"> 1502********4832 </p>
+              <div className='action-icon'>
+                <i className='setting-icon'><ion-icon name="settings-outline"></ion-icon></i>
+                <i className='delete-icon'><ion-icon name="trash-outline"></ion-icon></i>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Transaction Table */}
-        <div className="table-container my-5">
-          {/* <div className='d-flex justify-content-between'> */}
+        <div className="local-table-container my-5">
           <h1>Lịch sử giao dịch</h1>
           <div>
-            <InputGroup className="mb-3" style={{ width: '50%' }}>
+            <InputGroup className="mb-5" style={{ width: '550px', height: '40px' }}>
               <FormControl
                 placeholder="Search"
                 aria-label="Search"
@@ -142,19 +150,18 @@ function LocalWalletManagement() {
                 className='rounded-5'
               />
               <Button variant="" id="button-addon2">
-                <i className="bi bi-funnel fs-3"></i> {/* Bootstrap icon for search */}
+                <i className='filter-icon'><ion-icon name="filter-outline"></ion-icon></i>
               </Button>
             </InputGroup>
           </div>
-          {/* </div> */}
 
           <Table borderless hover responsive>
-            <thead>
+            <thead className='table-head'>
               <tr>
-                <th>Khách giao dịch</th>
-                <th>Trạng thái</th>
-                <th>Thời gian giao dịch</th>
-                <th>Số tiền</th>
+                <th>KHÁCH DU LỊCH</th>
+                <th>TRẠNG THÁI</th>
+                <th>THỜI GIAN GIAO DỊCH</th>
+                <th>SỐ TIỀN</th>
               </tr>
             </thead>
             <tbody>
