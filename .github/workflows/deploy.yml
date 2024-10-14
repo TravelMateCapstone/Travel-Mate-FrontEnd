@@ -3,7 +3,7 @@ name: Test and Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Chạy khi có push vào nhánh chính. Bạn có thể thay đổi thành nhánh khác nếu cần.
+      - develop  # Chạy khi có push vào nhánh chính. Bạn có thể thay đổi thành nhánh khác nếu cần.
 
 jobs:
   test:
