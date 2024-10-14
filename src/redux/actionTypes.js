@@ -5,3 +5,12 @@ export const DECREASE = 'DECREASE'
 
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGOUT = 'LOGOUT';
+
+export const OPEN_LOGIN_MODAL = "OPEN_LOGIN_MODAL";
+export const CLOSE_LOGIN_MODAL = "CLOSE_LOGIN_MODAL";
+
+export const OPEN_REGISTER_MODAL = "OPEN_REGISTER_MODAL";
+export const CLOSE_REGISTER_MODAL = "CLOSE_REGISTER_MODAL";
+
+export const VIEW_GROUP = 'VIEW_GROUP';
+export const VIEW_EVENT = 'VIEW_EVENT';

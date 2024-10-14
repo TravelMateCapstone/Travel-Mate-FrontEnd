@@ -6,10 +6,8 @@ import "../assets/css/DashBoard/Dashboard.css";
 import banner from "../assets/images/banner.jpeg";
 import HostCard from "../components/Dashboard/HostCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
-// import required modules
 import { Mousewheel, FreeMode, Pagination } from "swiper/modules";
 import PostCard from "../components/Dashboard/PostCard";
 import FixedActionMenu from "../components/Shared/FixedActionMenu";
@@ -32,61 +30,15 @@ function Dashboard() {
         const response = await axios.get(
           "https://travelmateapp.azurewebsites.net/odata/ApplicationUsers?$count=true"
         );
-        console.log("API Response:", response.data.value.length);
       } catch (error) {
         console.error("API Error:", error);
       }
     };
 
     fetchData();
-  }, []); // useEffect chỉ chạy một lần khi component mount
+  }, []); 
 
-  // Mảng điểm đến
-  const destinations = [
-    {
-      image:
-        "https://vcdn1-dulich.vnecdn.net/2022/06/03/cauvang-1654247842-9403-1654247849.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=Swd6JjpStebEzT6WARcoOA",
-      title: "Đà Nẵng",
-      description:
-        "Đà Nẵng nổi tiếng với những bãi biển đẹp và Cầu Vàng nổi bật tại Bà Nà Hills, thu hút hàng triệu du khách mỗi năm.",
-    },
-    {
-      image:
-        "https://vietmytravel.com/wp-content/uploads/2019/04/vietmytravel_du-l%E1%BB%8Bch-h%C3%A0-n%E1%BB%99i.jpg",
-      title: "Hà Nội",
-      description:
-        "Thủ đô Hà Nội với hồ Gươm, phố cổ và những di tích lịch sử mang đậm dấu ấn văn hóa Việt Nam.",
-    },
-    {
-      image:
-        "https://img.baoninhbinh.org.vn/DATA/ARTICLES/2023/10/7/mang-huong-sac-tay-ninh-den-voi-thu-do-ha-noi-6b07b.jpg",
-      title: "Tây Ninh",
-      description:
-        "Núi Bà Đen ở Tây Ninh được mệnh danh là 'nóc nhà Nam Bộ', nơi lý tưởng cho những người yêu thích leo núi và khám phá thiên nhiên.",
-    },
-    {
-      image:
-        "https://vcdn1-dulich.vnecdn.net/2022/06/01/Hoi-An-VnExpress-5851-16488048-4863-2250-1654057244.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=Z2ea_f0O7kgGZllKmJF92g",
-      title: "Hội An",
-      description:
-        "Phố cổ Hội An là Di sản Văn hóa Thế giới với kiến trúc cổ kính và nền ẩm thực phong phú.",
-    },
-    {
-      image:
-        "https://www.ctydulichhcm.com/wp-content/uploads/2021/03/tour-da-lat-3-ngay-3-dem-tu-tphcm11033.png",
-      title: "Đà Lạt",
-      description:
-        "Đà Lạt với khí hậu mát mẻ quanh năm, là thành phố của những cánh đồng hoa, rừng thông và hồ nước tuyệt đẹp.",
-    },
-    {
-      image:
-        "https://toquoc.mediacdn.vn/280518851207290880/2023/7/28/phu-quoc-cable-car-alamy-mnnpcc-16905319081521387289004.jpg",
-      title: "Phú Quốc",
-      description:
-        "Đảo Phú Quốc được biết đến với những bãi biển tuyệt đẹp và các khu nghỉ dưỡng sang trọng, lý tưởng cho du khách tìm kiếm sự thư giãn.",
-    },
-  ];
-
+  
   const hosts = [
     {
       avatar:
@@ -255,25 +207,21 @@ function Dashboard() {
             modules={[FreeMode]}
             className="mySwiper"
             breakpoints={{
-              // Mobile (số lượng slide ít hơn)
               320: {
-                slidesPerView: 1.9, // Hiển thị 1.9 slides trên màn hình mobile
-                spaceBetween: 0, // Khoảng cách giữa các slide
+                slidesPerView: 1.9,
+                spaceBetween: 0, 
               },
-              // Tablet
               768: {
-                slidesPerView: 3.8, // Hiển thị 3.8 slides trên màn hình tablet
-                spaceBetween: 15, // Khoảng cách giữa các slide
+                slidesPerView: 3.8, 
+                spaceBetween: 15, 
               },
-              // Desktop
               1024: {
-                slidesPerView: 4.1, // Hiển thị 4.1 slides trên màn hình desktop
-                spaceBetween: 20, // Khoảng cách giữa các slide
+                slidesPerView: 4.1, 
+                spaceBetween: 20, 
               },
-              // Large Desktop
               1440: {
-                slidesPerView: 5.2, // Hiển thị 5.1 slides trên màn hình lớn hơn
-                spaceBetween: 30, // Khoảng cách giữa các slide
+                slidesPerView: 5.2, 
+                spaceBetween: 30, 
               },
             }}
           >
@@ -294,7 +242,6 @@ function Dashboard() {
         <Row className="m-0 p-0">
           <Col lg={7}>
             <p className="fw-semibold fst-italic favorite-destination-title">Những điểm đến hấp dẫn</p>
-            {/* Map over the posts array to render multiple PostCard components */}
             <div className="overflow-y-auto px-1" style={{ height: '570px' }}>
               {posts.map((post, index) => (
                 <PostCard
