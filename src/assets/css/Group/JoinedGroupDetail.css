@@ -1,6 +1,10 @@
 .text-post:focus{
     border-color: rgba(0, 0, 0, 0.25) !important;
 }
+.join-group-detail-container{
+    border-left: 1px solid #d9d9d9;
+    padding-left: 55px;
+}
 
 @media (max-width: 1024px){
     .join-group-detail-container{
