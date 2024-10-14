@@ -46,7 +46,7 @@ const RouteWrapper = ({ component: Component, layout: Layout, path }) => {
 
 function App() {
   return (
-    <Router basename="/Travel-Mate-FrontEnd">
+    <Router>
       <Routes>
         {publishRoutes.map(({ path, component: Component, layout: Layout }, index) => (
           <Route

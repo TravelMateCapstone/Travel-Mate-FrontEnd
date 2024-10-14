@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
-    base: mode === 'production' ? '/' : '/Travel-Mate-FrontEnd/',  // Dùng '/' cho production, '/Travel-Mate-FrontEnd/' cho development
+   
     test: {
       environment: 'jsdom',  // Sử dụng jsdom để mô phỏng DOM cho test
       globals: true,         // Cho phép sử dụng các biến toàn cục như 'describe', 'test', 'expect'
