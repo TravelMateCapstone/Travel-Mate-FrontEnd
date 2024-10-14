@@ -3,12 +3,14 @@ import couterReducer from './couterReducer';
 import authReducer from './authReducer';
 import modalReducer from './modalReducer';
 import groupReducer from './groupReducer';
+import eventReducer from './eventReducer';
 
 const rootReducer = combineReducers({
-    couter : couterReducer,
+    couter: couterReducer,
     auth: authReducer,
     modal: modalReducer,
-    group: groupReducer
+    group: groupReducer,
+    event: eventReducer
 });
 
 export default rootReducer;

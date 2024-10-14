@@ -11,8 +11,8 @@ import GroupJoinedList from '../components/Group/GroupJoinedList';
 const DetailLayout = ({ children }) => {
     const sidebarItemsEvent = [
         { icon: 'list-circle', title: 'Sự kiện đã tạo', path: RoutePath.EVENT },
-        { icon: 'people-circle', title: 'Sự kiện đã tham gia', path: RoutePath.GROUP },
-        { icon: 'add-circle', title: 'Settings', path: RoutePath.ADMIN }
+        { icon: 'people-circle', title: 'Sự kiện đã tham gia', path: RoutePath.JOINEVENTDETAILS },
+        { icon: 'add-circle', title: 'Sự kiện đã tạo', path: RoutePath.ADMIN }
     ];
 
     const sidebarItemsGroup = [
@@ -37,9 +37,15 @@ const DetailLayout = ({ children }) => {
     let showGroupList = false;
     let showSearchFilter = !(location.pathname === RoutePath.JOINGROUPDETAILS || location.pathname === RoutePath.MYGROUPDETAIL);
 
-    if (location.pathname === RoutePath.EVENT || location.pathname === RoutePath.EVENT_DETAIL) {
+    if (location.pathname === RoutePath.EVENT || location.pathname === RoutePath.JOINEVENTDETAILS) {
         itemsToDisplay = sidebarItemsEvent;
         showProposeEvent = true;
+        if (location.pathname === RoutePath.EVENT) {
+            createbtn = 'Tạo sự kiện';
+        }
+        // if (location.pathname === RoutePath.JOINGROUPDETAILS || location.pathname === RoutePath.MYGROUPDETAIL) {
+        //     showGroupList = true;
+        // }
     } else if (location.pathname === RoutePath.GROUP || location.pathname === RoutePath.GROUPJOINED || location.pathname === RoutePath.GROUPCREATED || RoutePath.JOINGROUPDETAILS) {
         itemsToDisplay = sidebarItemsGroup;
         showProposeGroup = true;
@@ -116,7 +122,7 @@ const DetailLayout = ({ children }) => {
 
                     <Col lg={10} md={9} className='p-0'>
                         {/* Search and Filter on large screens */}
-                        {showSearchFilter && (
+                        {/* {showSearchFilter && (
                             <Container className='container-detail d-none d-md-flex'>
                                 <InputGroup className='search-list-container'>
                                     <InputGroup.Text className="search-icon search-icon-list">
@@ -147,7 +153,7 @@ const DetailLayout = ({ children }) => {
                                     Lọc
                                 </Button>
                             </Container>
-                        )}
+                        )} */}
 
                         <Container className='p-0'>
                             {children}

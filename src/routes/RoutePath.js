@@ -4,12 +4,16 @@ const RoutePath = {
     DASHBOARD: '/',
     LOGIN: '/login',
     REGISTER: '/register',
+    //groups
     GROUP: '/group',
     GROUPCREATED: '/groupcreated',
     GROUPJOINED: '/groupjoined',
     JOINGROUPDETAILS: '/joingroupdetails',
     MYGROUPDETAIL: '/mygroupdetail',
+    //event
     EVENT: '/event',
+    JOINEVENTDETAILS: '/joineventdetails',
+
     SETTING: '/setting',
     PROFILE: '/profile',
     EDITPROFILE: '/editprofile',
