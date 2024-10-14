@@ -52,7 +52,7 @@ const AdminDashboard = () => {
     };
     return (
         <div className="admin-dashboard">
-            <h1 className='dashboard-title'>Doanh thu</h1>
+            <h2 className='text-uppercase fw-bold'>Doanh thu</h2>
             <div className="dashboard-overview">
                 <div className="overview-card">
                     <div className='d-flex justify-content-between align-items-center'>

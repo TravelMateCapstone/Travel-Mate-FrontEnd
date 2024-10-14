@@ -113,35 +113,106 @@ function AdminReport() {
 
   return (
     <div className="admin-report">
-      <h2>Báo cáo</h2>
-
-      <div className='body-dashboard'>
-        {/* Overview Cards */}
+      <h2 className='text-uppercase fw-bold'>quản lí khiếu nại</h2>
+      <div className='body-dashboard p-0'>
         <div className="report-overview">
-          <div className="overview-card">
-            <div className='d-flex justify-content-between align-items-center'>
-              <h3>Tổng số báo cáo</h3>
-              <i className='bi bi-layout-text-window-reverse fs-3'></i>
+          <div className="overview-card d-flex align-items-center justify-content-between">
+            <div style={{
+              flex: '3'
+            }}>
+              <ion-icon name="document-text-outline" style={
+                {
+                  fontSize: '30px',
+                  marginLeft: '15px'
+                }
+              }></ion-icon>
+              <p style={{
+                fontSize: '20px',
+                fontWeight: 'bold',
+              }}>Tổng số <br /> báo cáo</p>
             </div>
-            <p className="value">120</p>
+            <div style={{
+              flex: '1',
+              textAlign: 'end',
+              fontSize: '36px',
+              fontWeight: 'bold'
+            }}>125</div>
           </div>
-          <div className="overview-card active">
-            <div className='d-flex justify-content-between align-items-center'> <h3>Đang xử lí</h3>
-              <i className='bi bi-layout-text-window-reverse fs-3 text-warning'></i></div>
-            <p className="value">20</p>
-          </div>
-          <div className="overview-card">
-            <div className='d-flex justify-content-between align-items-center'><h3>Đã giải quyết</h3>
-              <i className='bi bi-layout-text-window-reverse fs-3 text-success'></i>
+
+          <div className="overview-card d-flex align-items-center justify-content-between">
+            <div style={{
+              flex: '3'
+            }}>
+              <ion-icon name="hammer-outline" style={
+                {
+                  fontSize: '30px',
+                  marginLeft: '15px',
+                  color: '#5088FF'
+                }
+              }></ion-icon>
+              <p style={{
+                fontSize: '20px',
+                fontWeight: 'bold',
+              }}>Đang xử lí</p>
             </div>
-            <p className="value">80</p>
+            <div style={{
+              flex: '1',
+              textAlign: 'end',
+              fontSize: '36px',
+              fontWeight: 'bold'
+            }}>125</div>
           </div>
-          <div className="overview-card">
-            <div className='d-flex justify-content-between align-items-center'><h3>Đã bác bỏ</h3>
-              <i className='bi bi-x fs-3'></i>
+
+          <div className="overview-card d-flex align-items-center justify-content-between">
+            <div style={{
+              flex: '3'
+            }}>
+              <ion-icon name="cloud-done-outline" style={
+                {
+                  fontSize: '30px',
+                  marginLeft: '15px',
+                  color: '#007931'
+                }
+              }></ion-icon>
+              <p style={{
+                fontSize: '20px',
+                fontWeight: 'bold',
+              }}>Đã xử lí</p>
             </div>
-            <p className="value">20</p>
+            <div style={{
+              flex: '1',
+              textAlign: 'end',
+              fontSize: '36px',
+              fontWeight: 'bold'
+            }}>125</div>
           </div>
+
+          <div className="overview-card d-flex align-items-center justify-content-between">
+            <div style={{
+              flex: '3'
+            }}>
+              <ion-icon name="trash-bin-outline" style={
+                {
+                  fontSize: '30px',
+                  marginLeft: '15px',
+                  color: '#AC0B0B'
+                }
+              }></ion-icon>
+              <p style={{
+                fontSize: '20px',
+                fontWeight: 'bold',
+              }}>Đã hủy</p>
+            </div>
+            <div style={{
+              flex: '1',
+              textAlign: 'end',
+              fontSize: '36px',
+              fontWeight: 'bold'
+            }}>125</div>
+          </div>
+
+
+
         </div>
 
 

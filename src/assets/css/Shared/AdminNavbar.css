@@ -3,8 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  border-bottom: 0px !important;
+  padding: 20px 20px;
+  border-bottom: 1px solid #d9d9d9 !important;
+  height: 80px !important;
 }
 
 .search-bar-nav {
@@ -14,8 +15,9 @@
   border: 1px solid #ddd;
   border-radius: 25px;
   padding: 5px 15px;
-  width: 516px;
+  width: 544px;
   position: relative; /* Add relative positioning */
+  height: 43px;
 }
 
 .search-bar-nav input {
@@ -37,11 +39,11 @@
 .navbar-right {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
 .notification {
   position: relative;
-  margin-right: 20px;
 }
 
 .notification i {

@@ -1,41 +1,108 @@
-.search-filter-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 20px;
+
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
-.search-input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+.table-search .my-input-search {
+  height: 40px;
+  border-radius: 60px;
+  border: 1px solid #d9d9d9;
+  padding: 8px 16px;
+  width: 500px;
+}
+
+.table-search button {
+  background-color: transparent;
+}
+
+.table-container{
+  box-shadow: 0 0 0 !important;
+}
+
+
+.table-container .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   margin-right: 10px;
-  width: 300px;
 }
 
-.filter-button {
+.table-container .traveller {
+  display: flex;
+  align-items: center;
+}
+
+.table-container .headingtable {
+  background: white !important;
+  text-align: center;
+  font-size: 20px;
+}
+
+.headingtable-user{
+  background: white !important;
+  font-size: 20px;
+}
+
+.table-container .actions .action-btn {
+  margin-right: 8px;
+  padding: 6px 10px;
+}
+
+.table-container .block-btn i {
+  color: red;
+}
+
+.table-container .delete-btn i {
+  color: orange;
+}
+
+.table-container .info-btn i {
+  color: blue;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
   padding: 8px 12px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #ddd;
+  color: #333;
   cursor: pointer;
 }
 
-.filter-button i {
-  font-size: 18px;
+.pagination .active .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
 }
 
-.no-results {
+.pagination .page-item:hover .page-link {
+  background-color: #f0f0f0;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: #e9ecef;
+}
+
+.account-row td{
+  vertical-align: middle;
   text-align: center;
-  padding: 20px;
 }
 
-@media (min-width: 1024px) {
-  .table-search {
-    border: 1px solid #409034;
-    border-radius: 20px;
-    margin: 50px;
-    padding: 20px;
-  }
+.block-btn, .delete-btn, .info-btn{
+  padding: 0px 5px !important;
+  margin: 0px !important;
+}
+
+.action-btn ion-icon{
+  font-size: 20px;
 }
