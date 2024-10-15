@@ -41,6 +41,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Remove dist directory
+        run: rm -rf dist  # Xóa thư mục dist trước khi xây dựng
+
       - name: Build the project
         run: npm run build
 
