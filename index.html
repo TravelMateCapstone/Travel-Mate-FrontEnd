@@ -7,7 +7,7 @@
   <title>TravelMate</title>
   <script type="text/javascript">
     (function(l) {
-      // Kiểm tra nếu có nhiều tham số không cần thiết
+      // Kiểm tra và làm sạch URL
       const searchParams = new URLSearchParams(l.search);
       const unwantedParams = [...searchParams.entries()].filter(([key, value]) => key === "" || value.includes("~and~"));
 
