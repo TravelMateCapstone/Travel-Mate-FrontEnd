@@ -99,9 +99,7 @@ function LocalWalletManagement() {
         {/* Overview Cards */}
         <div className="wallet-overview d-flex">
           <div className="overview-card-wallet balance">
-            <div className='d-flex justify-content-between align-items-center'>
-              <p className='wallet_title'>Số dư của bạn</p>
-            </div>
+            <p className='wallet_title'>Số dư của bạn</p>
             <p className="value">3.250.000 <span className='vnd'>VND</span></p>
             <div className='d-flex justify-content-between align-items-center'>
               <button className='button-custom mx-3'>Nạp tiền <i class="bi bi-arrow-down-left"></i></button>
@@ -141,19 +139,23 @@ function LocalWalletManagement() {
         <div className="local-table-container my-5">
           <h1>Lịch sử giao dịch</h1>
           <div>
-            <InputGroup className="mb-5" style={{ width: '550px', height: '40px' }}>
+            <InputGroup className="mb-5 position-relative" style={{ width: '550px', height: '40px' }}>
+              <div className="position-absolute search-icon" style={{ top: '10px', left: '15px', zIndex: '6', color: '#6c757d' }}>
+                <i className="bi bi-search"></i>
+              </div>
               <FormControl
-                placeholder="Search"
+                placeholder="Tìm kiếm..."
                 aria-label="Search"
                 aria-describedby="basic-addon2"
-                id='search-input'
-                className='rounded-5'
+                id="search-input"
+                className="rounded-5 ps-5"
               />
               <Button variant="" id="button-addon2">
-                <i className='filter-icon'><ion-icon name="filter-outline"></ion-icon></i>
+                <i className="filter-icon"><ion-icon name="filter-outline"></ion-icon></i>
               </Button>
             </InputGroup>
           </div>
+
 
           <Table borderless hover responsive>
             <thead className='table-head'>
@@ -167,12 +169,12 @@ function LocalWalletManagement() {
             <tbody>
               {currentTransactions.length > 0 ? (
                 currentTransactions.map((transaction) => (
-                  <tr key={transaction.id}>
+                  <tr key={transaction.id} className='table-row'>
                     <td className="traveller">
                       <img src="https://via.placeholder.com/40" alt="avatar" className="avatar" />
                       <span>{transaction.name}</span>
                     </td>
-                    <td className={getStatusClass(transaction.status)}><i class="bi bi-dot"></i>{transaction.status}</td>
+                    <td className={getStatusClass(transaction.status)}>{transaction.status}</td>
                     <td>{transaction.date}</td>
                     <td>${transaction.amount.toFixed(2)}</td>
                   </tr>
