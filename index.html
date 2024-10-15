@@ -5,6 +5,22 @@
   <link rel="icon" type="image/svg+xml" href="/logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>TravelMate</title>
+  <script type="text/javascript">
+    (function(l) {
+      // Lấy các tham số từ hash thay vì search
+      var hashParams = l.hash.slice(1).split('&').map(function(s) { 
+        return s.replace(/~and~/g, '&');
+      }).join('&');
+
+      if (hashParams) {
+        // Cập nhật lại URL mà không thêm dấu hỏi
+        const newUrl = l.pathname + '#' + hashParams;
+        if (l.href !== newUrl) { // Kiểm tra xem URL mới có khác URL hiện tại không
+          window.history.replaceState(null, null, newUrl);
+        }
+      }
+    }(window.location));
+  </script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
 </head>
