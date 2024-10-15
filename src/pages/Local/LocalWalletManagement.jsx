@@ -94,7 +94,7 @@ function LocalWalletManagement() {
 
   return (
     <div className="local-wallet-management">
-      <h1 className='mx-3 fw-bold wallet'>Ví tiền</h1>
+      <p className='wallet'>Ví tiền</p>
       <div className='body-dashboard'>
         {/* Overview Cards */}
         <div className="wallet-overview d-flex">
@@ -139,7 +139,7 @@ function LocalWalletManagement() {
         <div className="local-table-container my-5">
           <h1>Lịch sử giao dịch</h1>
           <div>
-            <InputGroup className="mb-5 position-relative" style={{ width: '550px', height: '40px' }}>
+            <InputGroup className="position-relative search-form">
               <div className="position-absolute search-icon" style={{ top: '10px', left: '15px', zIndex: '6', color: '#6c757d' }}>
                 <i className="bi bi-search"></i>
               </div>
@@ -148,10 +148,10 @@ function LocalWalletManagement() {
                 aria-label="Search"
                 aria-describedby="basic-addon2"
                 id="search-input"
-                className="rounded-5 ps-5"
+                className="rounded-5 ps-5 search-group"
               />
-              <Button variant="" id="button-addon2">
-                <i className="filter-icon"><ion-icon name="filter-outline"></ion-icon></i>
+              <Button variant="" id="button-addon2" className='button-filter'>
+                <i className="filter-icon "><ion-icon name="filter-outline"></ion-icon></i>
               </Button>
             </InputGroup>
           </div>
@@ -172,7 +172,7 @@ function LocalWalletManagement() {
                   <tr key={transaction.id} className='table-row'>
                     <td className="traveller">
                       <img src="https://via.placeholder.com/40" alt="avatar" className="avatar" />
-                      <span>{transaction.name}</span>
+                      <span className='mx-2'>{transaction.name}</span>
                     </td>
                     <td className={getStatusClass(transaction.status)}>{transaction.status}</td>
                     <td>{transaction.date}</td>

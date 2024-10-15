@@ -3,13 +3,16 @@
 }
 
 .wallet {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .wallet-overview {
     display: flex;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -21,11 +24,9 @@
     height: 165px;
     width: 322px;
     max-width: 360px;
-    /* Limit max width */
     flex: 1;
-    /* Allow flexibility on resizing */
     box-sizing: border-box;
-    /* Ensure padding is considered in width calculation */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .wallet_title {
@@ -130,7 +131,9 @@
 }
 
 .filter-icon {
-    font-size: 30px;
+    font-size: 29px;
+    max-height: 30px !important;
+    width: 30px !important;
 }
 
 .table-row {
@@ -138,8 +141,25 @@
 }
 
 .search-icon {
-    font-size: 130%
+    height: 30px;
+    width: 30px;
 }
+
+.avatar {
+    border-radius: 50%;
+}
+
+.search-group {
+    width: 500px !important;
+    height: 40px !important;
+}
+
+.search-form {
+    width: 560px !important;
+    margin-bottom: 10px;
+}
+
+
 
 /* Media Query for Large Screens */
 @media (min-width: 1024px) {
