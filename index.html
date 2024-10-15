@@ -1,28 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>TravelMate</title>
-  <script type="text/javascript">
-    (function(l) {
-      // Kiểm tra và làm sạch URL
-      const searchParams = new URLSearchParams(l.search);
-      const unwantedParams = [...searchParams.entries()].filter(([key, value]) => key === "" || value.includes("~and~"));
-
-      if (unwantedParams.length > 0) {
-        // Làm sạch URL
-        const cleanedUrl = l.origin + l.pathname; // Chỉ giữ lại origin và pathname
-        window.history.replaceState(null, null, cleanedUrl);
-      }
-    }(window.location));
-  </script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
