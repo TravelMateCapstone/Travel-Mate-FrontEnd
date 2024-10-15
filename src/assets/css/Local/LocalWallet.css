@@ -130,19 +130,8 @@
     color: red;
 }
 
-.filter-icon {
-    font-size: 29px;
-    max-height: 30px !important;
-    width: 30px !important;
-}
-
 .table-row {
     font-weight: 500 !important;
-}
-
-.search-icon {
-    height: 30px;
-    width: 30px;
 }
 
 .avatar {
@@ -159,7 +148,19 @@
     margin-bottom: 10px;
 }
 
+.search-icon {
+    font-size: 17px;
+}
 
+.search-item {
+    height: 40px !important;
+    max-width: 500px !important;
+}
+
+.filter-icon {
+    font-size: 30px;
+    display: flex;
+}
 
 /* Media Query for Large Screens */
 @media (min-width: 1024px) {

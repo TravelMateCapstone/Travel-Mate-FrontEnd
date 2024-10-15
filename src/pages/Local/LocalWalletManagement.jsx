@@ -139,7 +139,7 @@ function LocalWalletManagement() {
         <div className="local-table-container my-5">
           <h1>Lịch sử giao dịch</h1>
           <div>
-            <InputGroup className="position-relative search-form">
+            <InputGroup className="mb-3 position-relative input-group">
               <div className="position-absolute search-icon" style={{ top: '10px', left: '15px', zIndex: '6', color: '#6c757d' }}>
                 <i className="bi bi-search"></i>
               </div>
@@ -148,10 +148,10 @@ function LocalWalletManagement() {
                 aria-label="Search"
                 aria-describedby="basic-addon2"
                 id="search-input"
-                className="rounded-5 ps-5 search-group"
+                className="rounded-5 ps-5 search-item"
               />
-              <Button variant="" id="button-addon2" className='button-filter'>
-                <i className="filter-icon "><ion-icon name="filter-outline"></ion-icon></i>
+              <Button variant="" id="button-addon2">
+                <i className="filter-icon"><ion-icon name="filter-outline"></ion-icon></i>
               </Button>
             </InputGroup>
           </div>
