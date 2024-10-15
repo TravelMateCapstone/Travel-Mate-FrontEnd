@@ -18,10 +18,10 @@ export default function LocalCalendarManagement() {
 
     return (
         <div className="calendar-container">
-            <h1>Lịch</h1>
+            <p className="calendar-title">Lịch</p>
             <FullCalendar
-                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}  // Thêm plugin timeGridPlugin
-                initialView="dayGridMonth"  // Mặc định là xem theo tháng
+                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                initialView="dayGridMonth"
                 headerToolbar={{            // Cấu hình toolbar
                     left: 'prev,next today',  // Các nút điều hướng
                     center: 'title',          // Tiêu đề hiển thị giữa
