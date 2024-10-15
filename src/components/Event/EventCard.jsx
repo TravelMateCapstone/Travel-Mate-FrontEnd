@@ -3,17 +3,23 @@ import { Card, Button } from 'react-bootstrap';
 import '../../assets/css/Event/EventCard.css';
 import { Link, useLocation } from 'react-router-dom';
 import RoutePath from '../../routes/RoutePath';
+import { useDispatch } from 'react-redux'; // Import useDispatch
+import { useNavigate } from 'react-router-dom';
+import { viewEvent } from '../../redux/actions/eventActions';  // Đảm bảo đường dẫn tới file actions chính xác
+
 
 const EventCard = ({ img, time, title, location, members, text }) => {
-    const locationRoute = useLocation(); // Lấy thông tin route hiện tại
 
-    // Xác định link nút dựa trên route hiện tại
-    // const buttonLink = locationRoute.pathname === RoutePath.GROUPCREATED
-    //     ? RoutePath.MYGROUPDETAIL
-    //     : RoutePath.JOINGROUPDETAILS;
+    const dispatch = useDispatch();
+    const navigate = useNavigate();  // Sử dụng useNavigate
 
-    // const isCreatedOrJoined = locationRoute.pathname === RoutePath.GROUPCREATED || locationRoute.pathname === RoutePath.GROUPJOINED;
-    // const buttonText = isCreatedOrJoined ? 'Tương tác' : 'Tham gia';
+    const handleJoinEvent = () => {
+        const eventDetails = { img, time, title, location, members, text };
+        dispatch(viewEvent(eventDetails));
+
+        // Điều hướng sau khi dispatch
+        navigate(RoutePath.JOINEVENTDETAILS);
+    };
 
 
     return (
@@ -22,7 +28,6 @@ const EventCard = ({ img, time, title, location, members, text }) => {
             <Card.Body className='event-card-body'>
                 <div className="location-and-members">
                     <span className='d-flex align-items-center'>
-                        {/* <ion-icon name="time-outline" className="icon-margin"></ion-icon> */}
                         {time}
                     </span>
                     <span className="group-card-members">
@@ -35,14 +40,30 @@ const EventCard = ({ img, time, title, location, members, text }) => {
                 <div className="event-card-info">
                     <span><i className='bi bi-geo-alt'></i> {location}</span>
                 </div>
-                <Button variant="success" className="btn-join">
-                    <span className="btn-text">Tham gia</span>
+                <Button
+                    variant="outline-success"
+                    className="btn-join"
+                    onClick={handleJoinEvent}  // Gọi hàm handleJoinEvent
+                >
+                    <div>Tham gia</div>
                     <div className="icon-join">
                         <ion-icon name="chevron-forward-circle-outline"></ion-icon>
                     </div>
                 </Button>
+                {/* <Button
+                    variant="outline-success"
+                    className="btn-join"
+                    as={Link}
+                    to={buttonLink}
+                    onClick={handleJoinEvent}
+                >
+                    <div>{buttonText}</div>
+                    <div className="icon-join">
+                        <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                    </div>
+                </Button> */}
             </Card.Body>
-        </Card>
+        </Card >
     );
 };
 

@@ -26,10 +26,12 @@ function ProfileCard() {
         CHÀO ĐÓN KHÁCH
         </Card.Text>
         <Container className='buttons-container'>
-          <Button variant="light" className='button-custom-edit button-custom'>
-            <Link className='fw-light' to={RoutePath.EDITPROFILE}>Hồ sơ</Link>
-          </Button>
-          <Button className='button-custom-setting button-custom'>
+          <Link  className='fw-light' to={RoutePath.EDITPROFILE}>
+            <Button variant="" className='button-custom-edit button-custom-profile text-white'>
+              Hồ sơ
+            </Button>
+          </Link>
+          <Button className='button-custom-setting button-custom-profile'>
             Cài đặt
           </Button>
         </Container>

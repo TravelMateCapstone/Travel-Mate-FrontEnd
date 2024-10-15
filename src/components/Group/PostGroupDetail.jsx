@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import CommentPostGroupDetail from './CommentPostGroupDetail';
-import '../../assets/css/Group/PostGroupDetail.css'
+import { Dropdown } from 'react-bootstrap';
+import '../../assets/css/Group/PostGroupDetail.css';
+
 const comments = [
   {
     id: 1,
@@ -48,31 +50,44 @@ function PostGroupDetail() {
 
   return (
     <div className='mb-5 post-group-detail-container'>
-      <div className='w-100 p-2 d-flex gap-3 align-items-center'>
-        <img src="https://yt3.googleusercontent.com/oN0p3-PD3HUzn2KbMm4fVhvRrKtJhodGlwocI184BBSpybcQIphSeh3Z0i7WBgTq7e12yKxb=s900-c-k-c0x00ffffff-no-rj" alt="" style={{
-          width: '72px',
-          height: '72px',
-          objectFit: 'cover',
-          borderRadius: '50%'
-        }} />
+      <div className='d-flex'>
+        <div className='w-100 p-2 d-flex gap-3 align-items-center'>
+          <img src="https://yt3.googleusercontent.com/oN0p3-PD3HUzn2KbMm4fVhvRrKtJhodGlwocI184BBSpybcQIphSeh3Z0i7WBgTq7e12yKxb=s900-c-k-c0x00ffffff-no-rj" alt="" style={{
+            width: '72px',
+            height: '72px',
+            objectFit: 'cover',
+            borderRadius: '50%'
+          }} />
 
-        <div>
-          <strong style={{
-            fontWeight: '600',
-            fontSize: '20px'
-          }}>Nhơn Trần</strong>
-          <p className='m-0' style={{
-            fontWeight: '500',
-            fontSize: '16px'
-          }}>24 tháng 09 lúc 9:01</p>
+          <div>
+            <strong style={{
+              fontWeight: '600',
+              fontSize: '20px'
+            }}>Nhơn Trần</strong>
+            <p className='m-0' style={{
+              fontWeight: '500',
+              fontSize: '16px'
+            }}>24 tháng 09 lúc 9:01</p>
+          </div>
         </div>
+
+        <Dropdown>
+          <Dropdown.Toggle variant="link" id="dropdown-basic" style={{ padding: '0', marginLeft: 'auto', color: 'black' }}>
+            <i className="bi bi-three-dots" style={{ cursor: 'pointer', fontSize: '24px' }}></i>
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu align="end" style={{ zIndex: '1000' }}>
+            <Dropdown.Item onClick={() => console.log('Chỉnh sửa bình luận')}>Chỉnh sửa</Dropdown.Item>
+            <Dropdown.Item onClick={() => console.log('Xóa bình luận')}>Xóa</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </div>
 
       <p style={{
         margin: '14px 0 18px 0',
         fontSize: '16px',
         fontWeight: '500'
-      }}>Xin chào mọi người, Hôm nay chúng tôi chia sẻ đén mọi người chuyến đi  Đà Nẵng 2 ngày 1 đêm của chúng tôi. </p>
+      }}>Xin chào mọi người, Hôm nay chúng tôi chia sẻ đến mọi người chuyến đi Đà Nẵng 2 ngày 1 đêm của chúng tôi.</p>
 
       <div style={{
         border: '1px solid #D9D9D9',
@@ -83,22 +98,14 @@ function PostGroupDetail() {
         boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.25)',
       }} className='post-group-detail-img'>
         <img src="https://tiki.vn/blog/wp-content/uploads/2023/03/cau-rong-da-nang.jpg" alt="địa điểm" style={{
-          width: '395px',
-          height: '395px',
           objectFit: 'cover',
           borderRadius: '20px'
         }} />
-
         <img src="https://tiki.vn/blog/wp-content/uploads/2023/03/cau-rong-da-nang.jpg" alt="địa điểm" style={{
-          width: '395px',
-          height: '395px',
           objectFit: 'cover',
           borderRadius: '20px'
         }} />
-
         <img src="https://tiki.vn/blog/wp-content/uploads/2023/03/cau-rong-da-nang.jpg" alt="địa điểm" style={{
-          width: '395px',
-          height: '395px',
           objectFit: 'cover',
           borderRadius: '20px'
         }} />
