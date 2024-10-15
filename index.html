@@ -7,17 +7,14 @@
   <title>TravelMate</title>
   <script type="text/javascript">
     (function(l) {
-      // Lấy các tham số từ hash thay vì search
-      var hashParams = l.hash.slice(1).split('&').map(function(s) { 
-        return s.replace(/~and~/g, '&');
-      }).join('&');
+      // Kiểm tra nếu có nhiều tham số không cần thiết
+      const searchParams = new URLSearchParams(l.search);
+      const unwantedParams = [...searchParams.entries()].filter(([key, value]) => key === "" || value.includes("~and~"));
 
-      if (hashParams) {
-        // Cập nhật lại URL mà không thêm dấu hỏi
-        const newUrl = l.pathname + '#' + hashParams;
-        if (l.href !== newUrl) { // Kiểm tra xem URL mới có khác URL hiện tại không
-          window.history.replaceState(null, null, newUrl);
-        }
+      if (unwantedParams.length > 0) {
+        // Làm sạch URL
+        const cleanedUrl = l.origin + l.pathname; // Chỉ giữ lại origin và pathname
+        window.history.replaceState(null, null, cleanedUrl);
       }
     }(window.location));
   </script>
