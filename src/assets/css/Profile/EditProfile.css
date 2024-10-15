@@ -6,6 +6,11 @@
     font-size: 24px;
     margin-top: 100px !important;
 }
+.rounded-input {
+    border-radius: 20px !important; /* Use !important to override default styles */
+    height: 40px;
+    border: 1px solid black;
+}
 
 .badge-custom {
     border: 1px solid black;

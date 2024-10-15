@@ -84,41 +84,47 @@ const MyHome = () => {
         </Row>
         {/* Image Section */}
         <div className='display-form-myhome mt-4' >
-          <h5 className=" fw-medium image-tiltle">Hình ảnh nhà của bạn</h5>
+          <h3 className="fw-medium image-tiltle">Hình ảnh nhà của bạn</h3>
           <div className="d-flex justify-content-start">
-            <button className="btn btn-outline-primary input-save">Nhấn vào đây để upload</button>
+            <button className="btn btn-outline-primary input-save d-flex gap-1" style={{
+              background: '#F2F7FF',
+            }}><div style={{
+              color: '#636363'
+            }}>Nhấn vào đây để</div> <div style={{
+              color: '#00A3FF'
+            }}> upload</div></button>
           </div>
         </div>
-        <div className="container">
+        <div className="container px-5">
           <div className='row'>
           <div className='col col-lg-4 col-md-6 col-6  image-grid-container'>
-            <div className='img-thumbnail'>
-            <img src='https://vcdn1-dulich.vnecdn.net/2022/06/03/cauvang-1654247842-9403-1654247849.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=Swd6JjpStebEzT6WARcoOA' alt='image-profile'></img>
+            <div className='img-thumbnail shadow p-3'>
+            <img src='https://i.imgur.com/dlKmQ5B_d.jpeg?maxwidth=520&shape=thumb&fidelity=high' alt='image-profile'></img>
             </div>
           </div>
           <div className='col col-lg-4  col-md-6 col-6  image-grid-container'>
-            <div className='img-thumbnail'>
-            <img src='https://vcdn1-dulich.vnecdn.net/2022/06/03/cauvang-1654247842-9403-1654247849.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=Swd6JjpStebEzT6WARcoOA' alt='image-profile'></img>
+            <div className='img-thumbnail shadow p-3'>
+            <img src='https://i.imgur.com/76YvkdU_d.jpeg?maxwidth=520&shape=thumb&fidelity=high' alt='image-profile'></img>
             </div>
           </div>
           <div className='col col-lg-4 col-md-6 col-6 image-grid-container'>
-            <div className='img-thumbnail'>
-            <img src='https://vcdn1-dulich.vnecdn.net/2022/06/03/cauvang-1654247842-9403-1654247849.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=Swd6JjpStebEzT6WARcoOA' alt='image-profile'></img>
+            <div className='img-thumbnail shadow p-3'>
+            <img src='https://i.imgur.com/K1WyfPn_d.jpeg?maxwidth=520&shape=thumb&fidelity=high' alt='image-profile'></img>
             </div>
           </div>
           <div className='col col-lg-4 col-md-6 col-6 image-grid-container'>
-            <div className='img-thumbnail'>
-            <img src='https://vcdn1-dulich.vnecdn.net/2022/06/03/cauvang-1654247842-9403-1654247849.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=Swd6JjpStebEzT6WARcoOA' alt='image-profile'></img>
+            <div className='img-thumbnail shadow p-3'>
+            <img src='https://i.imgur.com/AOKbQXM_d.jpeg?maxwidth=520&shape=thumb&fidelity=high' alt='image-profile'></img>
             </div>
           </div>
           <div className='col col-lg-4 col-md-6 col-6 image-grid-container'>
-            <div className='img-thumbnail'>
-            <img src='https://vcdn1-dulich.vnecdn.net/2022/06/03/cauvang-1654247842-9403-1654247849.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=Swd6JjpStebEzT6WARcoOA' alt='image-profile'></img>
+            <div className='img-thumbnail shadow p-3'>
+            <img src='https://i.imgur.com/T6TtzcC_d.jpeg?maxwidth=520&shape=thumb&fidelity=high' alt='image-profile'></img>
             </div>
-          </div>
+          </div> 
           <div className='col col-lg-4 col-md-6 col-6 image-grid-container'>
-            <div className='img-thumbnail'>
-            <img src='https://vcdn1-dulich.vnecdn.net/2022/06/03/cauvang-1654247842-9403-1654247849.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=Swd6JjpStebEzT6WARcoOA' alt='image-profile'></img>
+            <div className='img-thumbnail shadow p-3'>
+            <img src='https://i.imgur.com/rdxtw3S_d.jpeg?maxwidth=520&shape=thumb&fidelity=high' alt='image-profile'></img>
             </div>
           </div>
           </div>
