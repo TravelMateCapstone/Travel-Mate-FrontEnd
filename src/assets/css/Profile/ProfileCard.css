@@ -51,13 +51,14 @@
 }
 
 .button-custom-edit {
-  font-size: 0.8rem;
+  font-size: 16px;
   width: 106px;
   height: 35px;
   margin-bottom: 20px;
   border-radius: 30px;
-  background: #007931;
+  background: #007931 !important;
   border: 0px;
+  font-weight: 600 !important;
 }
 
 .button-custom-edit a {
@@ -65,14 +66,15 @@
 }
 
 .button-custom-setting {
-  font-size: 0.8rem;
+  font-size: 16px;
+  font-weight: 600;
   width: 106px;
   height: 35px;
   margin-bottom: 20px;
   border-radius: 30px;
-  background: #D9D9D9;
+  background: #D9D9D9 !important;
   border: 0px;
-  color: black;
+  color: black !important;
 }
 
 

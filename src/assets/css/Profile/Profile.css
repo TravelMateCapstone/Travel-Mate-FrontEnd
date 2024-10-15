@@ -85,7 +85,7 @@
 
 .tabs .tab-body {
   position: relative;
-  padding: 20px 0;
+  padding: 20px 5px;
   font-size: var(--font-size-desktop);
   /* Use desktop font size by default */
 }

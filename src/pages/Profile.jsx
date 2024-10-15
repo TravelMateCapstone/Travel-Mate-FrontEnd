@@ -23,11 +23,11 @@ function Profile() {
   ];
 
   const tabIcons = [
-    'bi bi-info-circle',
-    'bi bi-house',
-    'bi bi-clock-history',
-    'bi bi-people',
-    'bi bi-heart'
+    'information-circle-outline',
+    'home-outline',
+    'car-sport-outline',
+    'people-outline',
+    'bookmarks-outline'
   ];
 
   return (
@@ -40,7 +40,11 @@ function Profile() {
             onClick={() => handleTabClick(index)}
           >
             {/* Add icon before the tab name */}
-            <i className={tabIcons[index]}></i> {tab}
+            <ion-icon name={tabIcons[index]} style={{
+              fontSize: '14px',
+            }}></ion-icon> <div className='fw-semibold' style={{
+              fontSize: '13px',
+            }}>{tab}</div>
           </div>
         ))}
       </div>

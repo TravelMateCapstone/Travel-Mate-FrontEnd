@@ -4,56 +4,101 @@ import "../../assets/css/Profile/MyHome.css";
 
 function MyHome() {
   return (
-    <Container className='p-3 border rounded-3'>
-      <h2 className="mb-4 text-success fw-bold"><i className="bi bi-house-door"></i> NHÀ CỦA TÔI</h2>
+    <Container className='py-3 px-0 border rounded-5'>
+      <h2 className="mb-4 text-success fw-bold text-header-profile mt-3">NHÀ CỦA TÔI</h2>
 
-      <div className="mb-3 border rounded-3 cus-prioritize">
-        <h5 className="mx-4 mt-3">ƯU TIÊN</h5>
+      <div className="mb-3 ms-lg-4 rounded-3 cus-prioritize">
+        <h4 className="mx-4 mt-3">ƯU TIÊN</h4>
         <div className="px-3">
-          <p className="small ms-3">
-            <i className="bi bi-person-check-fill"></i> Số lượng khách tối đa: 2
-          </p>
-          <p className="small ms-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-gender-trans" viewBox="0 0 16 16">
-              <path fillRule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1.707L3.5 2.793l.646-.647a.5.5 0 1 1 .708.708l-.647.646.822.822A4 4 0 0 1 8 3c1.18 0 2.239.51 2.971 1.322L14.293 1H11.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 0 1-3.05-5.814l-.95-.949-.646.647a.5.5 0 1 1-.708-.708l.647-.646L1 1.707V3.5a.5.5 0 0 1-1 0zm5.49 4.856a3 3 0 1 0 5.02 3.288 3 3 0 0 0-5.02-3.288" />
-            </svg> Giới tính tôi muốn đón: Bất kỳ
-          </p>
-          <p className="small ms-3">
-            <i className="bi bi-ban"></i> Cho phép hút thuốc? Có
-          </p>
+          <div className="small ms-3 d-flex gap-2">
+            <ion-icon name="people-outline" style={{
+              fontSize: '16px'
+            }}></ion-icon> <p className='fw-medium'>Số lượng khách tối đa: 2</p>
+          </div>
+          <div className="small ms-3 d-flex gap-2">
+            <ion-icon name="male-female-outline" style={{
+              fontSize: '16px'
+            }}></ion-icon> <p className='fw-medium'>Giới tính tôi muốn đón: Bất kỳ</p>
+          </div>
+          <div className="small ms-3 d-flex gap-2">
+            <ion-icon name="logo-no-smoking" style={{
+              fontSize: '16px'
+            }}></ion-icon> <p className='fw-medium'>Số lượng khách tối đa: 2</p>
+          </div>
         </div>
       </div>
 
-      <div className="mb-3 border rounded-3 cus-home">
-        <h5 className="mx-4 mt-3">NƠI TÁ TÚC</h5>
+      <div className="mb-3 ms-lg-4 rounded-3 cus-home">
+        <h4 className="mx-4 mt-3">NƠI TÁ TÚC</h4>
         <div className="px-3">
-          <p className="small ms-3">
-            <i className="bi bi-door-open"></i> Phòng đơn
-          </p>
-          <p className="small ms-5">
+          <div className="small ms-3 d-flex gap-2">
+            <ion-icon name="bed-outline" style={{
+              fontSize: '24px'
+            }}></ion-icon> <p className='fw-medium m-0' style={{
+              fontSize: '20px'
+            }}>Phòng đơn</p>
+          </div>
+          <p className="small ms-3" style={{
+            fontSize: '20px',
+          }}>
             Sofa in the living room or private room
           </p>
+          <hr />
         </div>
+
       </div>
 
-      <div className="mb-3 border rounded-3 cus-details">
-        <h5 className="mx-4 mt-3">CHI TIẾT</h5>
+      <div className="mb-3 ms-lg-4 rounded-3 cus-details">
+        <h4 className="mx-4 mt-3">CHI TIẾT</h4>
         <div className="px-3">
-          <h6 className="mx-3"><i className="bi bi-people-fill"></i> Bạn cùng phòng</h6>
-          <p className="small ms-5">I live alone</p>
+          <div className="small ms-3 d-flex gap-2">
+            <ion-icon name="accessibility-outline" style={{
+              fontSize: '24px'
+            }}></ion-icon> <p className='fw-medium m-0' style={{
+              fontSize: '20px'
+            }}>Phòng đơn</p>
+          </div>
+          <p className="small ms-5" style={{
+            fontSize: '20px'
+          }}>Sofa ở phòng khách, riêng tư</p>
 
-          <h6 className="mx-3"><i className="bi bi-link-45deg"></i> Tôi có thể chia sẻ gì với bạn?</h6>
-          <p className="small ms-5">A place to sleep, free kitchen, free bathroom, wifi, my time and accompany</p>
+          <div className="small ms-3 d-flex gap-2">
+            <ion-icon name="link-outline" style={{
+              fontSize: '24px'
+            }}></ion-icon> <p className='fw-medium m-0' style={{
+              fontSize: '20px'
+            }}>Phòng đơn</p>
+          </div>
+          <p className="small ms-5" style={{
+            fontSize: '20px'
+          }}>Một nơi để ngủ, bếp miễn phí, phòng tắm miễn phí, wifi, thời gian của tôi và người đi cùng</p>
 
-          <h6 className="mx-3"><i className="bi bi-car-front"></i> Phương tiện di chuyển</h6>
-          <p className="small ms-5">I have a bike</p>
+          <div className="small ms-3 d-flex gap-2">
+            <ion-icon name="bus-outline" style={{
+              fontSize: '24px'
+            }}></ion-icon> <p className='fw-medium m-0' style={{
+              fontSize: '20px'
+            }}>Phương tiện di chuyển</p>
+          </div>
+          <p className="small ms-5" style={{
+            fontSize: '20px'
+          }}>Tôi có xe đạp, phương tiện giao thông công cộng</p>
 
-          <h6 className="mx-3"><i className="bi bi-info-circle"></i> Thông tin bổ sung</h6>
-          <p className="small ms-5">Feel free to ask me anything. Welcome!</p>
+
+          <div className="small ms-3 d-flex gap-2">
+            <ion-icon name="add-circle-outline" style={{
+              fontSize: '24px'
+            }}></ion-icon> <p className='fw-medium m-0' style={{
+              fontSize: '20px'
+            }}>Thông tin bổ sung</p>
+          </div>
+          <p className="small ms-5" style={{
+            fontSize: '20px'
+          }}>Hãy thoải mái hỏi tôi bất cứ điều gì. Chào mừng!</p>
         </div>
       </div>
 
-      <div className="mb-3 border rounded-3 cus-images">
+      <div className="mb-3 ms-lg-4 rounded-3 cus-images">
         <h5 className="mx-4 mt-3 d-flex">HÌNH ẢNH NHÀ CỦA BẠN</h5>
         <Row className="px-3 py-3">
           <Col xs={12} md={4} className="mb-3">

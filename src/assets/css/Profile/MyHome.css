@@ -1,14 +1,15 @@
 .cus-prioritize {
-    background-color: rgb(228, 226, 228);
     color: black;
 }
 
 .cus-home {
-    background-color: rgb(249, 219, 223);
     color: black;
 }
 
 .cus-details {
-    background-color: rgb(220, 233, 249);
     color: black;
+}
+
+.cus-prioritize h4, .cus-home h4, .cus-details h4{
+    color: #ED6542;
 }

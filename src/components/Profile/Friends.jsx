@@ -29,20 +29,18 @@ function Friends() {
 
   return (
     <div style={{
-      padding: '20px',
       border: '1px solid #ccc',
-      borderRadius: '10px'
-    }}>
-      <h2 className="mb-4 text-success fw-bold" style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px' }}>
-        <i className="bi bi-people"></i> BẠN BÈ
+      
+    }} className='rounded-5 py-3 px-0'>
+      <h2 className="mb-4 text-success fw-bold text-header-profile mt-3">
+        BẠN BÈ
       </h2>
       {/* Grid layout for the cards */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridGap: '20px 60px',
-        padding: '0 70px',
-      }}>
+      }} className='px-5'>
         {displayedFriends.map((friend, index) => (
           <div key={index} style={{
             border: '1px solid black',

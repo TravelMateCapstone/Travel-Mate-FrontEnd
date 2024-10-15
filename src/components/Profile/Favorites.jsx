@@ -25,16 +25,15 @@ function Favorites() {
   const displayedFavorites = favoritesData.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
   return (
-    <Container className='p-3 border rounded-3'>
-      <h2 className="mb-4 text-success fw-bold">
-        <i className="bi bi-pin-map"></i> ĐỊA ĐIỂM ƯA THÍCH
+    <Container className='py-3 px-0 border rounded-5'>
+      <h2 className="mb-4 text-success fw-bold text-header-profile mt-3">
+        ĐỊA ĐIỂM ƯA THÍCH
       </h2>
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridGap: '20px 60px',
-        padding: '0 70px',
-      }}>
+      }} className='px-5'>
         {displayedFavorites.map((favorite) => (
           <div key={favorite.id} style={{
             border: '1px solid black',

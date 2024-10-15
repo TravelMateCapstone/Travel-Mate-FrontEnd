@@ -1,7 +1,4 @@
-body {
-    margin-top: 20px;
-    background: #FBFDFF
-}
+
 
 .cbp_tmtimeline {
     margin: 0;
@@ -19,7 +16,7 @@ body {
     bottom: 0;
     width: 3px;
     background: #222222;
-    left: 7%;
+    left: 57px;
     margin-left: -6px
 }
 
@@ -39,7 +36,7 @@ body {
 
 
 .cbp_tmtimeline>li .cbp_tmlabel {
-    margin: 0 0 20px 9.5%;
+    margin: 0 0 20px 71px;
     background: #ffffff;
     position: relative;
     border-radius: 5px
@@ -66,9 +63,29 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 0 3px #4e4e4f;
     text-align: center;
-    left: 8%;
+    left: 67px;
     top: 0;
     margin: 0 0 0 -25px
+}
+
+.text-header-profile{
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.cbp_tmlabel h4{
+    color: #ED6542;
+}
+.favorite-tag{
+    gap: 10px;
+}
+
+.favorite-tag p{
+    margin: 0;
+    border-color: #100303 !important;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); /* Bóng màu đen với độ mờ */
 }
 
 
