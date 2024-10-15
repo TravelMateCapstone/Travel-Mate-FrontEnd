@@ -3,6 +3,11 @@
     padding: 20px;
 }
 
+.calendar-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
 .fc {
     width: 100%;
     height: 100%;
