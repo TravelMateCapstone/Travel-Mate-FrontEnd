@@ -85,24 +85,28 @@ function LocalTripHistory() {
 
     return (
         <div className="local-trip-management">
-            <h1 className='mx-4 fw-bold trip-history'>Lịch sử các chuyến đi</h1>
+            <p className='mx-4 trip-history'>Lịch sử các chuyến đi</p>
             <div className='body-dashboard-trip'>
                 {/* Transaction Table */}
                 <div className="table-container">
                     <div>
-                        <InputGroup className="mb-3" style={{ width: '50%' }}>
+                        <InputGroup className="mb-3 position-relative input-group">
+                            <div className="position-absolute search-icon" style={{ top: '10px', left: '15px', zIndex: '6', color: '#6c757d' }}>
+                                <i className="bi bi-search"></i>
+                            </div>
                             <FormControl
-                                placeholder="Search"
+                                placeholder="Tìm kiếm..."
                                 aria-label="Search"
                                 aria-describedby="basic-addon2"
-                                id='search-input'
-                                className='rounded-5'
+                                id="search-input"
+                                className="rounded-5 ps-5 search-trip"
                             />
                             <Button variant="" id="button-addon2">
-                                <i className="bi bi-funnel fs-3"></i> {/* Bootstrap icon for search */}
+                                <i className="filter-icon"><ion-icon name="filter-outline"></ion-icon></i>
                             </Button>
                         </InputGroup>
                     </div>
+
 
                     <Table borderless hover responsive>
                         <thead>
@@ -125,7 +129,7 @@ function LocalTripHistory() {
                                         <td>{transaction.location}</td>
                                         <td>{transaction.date}</td>
                                         <td>${transaction.amount.toFixed(2)}</td>
-                                        <td><button className='btn-detail'>Chi tiết</button></td>
+                                        <td><i className='action-setting'><ion-icon name="settings-outline"></ion-icon></i></td>
                                     </tr>
                                 ))
                             ) : (
