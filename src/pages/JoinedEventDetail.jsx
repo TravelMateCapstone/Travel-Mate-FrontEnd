@@ -54,18 +54,23 @@ function JoinedEventDetail() {
                 </div>
 
             </div>
-            <div>
-                <p><ion-icon name="people-outline" className="icon-margin"></ion-icon> {selectedEvent.members} người tham gia</p>
+            <div className='members d-flex'>
+                <div className='member-icon'>
+                    <ion-icon name="people-outline" className="icon-margin"></ion-icon>
+                </div>
+                <div className='member-text'>
+                    <p>{selectedEvent.members} người tham gia</p>
+                </div>
             </div>
 
             <div className="section-container">
                 <div className="section-left my-4">
-                    <h4 className='m-3'>Nội dung</h4>
+                    <p className='m-3 title'>Nội dung</p>
                     <p className='left-content m-3'>{selectedEvent.text}</p>
                 </div>
                 <div className="section-right my-4">
                     <div className='d-flex justify-content-between align-items-center'>
-                        <h4 className='m-3'>Người tham gia</h4>
+                        <h4 className='m-3 title'>Người tham gia</h4>
                         <a href="#" className='view-all-link m-3'>Xem tất cả</a>
                     </div>
                     <div className='members-list m-3'>
