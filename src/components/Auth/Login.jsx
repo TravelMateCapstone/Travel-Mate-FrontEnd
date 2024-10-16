@@ -20,7 +20,7 @@ const Login = ({ show, handleClose }) => {
 
     try {
       // Gửi yêu cầu POST đến API đăng nhập
-      const response = await fetch('https://travelmateapp.azurewebsites.net/odata/Auth/login', {
+      const response = await fetch('https://travelmateapp.azurewebsites.net/api/Auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

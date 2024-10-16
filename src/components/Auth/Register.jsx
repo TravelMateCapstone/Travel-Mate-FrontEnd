@@ -26,7 +26,7 @@ const Register = ({ show, handleClose }) => {
     }
 
     try {
-      const response = await fetch('https://travelmateapp.azurewebsites.net/odata/Auth/register', {
+      const response = await fetch('https://travelmateapp.azurewebsites.net/api/Auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
