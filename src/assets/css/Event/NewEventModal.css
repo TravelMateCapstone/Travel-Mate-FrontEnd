@@ -1,0 +1,148 @@
+/* NewEventModal.css */
+.modal-dialog {
+    width: 843px;
+    max-width: 843px;
+    height: 897px;
+    max-height: 897px;
+    margin: auto;
+}
+
+.modal-event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 786px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 843px !important;
+    max-width: 843px !important;
+    height: 897px !important;
+    max-height: 897px !important;
+    border-radius: 20px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 56px);
+    /* Adjusted to account for modal header/footer */
+    padding: 20px;
+}
+
+.form-control {
+    width: 746px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.event-image {
+    width: 746px;
+
+}
+
+.eventInformation {
+    width: 746px;
+    text-align: left;
+    /* Căn lề trái */
+    margin-left: 0;
+    margin-bottom: 15px;
+    /* Đảm bảo không có khoảng cách ở bên trái */
+}
+
+.eventInfo {
+    font-size: 24px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.eventDetails {
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+}
+
+
+#eventName,
+#location {
+    height: 47px;
+    border-radius: 20px;
+}
+
+#eventDescription {
+    height: 140px;
+    border-radius: 20px;
+}
+
+#startTime,
+#endTime {
+    width: 364px;
+    height: 51px;
+    border-radius: 20px;
+}
+
+.date-time-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 746px;
+}
+
+.ip-start {
+    margin-right: 15px;
+}
+
+.ip-end {
+    margin-left: 15px;
+}
+
+#eventImage {
+    width: 260px;
+    height: 44px;
+    border-radius: 20px;
+}
+
+.button-container {
+    width: 746px;
+    text-align: right;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-create {
+    height: 44px;
+    width: 121px;
+    margin-right: 15px;
+    background-color: #007931;
+    border-radius: 20px;
+}
+
+.btn-cancel {
+    height: 44px;
+    width: 81px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px black solid;
+    color: black;
+}
+
+/* Labels styling */
+label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Placeholder styling */
+::placeholder {
+    font-size: 12px;
+    font-weight: 300;
+}

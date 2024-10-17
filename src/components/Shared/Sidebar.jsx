@@ -15,50 +15,23 @@ const SidebarItem = ({ icon, title, path, active }) => {
     );
 };
 
-const Sidebar = ({ items, createBtn, isShowGroupList, createbtn }) => {
-    const location = useLocation(); // Lấy đường dẫn hiện tại
-
-    // Kiểm tra đường dẫn hiện tại
-    const isJoinGroupDetails = location.pathname === RoutePath.JOINGROUPDETAILS;
-    const isMyGroupDetail = location.pathname === RoutePath.MYGROUPDETAIL;
+const Sidebar = ({ items, createBtn, onCreateBtnClick }) => {
+    const location = useLocation();
 
     return (
         <div className="sidebar-custom">
-            {items.map((item, index) => {
-                // Logic để đánh dấu active cho các trang cụ thể
-                let isActive = false;
-                if (isJoinGroupDetails && item.path === RoutePath.GROUPJOINED) {
-                    isActive = true; // Đánh dấu active cho "Nhóm đã tham gia"
-                } else if (isMyGroupDetail && item.path === RoutePath.GROUPCREATED) {
-                    isActive = true; // Đánh dấu active cho "Nhóm đã tạo"
-                } else {
-                    isActive = location.pathname === item.path; // Kiểm tra bình thường
-                }
-
-                return (
-                    <SidebarItem
-                        key={index}
-                        icon={item.icon}
-                        title={item.title}
-                        path={item.path}
-                        active={isActive}
-                    />
-                );
-            })}
+            {items.map((item, index) => (
+                <SidebarItem
+                    key={index}
+                    icon={item.icon}
+                    title={item.title}
+                    path={item.path}
+                    active={location.pathname === item.path}
+                />
+            ))}
             {createBtn && (
-                <button className="btn btn-outline-dark create-btn w-100">
+                <button className="btn btn-outline-dark create-btn w-100" onClick={onCreateBtnClick}>
                     {createBtn}
-                </button>
-            )}
-
-            {isShowGroupList && (
-                <GroupJoinedList />
-            )}
-
-            {/* Kiểm tra nếu createbtn khác null thì render nút */}
-            {createbtn && (
-                <button className="btn-create">
-                    {createbtn}
                 </button>
             )}
         </div>
